@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Kalam:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,400;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-hand: 'Caveat', 'Kalam', cursive;
+  
+  --bg-dark: #0d1214;
+  --kraft-bg: #f4eedf;
+  --kraft-dark: #d5c39e;
+  --sage-tab: #4d664b;
+  --steel-tab: #3a5369;
+  --terracotta-tab: #823824;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  selection-background-color: #5a7a58;
+  selection-color: #ffffff;
+}
+
+/* Custom Scrollbar - Retro Vintage Styled */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #090e10;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c3a3f;
+  border-radius: 4px;
+  border: 1px solid #1a2529;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475d66;
+}
+
+/* Authentic Cutting Mat Desk Background */
+.cutting-mat-bg {
+  background-color: #0d1315;
+  background-image: 
+    linear-gradient(to right, rgba(40, 65, 55, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(40, 65, 55, 0.2) 1px, transparent 1px),
+    linear-gradient(to right, rgba(60, 95, 80, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(60, 95, 80, 0.35) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+}
+
+/* Tactile Paper Textures & Backgrounds */
+.paper-texture {
+  background-color: #f7f2e7;
+  background-image: 
+    radial-gradient(rgba(0,0,0,0.035) 1px, transparent 0),
+    linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(240,230,210,0.85));
+  background-size: 20px 20px, 100% 100%;
+  color: #1f2937;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 20px 25px -5px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(213, 195, 158, 0.6);
+}
+
+.manila-card-jacket {
+  background-color: #ecdcb9;
+  background-image: 
+    radial-gradient(rgba(100, 70, 30, 0.05) 1px, transparent 0),
+    linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(220,195,150,0.6) 100%);
+  background-size: 16px 16px, 100% 100%;
+  border: 1px solid #c9b183;
+  box-shadow: 
+    0 12px 30px -5px rgba(0, 0, 0, 0.35),
+    0 4px 6px -2px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.blueprint-sheet {
+  background-color: #1b2d3d;
+  background-image: 
+    linear-gradient(to right, rgba(90, 160, 220, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 160, 220, 0.15) 1px, transparent 1px),
+    linear-gradient(to right, rgba(90, 160, 220, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 160, 220, 0.3) 1px, transparent 1px);
+  background-size: 10px 10px, 10px 10px, 50px 50px, 50px 50px;
+  color: #e2f0fc;
+}
+
+.dark-dossier-texture {
+  background-color: #11171a;
+  background-image: 
+    radial-gradient(rgba(255,255,255,0.02) 1px, transparent 0),
+    linear-gradient(180deg, rgba(20,28,32,0.95) 0%, rgba(13,18,20,0.98) 100%);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.graph-paper-texture {
+  background-color: #f5f0e3;
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+}
+
+.lined-paper-texture {
+  background-color: #fcf9f2;
+  background-size: 100% 28px;
+  background-image: linear-gradient(to bottom, transparent 27px, #e2d9c5 28px);
+}
+
+.receipt-texture {
+  background-color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  font-family: 'Space Mono', monospace;
+  position: relative;
+}
+
+.receipt-perforated-bottom {
+  background-image: radial-gradient(circle at 10px 0, transparent 8px, #ffffff 8.5px);
+  background-size: 20px 15px;
+  background-repeat: repeat-x;
+  height: 15px;
+  width: 100%;
+}
+
+.receipt-perforated-top {
+  background-image: radial-gradient(circle at 10px 15px, transparent 8px, #ffffff 8.5px);
+  background-size: 20px 15px;
+  background-repeat: repeat-x;
+  height: 15px;
+  width: 100%;
+}
+
+/* Polaroid Photo Styling with Skeuomorphic Drop Shadow */
+.polaroid-card {
+  background: #ffffff;
+  padding: 10px 10px 36px 10px;
+  box-shadow: 
+    0 12px 28px -4px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center center;
+}
+
+.polaroid-card:hover {
+  transform: translateY(-8px) scale(1.02) rotate(0deg) !important;
+  box-shadow: 
+    0 24px 50px -10px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(0, 0, 0, 0.15);
+  z-index: 30;
+}
+
+/* Washi Tape / Scotch Tape effect */
+.scotch-tape {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  backdrop-filter: blur(3px);
+  border-left: 2px dashed rgba(0,0,0,0.12);
+  border-right: 2px dashed rgba(0,0,0,0.12);
+}
+
+.washi-tape-yellow {
+  background: rgba(254, 240, 138, 0.75);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  backdrop-filter: blur(2px);
+  border-left: 3px dashed rgba(202, 138, 4, 0.3);
+  border-right: 3px dashed rgba(202, 138, 4, 0.3);
+}
+
+.washi-tape-green {
+  background: rgba(187, 247, 208, 0.75);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  backdrop-filter: blur(2px);
+  border-left: 3px dashed rgba(22, 163, 74, 0.3);
+  border-right: 3px dashed rgba(22, 163, 74, 0.3);
+}
+
+/* Barcode Font & Strip */
+.barcode-strip {
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.25em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Manila Folder Deckle Edges */
+.deckle-edge-bottom {
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+/* Embroidered Pixel Textile Ribbon */
+.embroidered-ribbon {
+  background-color: #354a32;
+  color: #c9e2c6;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  border-top: 2px dashed rgba(200, 230, 195, 0.4);
+  border-bottom: 2px dashed rgba(200, 230, 195, 0.4);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Stamped Ink Seal */
+.ink-stamp {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: 'Space Mono', monospace;
+  font-weight: 800;
+  border: 2px solid currentColor;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  mask-image: radial-gradient(rgba(0,0,0,0.9) 60%, rgba(0,0,0,0.55) 100%);
+  -webkit-mask-image: radial-gradient(rgba(0,0,0,0.9) 60%, rgba(0,0,0,0.55) 100%);
+}
+
+.stamp-red {
+  color: #b91c1c;
+  border-color: #b91c1c;
+  background-color: rgba(254, 226, 226, 0.5);
+  transform: rotate(-3deg);
+}
+
+.stamp-green {
+  color: #15803d;
+  border-color: #15803d;
+  background-color: rgba(220, 252, 231, 0.5);
+  transform: rotate(2deg);
+}
+
+.stamp-blue {
+  color: #1d4ed8;
+  border-color: #1d4ed8;
+  background-color: rgba(219, 234, 254, 0.5);
+  transform: rotate(-2deg);
+}
+
+/* Manila Folder Tabs */
+.folder-tab {
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.folder-tab:hover {
+  transform: translateY(-4px);
+}
+
+.folder-tab.active {
+  z-index: 20;
+  transform: translateY(-2px);
+}
