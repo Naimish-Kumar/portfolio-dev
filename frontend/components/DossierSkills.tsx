@@ -19,23 +19,23 @@ export default function DossierSkills({ skillsList = [] }: DossierSkillsProps) {
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
   const defaultSkills: SkillItem[] = [
-    { name: 'Next.js 14 / React 19', category: 'Frontend', proficiency: 98 },
+    { name: 'Java 21 & Spring Boot 3', category: 'Backend', proficiency: 96 },
+    { name: 'Model Context Protocol (MCP) & AI', category: 'AI & MCP', proficiency: 95 },
+    { name: 'Flutter & Dart (60FPS BLoC)', category: 'Mobile', proficiency: 98 },
+    { name: 'Spring Security & OAuth2 / JWT', category: 'Backend', proficiency: 94 },
+    { name: 'Autonomous AI Agents & RAG', category: 'AI & MCP', proficiency: 92 },
+    { name: 'Next.js 14 / React 19 & TS', category: 'Frontend', proficiency: 96 },
+    { name: 'PostgreSQL & MySQL / JPA', category: 'Backend', proficiency: 94 },
+    { name: 'Apache Kafka & Redis Streaming', category: 'Backend', proficiency: 90 },
     { name: 'Three.js / WebGL / GLSL', category: '3D & WebGL', proficiency: 92 },
-    { name: 'TypeScript & JavaScript', category: 'Frontend', proficiency: 95 },
-    { name: 'Node.js & Express API', category: 'Backend', proficiency: 94 },
-    { name: 'MySQL & Relational DBs', category: 'Backend', proficiency: 90 },
-    { name: 'Tailwind CSS & Animations', category: 'Frontend', proficiency: 96 },
-    { name: 'REST & GraphQL APIs', category: 'Backend', proficiency: 92 },
-    { name: 'Blender 3D Modeling', category: '3D & WebGL', proficiency: 85 },
-    { name: 'Docker & CI/CD Pipelines', category: 'Cloud & DevOps', proficiency: 88 },
-    { name: 'Hostinger & Linux VPS', category: 'Cloud & DevOps', proficiency: 92 },
-    { name: 'Git & GitHub Workflows', category: 'Cloud & DevOps', proficiency: 95 },
-    { name: 'GSAP & Motion Physics', category: '3D & WebGL', proficiency: 94 },
+    { name: 'Docker, K8s & CI/CD Pipelines', category: 'Cloud & DevOps', proficiency: 91 },
+    { name: 'REST & GraphQL Microservices', category: 'Backend', proficiency: 95 },
+    { name: 'WebRTC & Socket.IO Realtime', category: 'Mobile', proficiency: 93 },
   ];
 
   const effectiveSkills = skillsList && skillsList.length > 0 ? skillsList : defaultSkills;
 
-  const categories = ['All', 'Frontend', 'Backend', '3D & WebGL', 'Cloud & DevOps'];
+  const categories = ['All', 'Backend', 'AI & MCP', 'Mobile', 'Frontend', '3D & WebGL', 'Cloud & DevOps'];
 
   const filteredSkills =
     activeCategory === 'All'

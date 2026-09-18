@@ -124,7 +124,7 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
     } catch {
       setStatus({
         type: 'error',
-        text: 'Failed to dispatch brief. Please contact directly at vnaimishkumar@gmail.com',
+        text: 'Failed to dispatch brief. Please contact directly at acrocoader@gmail.com',
       });
     } finally {
       setLoading(false);
@@ -294,7 +294,7 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
               <div className="w-20 h-20 rounded-full bg-red-900 border-2 border-red-950 shadow-xl flex flex-col items-center justify-center text-amber-200 rotate-[-8deg] relative select-none">
                 <div className="w-16 h-16 rounded-full border border-dashed border-red-700/80 flex flex-col items-center justify-center text-center">
                   <span className="font-mono font-black text-[9px] tracking-widest text-amber-300">NKV</span>
-                  <span className="font-mono text-[7px] tracking-wider text-amber-200/90">★ 2026 ★</span>
+                  <span className="font-mono text-[7px] tracking-wider text-amber-200/90">// 2026 //</span>
                   <span className="font-mono text-[6px] uppercase tracking-tighter text-amber-300/80">SEALED</span>
                 </div>
               </div>
@@ -330,8 +330,8 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
               <div className="flex items-center gap-2.5 text-slate-800">
                 <Mail className="w-4 h-4 text-slate-700 shrink-0" />
                 <span className="font-semibold text-slate-600 text-[11px]">Email:</span>
-                <a href="mailto:vnaimishkumar@gmail.com" className="font-bold underline text-blue-800 hover:text-blue-900">
-                  vnaimishkumar@gmail.com
+                <a href="mailto:acrocoader@gmail.com" className="font-bold underline text-blue-800 hover:text-blue-900">
+                  acrocoader@gmail.com
                 </a>
               </div>
 

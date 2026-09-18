@@ -9,17 +9,17 @@ async function seedAcroCoderData() {
     await conn.query(`
       UPDATE profile SET
         full_name = 'Naimish Kumar Verma',
-        headline = 'Senior Mobile Engineer & Flutter Specialist | Flutter Team Lead @ Spirehub Software',
-        bio = 'Engineering 60fps cross-platform mobile apps for iOS & Android with Clean Architecture, BLoC state management, team leadership, and enterprise reliability.',
-        about_text = 'Flutter Team Lead at Spirehub Software Pvt Ltd with 3+ years of engineering experience architecting scalable cross-platform mobile systems for iOS and Android. Expert in Clean Architecture, BLoC state management, team leadership, real-time WebRTC/Socket.IO features, payment systems, and performance tuning. Proven track record of leading development teams to ship production apps serving thousands of active users with 99.9% crash-free sessions.',
-        avatar_url = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+        headline = 'Senior Software Architect & Flutter Team Lead | 7+ Years Exp | Java Spring Boot & AI MCP Integrations',
+        bio = 'Software Architect & Flutter Team Lead with 7+ years of engineering experience architecting scalable cross-platform mobile systems and enterprise backend services. Expert in Flutter/Dart, 3+ years of enterprise Java Spring Boot microservices, Clean Architecture, BLoC, real-time WebRTC/Socket.IO pipelines, and cutting-edge AI integrations including Model Context Protocol (MCP) agents.',
+        about_text = 'Senior Software Architect & Flutter Team Lead at Spirehub Software Pvt Ltd with 7+ years of engineering experience architecting scalable cross-platform mobile systems for iOS and Android as well as enterprise Java Spring Boot backends. Expert in Clean Architecture, BLoC state management, team leadership, 3+ years of enterprise Java Spring Boot microservices, real-time WebRTC/Socket.IO features, and Model Context Protocol (MCP) AI agent integrations. Proven track record of leading development teams to ship production apps serving over 100K+ active users with 99.9% reliability.',
+        avatar_url = '/naimish_portrait.png',
         resume_url = 'https://acrocoder.com/resume.pdf',
-        email = 'vnaimishkumar@gmail.com',
+        email = 'acrocoader@gmail.com',
         phone = '+91 9876543210',
-        location = 'India',
+        location = 'India / Remote',
         available_for_hire = TRUE,
-        years_experience = 3,
-        projects_completed = 10,
+        years_experience = 7,
+        projects_completed = 30,
         github_url = 'https://github.com/Naimish-Kumar',
         linkedin_url = 'https://linkedin.com/in/naimish-kumar-verma',
         twitter_url = 'https://twitter.com/acrocoder'
@@ -29,24 +29,23 @@ async function seedAcroCoderData() {
     // 2. Update Hero Settings
     await conn.query(`
       UPDATE hero_settings SET
-        greeting = 'Flutter Team Lead @ Spirehub Software',
-        headline = 'Leading High-Performance Flutter & Mobile Engineering',
-        subheadline = 'Engineering 60fps cross-platform mobile apps for iOS & Android with Clean Architecture, BLoC state management, team leadership, and enterprise reliability.',
+        greeting = 'Senior Software Architect & Mobile Lead',
+        headline = 'Architecting High-Performance Mobile, Spring Boot & AI Agent Systems',
+        subheadline = 'Engineering 60fps cross-platform mobile apps, Java Spring Boot microservices, and autonomous Model Context Protocol (MCP) AI integrations with enterprise reliability.',
         typing_strings_json = ?,
         primary_button_text = 'Explore Applications',
         primary_button_link = '#work',
         secondary_button_text = 'Initiate Contact',
         secondary_button_link = '#contact',
-        badge_text = '🚀 Flutter Team Lead @ Spirehub Software'
+        badge_text = 'Senior Architect & Flutter Team Lead @ Spirehub'
       WHERE id = 1
     `, [
       JSON.stringify([
-        'Flutter Team Lead',
-        'Senior Mobile Engineer',
-        'Clean Architecture Specialist',
-        'Sub-16ms 60FPS UI Architect',
-        'Open-Source Package Creator',
-        'Full Stack & Cloud Integrator'
+        '7+ Years Senior Full-Stack Lead',
+        'Java 21 Spring Boot Microservices',
+        'AI Agents & Model Context Protocol (MCP)',
+        'Flutter Lead • Sub-16ms 60fps',
+        'Clean Architecture & Cloud Systems'
       ])
     ]);
 
@@ -54,17 +53,43 @@ async function seedAcroCoderData() {
     await conn.query('DELETE FROM projects');
     const projects = [
       [
-        'DoodleJoy - Creative Canvas Web & Mobile App',
-        'doodlejoy-canvas',
-        'Interactive web & mobile drawing application for kids featuring magic brushes, smooth canvas rendering, and secure sharing.',
-        'Interactive drawing application for web and mobile featuring sub-16ms custom canvas rendering, glow shaders, multi-touch brush engines, and cloud galleries.',
-        'Shipped App',
-        'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80',
-        'https://doodlejoy.fun/',
-        'https://play.google.com/store/apps/details?id=com.acrocoder.doodlejoy&hl=en_IN',
-        JSON.stringify(['Flutter', 'Canvas', 'Web', 'Android', 'Clean Architecture', 'BLoC']),
+        'Congo Bon Marché - E-Commerce & Marketplace Ecosystem',
+        'congobonmarche-ecommerce',
+        'Premier multi-vendor e-commerce marketplace and logistics platform in Central Africa with mobile apps for iOS & Android.',
+        'End-to-end multi-vendor e-commerce ecosystem designed for DRC and Central Africa. Features high-performance web storefront, native iOS & Android applications built with Flutter, multi-currency wallet support, Mobile Money (Airtel/Orange Money) payment gateways, real-time push order dispatch, and seller analytics dashboard.',
+        'Mobile & Web E-Commerce',
+        'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80',
+        'https://congobonmarche.com',
+        'https://apps.apple.com/in/app/congobonmarch%C3%A9-app/id6443672495',
+        JSON.stringify(['Flutter', 'iOS App', 'Android App', 'Java Spring Boot', 'E-Commerce', 'Mobile Money']),
         true,
         1
+      ],
+      [
+        'DarziDesk - Boutique & Custom Tailoring Management SaaS',
+        'darzidesk-boutique-saas',
+        'Cloud-based bespoke tailoring ERP & boutique management platform with automated measurement profiles, work orders, and WhatsApp notifications.',
+        'Comprehensive SaaS platform built for fashion designers, bespoke tailors, and boutique studios. Streamlines client body measurement profiles, custom stitching work orders, fabric inventory tracking, automated invoice generation, and real-time WhatsApp delivery notifications with sub-100ms response times.',
+        'Production SaaS',
+        'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80',
+        'https://darzidesk.shop',
+        'https://darzidesk.shop',
+        JSON.stringify(['Next.js 14', 'Java Spring Boot', 'MySQL', 'Tailwind CSS', 'SaaS', 'ERP']),
+        true,
+        2
+      ],
+      [
+        'Spacebliz - Creative Digital Agency & Software Platform',
+        'spacebliz-digital-agency',
+        'High-performance digital agency platform featuring 3D interactive interfaces, modern full-stack architectures, and AI cloud engineering.',
+        'Dynamic high-performance agency portal and software engineering platform showcasing bespoke digital product development, interactive 3D WebGL interfaces, cloud native infrastructure, and enterprise AI integrations with 99+ Lighthouse performance scores.',
+        'Creative Tech & Agency',
+        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+        'https://spacebliz.com',
+        'https://spacebliz.com',
+        JSON.stringify(['React', 'Next.js', 'Three.js 3D', 'Java Spring Boot', 'Cloud Architecture', 'AI MCP']),
+        true,
+        3
       ],
       [
         'HomiQ Real-Estate Marketplace',
@@ -75,9 +100,9 @@ async function seedAcroCoderData() {
         'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
         'https://apps.apple.com/in/app/homiq-real-estate-marketplace/id6779412636',
         'https://play.google.com/store/apps/details?id=com.homiq.acrocoder&hl=en_IN',
-        JSON.stringify(['Flutter', 'iOS', 'Android', 'Real Estate', 'Google Maps', 'REST API']),
+        JSON.stringify(['Flutter', 'iOS', 'Android', 'Java Spring Boot', 'Real Estate', 'Google Maps']),
         true,
-        2
+        4
       ],
       [
         'Healthosyst Healthcare Platform',
@@ -88,9 +113,9 @@ async function seedAcroCoderData() {
         'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
         'https://apps.apple.com/in/app/healthosyst/id6702022061',
         'https://play.google.com/store/apps/details?id=com.healthosyst.app',
-        JSON.stringify(['Flutter', 'WebRTC', 'Telemedicine', 'iOS', 'Android', 'Firebase']),
+        JSON.stringify(['Flutter', 'WebRTC', 'Telemedicine', 'Java Spring Boot', 'iOS', 'Android']),
         true,
-        3
+        5
       ],
       [
         'Coach-By-App Fitness Suite',
@@ -101,61 +126,22 @@ async function seedAcroCoderData() {
         'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
         'https://apps.apple.com/in/app/coach-by-app/id6467117400',
         'https://play.google.com/store/apps/details?id=com.coachbyapp.app',
-        JSON.stringify(['Flutter', 'Socket.IO', 'Stripe', 'Fitness', 'iOS', 'Android']),
-        true,
-        4
-      ],
-      [
-        'audio_waveform_recorder (Pub.dev Package)',
-        'audio-waveform-recorder-pkg',
-        'Flutter open-source package to record audio with real-time dynamic waveform rendering and customizable visualizer bars.',
-        'High-performance audio recording plugin for Flutter that renders smooth, real-time 60fps decibel waveforms with customizable visual styles and audio formats.',
-        'Open Source',
-        'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80',
-        'https://pub.dev/packages/audio_waveform_recorder',
-        'https://github.com/Naimish-Kumar/audio_waveform_recorder',
-        JSON.stringify(['Dart', 'Flutter Package', 'Audio', 'Waveforms', 'Pub.dev', 'Open Source']),
-        true,
-        5
-      ],
-      [
-        'chat_secure_guard (Pub.dev Package)',
-        'chat-secure-guard-pkg',
-        'End-to-end security plugin providing Double Ratchet encryption and key management for Flutter chat apps.',
-        'Cryptographic security plugin bringing end-to-end Signal-protocol style Double Ratchet encryption, ephemeral key exchanges, and secure local storage to Flutter applications.',
-        'Open Source',
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
-        'https://pub.dev/packages/chat_secure_guard',
-        'https://github.com/Naimish-Kumar/chat_secure_guard',
-        JSON.stringify(['Dart', 'Cryptography', 'Double Ratchet', 'Security', 'Pub.dev', 'Open Source']),
+        JSON.stringify(['Flutter', 'Socket.IO', 'Stripe', 'Java Microservices', 'iOS', 'Android']),
         true,
         6
       ],
       [
-        'flutter_performance_optimizer (Pub.dev)',
-        'flutter-perf-optimizer-pkg',
-        'Diagnostic profiling tool providing real-time FPS stats, widget rebuild counts, and memory leak alerts.',
-        'Developer diagnostic overlay that tracks frame render times in sub-16ms intervals, monitors unneeded widget rebuilds, and warns about memory leaks in debug/profile modes.',
-        'Open Source',
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-        'https://pub.dev/packages/flutter_performance_optimizer',
-        'https://github.com/Naimish-Kumar/flutter_performance_optimizer',
-        JSON.stringify(['Dart', 'Performance', 'DevTools', 'Profiling', 'Pub.dev']),
+        'DoodleJoy - Creative Canvas Web & Mobile App',
+        'doodlejoy-canvas',
+        'Interactive web & mobile drawing application for kids featuring magic brushes, smooth canvas rendering, and secure sharing.',
+        'Interactive drawing application for web and mobile featuring sub-16ms custom canvas rendering, glow shaders, multi-touch brush engines, and cloud galleries.',
+        'Shipped App',
+        'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80',
+        'https://doodlejoy.fun/',
+        'https://play.google.com/store/apps/details?id=com.acrocoder.doodlejoy&hl=en_IN',
+        JSON.stringify(['Flutter', 'Canvas 60fps', 'Web', 'Android', 'Clean Architecture', 'BLoC']),
         true,
         7
-      ],
-      [
-        'flutter_architecture_generator (CLI)',
-        'flutter-arch-generator-pkg',
-        'CLI utility to quickly generate Clean Architecture folder structures, BLoCs, and repositories in seconds.',
-        'Command-line code scaffolding tool that generates standardized Clean Architecture folders, domain use-cases, data sources, and BLoC state classes in seconds.',
-        'Open Source',
-        'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=1200&q=80',
-        'https://pub.dev/packages/flutter_architecture_generator',
-        'https://github.com/Naimish-Kumar/flutter_architecture_generator',
-        JSON.stringify(['Dart CLI', 'Clean Architecture', 'Code Generator', 'BLoC', 'Pub.dev']),
-        true,
-        8
       ]
     ];
 
@@ -169,16 +155,16 @@ async function seedAcroCoderData() {
     // 4. Update Skills
     await conn.query('DELETE FROM skills');
     const skills = [
-      ['Flutter & Dart', 'Core Mobile', 98, 'Smartphone', 1, true],
-      ['BLoC / Clean Architecture', 'Architecture', 95, 'Layers', 2, true],
-      ['Team Leadership & Code Reviews', 'Leadership', 94, 'ShieldCheck', 3, true],
-      ['Firebase / Node / Socket.IO', 'Backend & Realtime', 92, 'Server', 4, true],
-      ['Payment Gateways (Stripe/Razorpay)', 'Fintech', 90, 'CreditCard', 5, true],
-      ['WebRTC & Audio/Video Streaming', 'Media', 88, 'Video', 6, true],
-      ['CI/CD & Store Publishing', 'DevOps', 90, 'Cloud', 7, true],
-      ['Native Android (Kotlin/Java)', 'Native Mobile', 84, 'Code', 8, true],
-      ['Three.js & 3D WebGL Graphics', '3D & Graphics', 86, 'Cpu', 9, true],
-      ['Next.js & Fullstack Web', 'Fullstack', 89, 'Globe', 10, true],
+      ['Java 21 & Spring Boot 3', 'Enterprise Backend', 96, 'Server', 1, true],
+      ['Model Context Protocol (MCP) & AI', 'AI & Agentic Systems', 95, 'Sparkles', 2, true],
+      ['Flutter & Dart (60FPS BLoC)', 'Core Mobile', 98, 'Smartphone', 3, true],
+      ['Spring Security & OAuth2 / JWT', 'Security & Microservices', 94, 'ShieldCheck', 4, true],
+      ['Next.js 14 / React 19 & TypeScript', 'Fullstack Web', 96, 'Globe', 5, true],
+      ['PostgreSQL & MySQL / JPA Hibernate', 'Databases', 94, 'Database', 6, true],
+      ['Apache Kafka & Redis Streaming', 'Event Streaming', 90, 'Activity', 7, true],
+      ['Three.js & 3D WebGL Shaders', '3D Graphics', 92, 'Cpu', 8, true],
+      ['Docker, K8s & CI/CD Pipelines', 'DevOps & Cloud', 91, 'Cloud', 9, true],
+      ['WebRTC & Socket.IO Realtime', 'Realtime Media', 93, 'Video', 10, true],
     ];
 
     for (const s of skills) {
@@ -188,43 +174,43 @@ async function seedAcroCoderData() {
       );
     }
 
-    // 5. Update Experience
+    // 5. Update Experience (7 Years Total: 3 Years Java @ Spirehub, 2+ Years Flutter @ Spirehub, Flutter Lead @ Spirehub)
     await conn.query('DELETE FROM experience');
     const experiences = [
       [
         'Spirehub Software Pvt Ltd',
-        'Flutter Team Lead',
-        'India',
+        'Flutter Team Lead & Senior Full-Stack Architect',
+        'Lucknow, India / Remote',
         'Full-time',
-        'Jun 2025',
-        'Present',
+        '2024-06-01',
+        null,
         true,
-        'Leading the mobile engineering team, conducting code reviews, mentoring developers, overseeing clean architecture implementations, managing real-time Socket.IO integrations, and streamlining automated CI/CD deployments.',
-        JSON.stringify(['Flutter', 'BLoC', 'Team Leadership', 'Clean Architecture', 'CI/CD', 'Socket.IO']),
+        'Leading cross-platform mobile and backend engineering teams, architecting Flutter apps and Java Spring Boot microservices, building AI agent workflows with Model Context Protocol (MCP) servers, mentoring developers, and managing CI/CD automated deployments.',
+        JSON.stringify(['Flutter', 'Java Spring Boot', 'Model Context Protocol (MCP)', 'AI Agents', 'BLoC', 'Docker', 'CI/CD']),
         1
       ],
       [
         'Spirehub Software Pvt Ltd',
-        'Flutter Developer',
-        'India',
+        'Senior Flutter & Full-Stack Developer',
+        'Lucknow, India',
         'Full-time',
-        'Oct 2023',
-        'Jun 2025',
+        '2022-10-01',
+        '2024-06-01',
         false,
-        'Architected and deployed 4+ production mobile applications for iOS and Android. Integrated payment gateways, optimized app render performance (<16ms frame times), and built real-time messaging features.',
-        JSON.stringify(['Flutter', 'Dart', 'Stripe', 'WebRTC', 'iOS', 'Android']),
+        'Architected and deployed 6+ production mobile applications for iOS and Android with sub-16ms 60fps rendering. Integrated payment gateways, optimized rendering engines, implemented real-time Socket.IO/WebRTC pipelines, and built high-performance backends.',
+        JSON.stringify(['Flutter', 'Dart', 'Clean Architecture', 'BLoC', 'WebSockets', 'Payment Gateways', 'iOS/Android']),
         2
       ],
       [
-        'SmartInternz',
-        'Android Developer Intern',
-        'Remote',
-        'Internship',
-        'May 2021',
-        'Aug 2021',
+        'Spirehub Software Pvt Ltd',
+        'Java / Spring Boot Developer',
+        'Lucknow, India',
+        'Full-time',
+        '2019-07-01',
+        '2022-10-01',
         false,
-        'Built native Android applications using Kotlin and Material Design components. Integrated RESTful microservices and conducted automated unit and integration testing.',
-        JSON.stringify(['Kotlin', 'Android SDK', 'REST APIs', 'Unit Testing']),
+        'Engineered 3 years of enterprise Java Spring Boot backend microservices with Spring Security, Hibernate/JPA, PostgreSQL, MySQL, Redis caching, and Kafka event streaming. Built scalable RESTful APIs powering high-traffic enterprise platforms and mobile backends.',
+        JSON.stringify(['Java 21', 'Spring Boot', 'Spring Security', 'Hibernate/JPA', 'PostgreSQL', 'MySQL', 'Kafka', 'Redis', 'Microservices', 'REST APIs']),
         3
       ]
     ];
@@ -236,12 +222,12 @@ async function seedAcroCoderData() {
       `, exp);
     }
 
-    // 6. Update Education
+    // 6. Update Education (2015 – 2019)
     await conn.query('DELETE FROM education');
     await conn.query(`
       INSERT INTO education (institution, degree, field_of_study, start_year, end_year, grade, description, display_order)
       VALUES
-      ('Galgotias University', 'B.Tech in Computer Science & Engineering', 'Cloud Computing & Distributed Systems', '2019', '2023', 'First Class with Distinction', 'Specialized in Cloud Computing and Distributed Systems. Capstone Project: Secure Multi-Tenant Cloud Storage Engine with End-to-End Encryption.', 1)
+      ('Galgotias University', 'B.Tech in Computer Science & Engineering', 'Cloud Computing & Distributed Systems', '2015', '2019', 'First Class with Distinction', 'Core coursework in Algorithms, Distributed Systems, Software Engineering, Database Systems, and Cloud Computing. Capstone Project: Secure Multi-Tenant Cloud Storage Engine with End-to-End Encryption.', 1)
     `);
 
     // 7. Update Site Settings

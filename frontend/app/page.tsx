@@ -54,7 +54,7 @@ export default function Home() {
             <div className="flex items-center gap-2.5 shrink-0">
               <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span className="font-mono text-xs sm:text-sm font-bold tracking-widest text-[#f5eedf] whitespace-nowrap">
-                FILE \ 2026 :: NAIMISH VERMA
+                PORTFOLIO \ 2026 :: NAIMISH VERMA
               </span>
             </div>
 
@@ -93,21 +93,6 @@ export default function Home() {
             </nav>
 
             <div className="flex items-center gap-2 shrink-0 font-mono text-xs whitespace-nowrap">
-              <button
-                onClick={() => {
-                  const s = soundFx.toggleMute();
-                  setSoundActive(s);
-                }}
-                className={`px-3 py-1.5 rounded-lg border transition-all flex items-center gap-1.5 ${
-                  soundActive
-                    ? 'bg-[#3d5a45] text-emerald-100 border-emerald-600 shadow-sm'
-                    : 'bg-slate-800 text-slate-400 border-slate-700'
-                }`}
-              >
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>{soundActive ? 'SFX ON' : 'SFX OFF'}</span>
-              </button>
-
               <button
                 onClick={() => {
                   soundFx.playStamp();
@@ -218,16 +203,10 @@ export default function Home() {
         </section>
 
         {/* Footer Closing */}
-        <footer className="w-full border-t border-[#233035] py-10 text-center font-mono text-xs text-slate-500 relative z-20 bg-[#0e1315]">
-          <div className="max-w-4xl mx-auto px-4 space-y-2">
+        <footer className="w-full border-t border-[#233035] py-8 text-center font-mono text-xs text-slate-500 relative z-20 bg-[#0e1315]">
+          <div className="max-w-4xl mx-auto px-4">
             <p className="text-slate-400 font-bold">
-              © 2026 Naimish Kumar Verma ~ Flutter Team Lead & Mobile Creative
-            </p>
-            <p className="text-[11px] text-slate-500">
-              Crafted with Next.js 14, Three.js WebGL, GSAP Lenis Motion & Hostinger Cloud
-            </p>
-            <p className="text-[10px] text-slate-600">
-              Tactile Dossier Design System inspired by Behance 2026 Aesthetic Standards
+              © 2026 Naimish Kumar Verma // Flutter Team Lead & Full-Stack Architect
             </p>
           </div>
         </footer>

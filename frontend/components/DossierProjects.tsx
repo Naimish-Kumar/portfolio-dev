@@ -280,7 +280,7 @@ export default function DossierProjects({
                       className="px-3.5 py-1.5 rounded-lg bg-emerald-800 hover:bg-emerald-700 text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-md transition-colors"
                     >
                       <Globe className="w-3.5 h-3.5" />
-                      <span>LAUNCH APP ↵</span>
+                      <span>{currentProject.live_url.includes('apple.com') ? 'APP STORE ↵' : currentProject.live_url.includes('play.google.com') ? 'PLAY STORE ↵' : 'LAUNCH APP ↵'}</span>
                     </a>
                   )}
                   {currentProject.demo_url && currentProject.demo_url !== currentProject.live_url && (
@@ -290,8 +290,8 @@ export default function DossierProjects({
                       rel="noopener noreferrer"
                       className="px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-md transition-colors"
                     >
-                      <ExternalLink className="w-3.5 h-3.5" />
-                      <span>STORE DEMO</span>
+                      <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>{currentProject.demo_url.includes('play.google.com') ? 'PLAY STORE ↵' : currentProject.demo_url.includes('apple.com') ? 'APP STORE ↵' : 'STORE DEMO'}</span>
                     </a>
                   )}
                   {currentProject.github_url && (
@@ -299,10 +299,23 @@ export default function DossierProjects({
                       href={currentProject.github_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-900 font-mono text-xs font-bold flex items-center gap-1.5 border border-slate-400 transition-colors"
+                      className={`px-3 py-1.5 rounded-lg font-mono text-xs font-bold flex items-center gap-1.5 transition-colors ${
+                        currentProject.github_url.includes('apple.com')
+                          ? 'bg-blue-800 hover:bg-blue-700 text-white shadow-md'
+                          : 'bg-slate-200 hover:bg-slate-300 text-slate-900 border border-slate-400'
+                      }`}
                     >
-                      <Github className="w-3.5 h-3.5" />
-                      <span>SOURCE</span>
+                      {currentProject.github_url.includes('apple.com') ? (
+                        <>
+                          <Smartphone className="w-3.5 h-3.5 text-cyan-300" />
+                          <span>APP STORE ↵</span>
+                        </>
+                      ) : (
+                        <>
+                          <Github className="w-3.5 h-3.5" />
+                          <span>SOURCE</span>
+                        </>
+                      )}
                     </a>
                   )}
                 </div>

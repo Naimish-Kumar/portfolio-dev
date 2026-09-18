@@ -202,7 +202,7 @@ export default function ThreeHeroScene() {
     >
       <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 via-cyan-500/10 to-transparent rounded-full blur-2xl pointer-events-none" />
       <div className="absolute bottom-2 text-center text-[10px] font-mono text-cyan-400/70 tracking-wider uppercase pointer-events-none">
-        ✦ Interactive 3D Hologram (Hover & Drag) ✦
+        [ Interactive 3D Hologram // Hover & Drag ]
       </div>
     </div>
   );

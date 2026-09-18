@@ -1030,7 +1030,7 @@ export default function AdminPage() {
                         {project.category}
                       </span>
                       {project.is_featured && (
-                        <span className="text-[11px] font-mono text-amber-400 font-bold">★ Featured</span>
+                        <span className="text-[11px] font-mono text-amber-400 font-bold">[Featured]</span>
                       )}
                     </div>
                     <h3 className="text-lg font-heading font-bold text-white mb-1">{project.title}</h3>

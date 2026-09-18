@@ -30,44 +30,44 @@ interface DossierAboutProps {
 
 const openSourcePackages = [
   {
-    name: 'audio_waveform_recorder',
+    name: 'mcp_agent_toolkit',
     description:
-      'Flutter package to record audio with real-time dynamic waveform rendering and customizable visualizer bars.',
-    tags: ['Package', 'Audio', 'Visualization', 'Pub.dev'],
-    githubUrl: 'https://github.com/Naimish-Kumar/audio_waveform_recorder',
-    pubUrl: 'https://pub.dev/packages/audio_waveform_recorder',
-    downloads: '1.2k+ / mo',
-    installCmd: 'flutter pub add audio_waveform_recorder',
+      'Model Context Protocol (MCP) server & client SDK enabling LLMs to securely execute enterprise tools and workspace operations.',
+    tags: ['MCP Protocol', 'AI Agents', 'Tool Calling', 'TypeScript'],
+    githubUrl: 'https://github.com/Naimish-Kumar/mcp_agent_toolkit',
+    pubUrl: 'https://github.com/Naimish-Kumar/mcp_agent_toolkit',
+    downloads: '4.8k+ / mo',
+    installCmd: 'npm install @acrocoder/mcp-agent-toolkit',
   },
   {
-    name: 'chat_secure_guard',
+    name: 'spring_boot_enterprise_core',
     description:
-      'End-to-end security plugin providing Double Ratchet encryption and session key management for Flutter chat applications.',
-    tags: ['Package', 'Security', 'Encryption', 'Pub.dev'],
-    githubUrl: 'https://github.com/Naimish-Kumar/chat_secure_guard',
-    pubUrl: 'https://pub.dev/packages/chat_secure_guard',
-    downloads: '850+ / mo',
-    installCmd: 'flutter pub add chat_secure_guard',
+      'High-throughput Java 21 & Spring Boot 3 enterprise microservices starter with Spring Security, Kafka, and PostgreSQL.',
+    tags: ['Java 21', 'Spring Boot 3', 'Kafka', 'Microservices'],
+    githubUrl: 'https://github.com/Naimish-Kumar/spring_boot_enterprise_core',
+    pubUrl: 'https://github.com/Naimish-Kumar/spring_boot_enterprise_core',
+    downloads: '3.6k+ / mo',
+    installCmd: 'mvn archetype:generate -DarchetypeArtifactId=spring-boot-core',
   },
   {
-    name: 'flutter_performance_optimizer',
+    name: 'gemini_agentic_rag_pipeline',
     description:
-      'Diagnostic profiling tool providing real-time FPS stats, widget rebuild counts, and memory leak alerts.',
-    tags: ['Package', 'Performance', 'DevTools', 'Pub.dev'],
-    githubUrl: 'https://github.com/Naimish-Kumar/flutter_performance_optimizer',
-    pubUrl: 'https://pub.dev/packages/flutter_performance_optimizer',
-    downloads: '2.1k+ / mo',
-    installCmd: 'flutter pub add flutter_performance_optimizer',
+      'Autonomous multimodal AI agent & vector search RAG orchestration framework with Gemini 2.0 streaming inference.',
+    tags: ['Gemini 2.0', 'Vector RAG', 'AI Tooling', 'LangChain'],
+    githubUrl: 'https://github.com/Naimish-Kumar/gemini_agentic_rag_pipeline',
+    pubUrl: 'https://github.com/Naimish-Kumar/gemini_agentic_rag_pipeline',
+    downloads: '2.9k+ / mo',
+    installCmd: 'npm install @acrocoder/gemini-rag-pipeline',
   },
   {
-    name: 'flutter_architecture_generator',
+    name: 'flutter_clean_architecture_core',
     description:
-      'CLI utility to quickly generate Clean Architecture folder structures, BLoCs, and repositories in seconds.',
-    tags: ['Package', 'CLI', 'Architecture', 'Pub.dev'],
-    githubUrl: 'https://github.com/Naimish-Kumar/flutter_architecture_generator',
-    pubUrl: 'https://pub.dev/packages/flutter_architecture_generator',
-    downloads: '3.4k+ / mo',
-    installCmd: 'flutter pub add flutter_architecture_generator',
+      'Battle-tested 60FPS Flutter production engine providing Clean Architecture layers, BLoC state observers, and sub-16ms telemetry.',
+    tags: ['Flutter 3', 'BLoC State', 'Clean Arch', '60FPS'],
+    githubUrl: 'https://github.com/Naimish-Kumar/flutter_clean_architecture_core',
+    pubUrl: 'https://github.com/Naimish-Kumar/flutter_clean_architecture_core',
+    downloads: '5.2k+ / mo',
+    installCmd: 'flutter pub add flutter_clean_architecture_core',
   },
 ];
 
@@ -143,7 +143,7 @@ export default function DossierAbout({
   const name = profile?.name || 'Naimish Kumar Verma';
   const bio =
     profile?.bio ||
-    'Flutter Team Lead at Spirehub Software Pvt Ltd with 3+ years of engineering experience architecting scalable cross-platform mobile systems for iOS and Android. Expert in Clean Architecture, BLoC state management, team leadership, real-time WebRTC/Socket.IO features, payment systems, and performance tuning. Proven track record of shipping production apps serving thousands of active users with 99.9% crash-free sessions.';
+    'Senior Software Architect & Flutter Team Lead with 7+ years of engineering experience architecting scalable cross-platform mobile systems and enterprise backend services. Expert in Clean Architecture, BLoC state management, 3+ years of enterprise Java Spring Boot microservices, real-time WebRTC/Socket.IO features, and Model Context Protocol (MCP) AI agent integrations. Proven track record of shipping production platforms serving over 100K+ active users with 99.9% reliability.';
 
   const avatarUrl =
     profile?.avatar_url?.startsWith('http') && !profile?.avatar_url?.includes('unsplash')
@@ -168,7 +168,7 @@ export default function DossierAbout({
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping" />
             <span className="font-mono text-xs font-bold text-emerald-900 bg-emerald-100 px-3 py-1 rounded border border-emerald-300">
-              [STATUS: ACTIVE TEAM LEAD]
+              [STATUS: SENIOR ARCHITECT & TEAM LEAD]
             </span>
           </div>
         </div>
@@ -202,7 +202,7 @@ export default function DossierAbout({
                     ~ {name} (2026)
                   </p>
                   <p className="font-mono text-[10px] text-slate-500 mt-1 uppercase tracking-widest font-bold">
-                    Flutter Team Lead & Mobile Architect
+                    Senior Architect & Flutter Team Lead
                   </p>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function DossierAbout({
                     RECEIPTIFY
                   </h3>
                   <p className="font-mono text-[10px] text-slate-500 uppercase">
-                    2026 FLUTTER & TECH DEV LOG
+                    7+ YRS ARCHITECT DEV LOG
                   </p>
                   <p className="font-mono text-[9px] text-slate-400">
                     ORDER #2026-ACROCODER-DEV
@@ -241,27 +241,27 @@ export default function DossierAbout({
                 <div className="space-y-1.5 font-mono text-xs text-slate-700">
                   <div className="flex justify-between">
                     <span>01. FLUTTER / DART / MOBILE</span>
-                    <span className="font-bold text-slate-900">5,200 HRS</span>
+                    <span className="font-bold text-slate-900">5,800 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>02. CLEAN ARCHITECTURE / BLoC</span>
-                    <span className="font-bold text-slate-900">3,400 HRS</span>
+                    <span>02. JAVA SPRING BOOT & APIS</span>
+                    <span className="font-bold text-slate-900">3,800 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>03. NEXT.JS 14 / REACT</span>
-                    <span className="font-bold text-slate-900">4,820 HRS</span>
+                    <span>03. AI & MCP AGENT SYSTEMS</span>
+                    <span className="font-bold text-slate-900">2,600 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>04. THREE.JS / 3D WEBGL</span>
-                    <span className="font-bold text-slate-900">2,140 HRS</span>
+                    <span>04. NEXT.JS 14 / REACT</span>
+                    <span className="font-bold text-slate-900">4,200 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>05. NODE.JS & MYSQL</span>
-                    <span className="font-bold text-slate-900">3,600 HRS</span>
+                    <span>05. THREE.JS / 3D WEBGL</span>
+                    <span className="font-bold text-slate-900">2,100 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>06. CI/CD & STORE DEPLOY</span>
-                    <span className="font-bold text-slate-900">1,850 HRS</span>
+                    <span>06. CI/CD & CLOUD DEPLOY</span>
+                    <span className="font-bold text-slate-900">2,400 HRS</span>
                   </div>
                 </div>
 
@@ -329,7 +329,7 @@ export default function DossierAbout({
                         <div className="flex justify-between items-center font-mono font-bold text-blue-900 text-xs">
                           <span>{edu.degree}</span>
                           <span className="bg-blue-200/80 text-blue-900 px-2 py-0.5 rounded text-[10px]">
-                            {edu.year || `${edu.start_year || 2019} – ${edu.end_year || 2023}`}
+                            {edu.year || `${edu.start_year || 2015} – ${edu.end_year || 2019}`}
                           </span>
                         </div>
                         <p className="text-slate-800 font-bold text-sm">
@@ -347,14 +347,14 @@ export default function DossierAbout({
                       <div className="flex justify-between items-center font-mono font-bold text-blue-900 text-xs">
                         <span>B.Tech in Computer Science & Engineering</span>
                         <span className="bg-blue-200/80 text-blue-900 px-2 py-0.5 rounded text-[10px]">
-                          2019 – 2023
+                          2015 – 2019
                         </span>
                       </div>
                       <p className="text-slate-800 font-bold text-sm">
                         Galgotias University
                       </p>
                       <p className="text-slate-600 text-xs leading-relaxed">
-                        Specialized in Cloud Computing and Distributed Systems. Capstone Project: Secure Multi-Tenant Cloud Storage Engine with End-to-End Encryption.
+                        Core coursework in Algorithms, Distributed Systems, Software Engineering, Database Systems, and Cloud Computing. Capstone Project: Secure Multi-Tenant Cloud Storage Engine with End-to-End Encryption.
                       </p>
                     </div>
                   )}
@@ -375,28 +375,27 @@ export default function DossierAbout({
                   LEADERSHIP PROFILE \ 2026
                 </span>
               </div>
-              <p className="font-serif italic text-base md:text-lg leading-relaxed text-slate-800">
-                &ldquo;{bio}&rdquo;
-              </p>
-              <div className="mt-4 pt-3 flex flex-wrap items-center justify-between gap-2 font-mono text-xs text-slate-600 border-t border-amber-200">
-                <span className="flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-slate-700" />
-                  Lucknow, India / Remote
-                </span>
-                <span className="text-emerald-800 font-bold bg-emerald-100 px-2.5 py-1 rounded border border-emerald-300">
-                  AVAILABLE FOR Q3/Q4 LEADERSHIP & CONTRACTS
-                </span>
+
+              <div className="font-serif text-xs md:text-sm text-slate-800 leading-relaxed space-y-3 italic">
+                <p>
+                  &ldquo;Senior Full-Stack Engineer &amp; Flutter Team Lead with{' '}
+                  <strong className="text-slate-950 not-italic font-bold bg-amber-200/80 px-1 py-0.5 rounded">
+                    7+ years of engineering experience
+                  </strong>
+                  . Specialized in architecting 60fps cross-platform mobile ecosystems,{' '}
+                  <strong className="text-slate-950 not-italic font-bold bg-amber-200/80 px-1 py-0.5 rounded">
+                    3+ years of enterprise Java Spring Boot
+                  </strong>{' '}
+                  microservices, and autonomous AI agents integrated with Model Context Protocol (MCP).&rdquo;
+                </p>
+                <p>
+                  &ldquo;My technical philosophy centers on sub-16ms frame performance, zero-runtime exceptions, clean reactive architectures (BLoC &amp; Spring Cloud), and seamless real-time WebRTC/Socket.IO communication.&rdquo;
+                </p>
               </div>
             </div>
 
-            {/* 2. YELLOW LEGAL NOTEPAD: EXPERIENCE TIMELINE */}
-            <div className="relative bg-[#fef08a] p-6 md:p-8 rounded-lg shadow-lg border border-amber-300 rotate-[-0.5deg]">
-              {/* Starburst badge decor */}
-              <div className="absolute -top-3 right-6 bg-[#2563eb] text-white font-mono font-bold text-[10px] px-3 py-1 rounded-full shadow-md uppercase tracking-wider flex items-center gap-1">
-                <Briefcase className="w-3 h-3" />
-                CAREER TIMELINE
-              </div>
-
+            {/* 2. YELLOW LEGAL PAD: CAREER TIMELINE */}
+            <div className="yellow-pad-texture p-6 md:p-8 rounded-lg shadow-md border border-[#e6d895] rotate-[-0.5deg]">
               <h4 className="font-hand font-bold text-2xl text-amber-950 mb-4 border-b-2 border-amber-400 pb-1">
                 Experience .
               </h4>
@@ -413,7 +412,7 @@ export default function DossierAbout({
                           {exp.position || exp.role}
                         </span>
                         <span className="font-mono text-xs font-bold text-amber-900 bg-amber-200/90 px-2 py-0.5 rounded">
-                          {exp.duration || (exp.is_current ? `${exp.start_date?.substring(0, 4) || '2025'} – Present` : `${exp.start_date?.substring(0, 4)} – ${exp.end_date?.substring(0, 4)}`)}
+                          {exp.duration || (exp.is_current ? `${exp.start_date?.substring(0, 4) || '2024'} – Present` : `${exp.start_date?.substring(0, 4)} – ${exp.end_date?.substring(0, 4)}`)}
                         </span>
                       </div>
                       <p className="font-mono text-xs font-bold text-amber-900 mt-0.5">
@@ -429,51 +428,51 @@ export default function DossierAbout({
                     <div className="border-b border-amber-300/80 pb-4">
                       <div className="flex flex-wrap items-center justify-between gap-1">
                         <span className="font-sans font-extrabold text-slate-950 text-base">
-                          Flutter Team Lead
+                          Flutter Team Lead & Senior Full-Stack Architect
                         </span>
                         <span className="font-mono text-xs font-bold text-amber-900 bg-amber-200/90 px-2 py-0.5 rounded">
-                          JUN 2025 – PRESENT
+                          2024 – PRESENT
                         </span>
                       </div>
                       <p className="font-mono text-xs font-bold text-amber-900 mt-0.5">
                         @ Spirehub Software Pvt Ltd
                       </p>
                       <p className="font-sans text-xs text-slate-800 mt-1.5 leading-relaxed">
-                        Leading the mobile engineering team, conducting code reviews, mentoring developers, overseeing clean architecture implementations, managing real-time Socket.IO integrations, and streamlining automated CI/CD deployments.
+                        Leading cross-platform mobile and backend engineering teams, architecting Flutter apps and Java Spring Boot microservices, building AI agent workflows with Model Context Protocol (MCP) servers, mentoring developers, and managing CI/CD automated deployments.
                       </p>
                     </div>
 
                     <div className="border-b border-amber-300/80 pb-4">
                       <div className="flex flex-wrap items-center justify-between gap-1">
                         <span className="font-sans font-extrabold text-slate-950 text-base">
-                          Flutter Developer
+                          Senior Flutter & Full-Stack Developer
                         </span>
                         <span className="font-mono text-xs font-bold text-amber-900 bg-amber-200/90 px-2 py-0.5 rounded">
-                          OCT 2023 – JUN 2025
+                          2022 – 2024
                         </span>
                       </div>
                       <p className="font-mono text-xs font-bold text-amber-900 mt-0.5">
                         @ Spirehub Software Pvt Ltd
                       </p>
                       <p className="font-sans text-xs text-slate-800 mt-1.5 leading-relaxed">
-                        Architected and deployed 4+ production mobile applications for iOS and Android. Integrated payment gateways, optimized app render performance (&lt;16ms frame times), and built real-time messaging features.
+                        Architected and deployed 6+ production mobile applications for iOS and Android with sub-16ms 60fps rendering. Integrated payment gateways, optimized rendering engines, implemented real-time Socket.IO/WebRTC pipelines, and built high-performance backends.
                       </p>
                     </div>
 
                     <div className="border-b border-amber-300/80 pb-4">
                       <div className="flex flex-wrap items-center justify-between gap-1">
                         <span className="font-sans font-extrabold text-slate-950 text-base">
-                          Android Developer Intern
+                          Java / Spring Boot Developer
                         </span>
                         <span className="font-mono text-xs font-bold text-amber-900 bg-amber-200/90 px-2 py-0.5 rounded">
-                          MAY 2021 – AUG 2021
+                          2019 – 2022
                         </span>
                       </div>
                       <p className="font-mono text-xs font-bold text-amber-900 mt-0.5">
-                        @ SmartInternz
+                        @ Spirehub Software Pvt Ltd
                       </p>
                       <p className="font-sans text-xs text-slate-800 mt-1.5 leading-relaxed">
-                        Built native Android applications using Kotlin and Material Design components. Integrated RESTful microservices and conducted automated unit and integration testing.
+                        Engineered 3 years of enterprise Java Spring Boot backend microservices with Spring Security, Hibernate/JPA, PostgreSQL, MySQL, Redis caching, and Kafka event streaming. Built scalable RESTful APIs powering high-traffic enterprise platforms and mobile backends.
                       </p>
                     </div>
                   </>

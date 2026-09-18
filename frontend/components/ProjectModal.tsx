@@ -39,7 +39,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           className="absolute top-4 right-4 font-mono text-xs font-bold px-3 py-1.5 rounded bg-red-700 text-white hover:bg-red-800 transition-colors shadow"
           aria-label="Close dossier"
         >
-          [ CLOSE ✕ ]
+          [ CLOSE X ]
         </button>
 
         {/* Dossier Header Info */}
@@ -80,7 +80,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             ))}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {project.live_url && (
               <a
                 href={project.live_url}
@@ -89,7 +89,18 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 onClick={() => soundFx.playKeyClick()}
                 className="bg-[#3d5a45] hover:bg-[#4d664b] text-white px-4 py-2 rounded font-bold shadow transition-colors"
               >
-                Live Production ↗
+                {project.live_url.includes('apple.com') ? 'App Store ↗' : project.live_url.includes('play.google.com') ? 'Google Play ↗' : 'Live Platform ↗'}
+              </a>
+            )}
+            {project.demo_url && project.demo_url !== project.live_url && (
+              <a
+                href={project.demo_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => soundFx.playKeyClick()}
+                className="bg-[#1e3a8a] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded font-bold shadow transition-colors"
+              >
+                {project.demo_url.includes('play.google.com') ? 'Google Play Store ↗' : project.demo_url.includes('apple.com') ? 'Apple App Store ↗' : 'Demo Link ↗'}
               </a>
             )}
             {project.github_url && (
@@ -100,7 +111,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 onClick={() => soundFx.playKeyClick()}
                 className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded font-bold shadow transition-colors"
               >
-                Source Repository ↗
+                {project.github_url.includes('apple.com') ? 'Apple App Store ↗' : 'Source Repository ↗'}
               </a>
             )}
           </div>

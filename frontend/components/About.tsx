@@ -107,8 +107,8 @@ export default function About({ profileData }: AboutProps) {
                 </div>
                 <div>
                   <div className="text-[10px] font-mono uppercase text-slate-500">Email</div>
-                  <a href="mailto:vnaimishkumar@gmail.com" className="text-xs font-bold text-white hover:text-cyan-400 transition-colors">
-                    vnaimishkumar@gmail.com
+                  <a href="mailto:acrocoader@gmail.com" className="text-xs font-bold text-white hover:text-cyan-400 transition-colors">
+                    acrocoader@gmail.com
                   </a>
                 </div>
               </div>

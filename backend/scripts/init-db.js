@@ -56,7 +56,7 @@ async function initDB() {
         primary_button_link VARCHAR(255) DEFAULT '#projects',
         secondary_button_text VARCHAR(100) DEFAULT 'Get in Touch',
         secondary_button_link VARCHAR(255) DEFAULT '#contact',
-        badge_text VARCHAR(100) DEFAULT 'Available for new opportunities 🚀',
+        badge_text VARCHAR(100) DEFAULT 'Available for new opportunities',
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     `);
@@ -184,7 +184,7 @@ async function initDB() {
           'I am a Flutter Team Lead & full-stack engineer with hands-on expertise building cross-platform mobile architectures, production-ready cloud systems, and modern interactive applications using Flutter, Dart, Next.js, Node.js, and MySQL.',
           'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
           '#resume',
-          'vnaimishkumar@gmail.com',
+          'acrocoader@gmail.com',
           '+91 7784068641',
           'Lucknow, India',
           TRUE,
@@ -218,7 +218,7 @@ async function initDB() {
           '#projects',
           'Let\\'s Talk',
           '#contact',
-          '🚀 Available for exciting new roles & contracts'
+          'Available for exciting new roles & contracts'
         )
       `);
       console.log('Created default hero settings.');
@@ -322,28 +322,40 @@ async function initDB() {
     if (existingExp.length === 0) {
       const defaultExp = [
         [
-          'AcroCoder Technologies',
-          'Lead Fullstack Engineer',
-          'Remote',
+          'Spirehub Software Pvt Ltd',
+          'Flutter Team Lead & Senior Full-Stack Architect',
+          'Lucknow, India / Remote',
           'Full-time',
-          '2023',
-          'Present',
+          '2024-06-01',
+          null,
           true,
-          'Architected and deployed high-performance web applications and backend microservices. Led end-to-end fullstack development, database schema design, and CI/CD automation.',
-          JSON.stringify(['Next.js', 'Node.js', 'MySQL', 'System Architecture', 'DevOps']),
+          'Leading cross-platform mobile and backend engineering teams, architecting Flutter apps and Java Spring Boot microservices, building AI agent workflows with Model Context Protocol (MCP) servers, mentoring developers, and managing CI/CD automated deployments.',
+          JSON.stringify(['Flutter', 'Java Spring Boot', 'Model Context Protocol (MCP)', 'AI Agents', 'BLoC', 'Docker', 'CI/CD']),
           1
         ],
         [
-          'Digital Cloud Solutions',
-          'Senior Software Developer',
-          'Hybrid',
+          'Spirehub Software Pvt Ltd',
+          'Senior Flutter & Full-Stack Developer',
+          'Lucknow, India',
           'Full-time',
-          '2021',
-          '2023',
+          '2022-10-01',
+          '2024-06-01',
           false,
-          'Built scalable SaaS web platforms, integrated REST and GraphQL APIs, optimized database queries, and collaborated with cross-functional design and product teams.',
-          JSON.stringify(['React', 'TypeScript', 'Express', 'MySQL', 'Docker']),
+          'Architected and deployed 6+ production mobile applications for iOS and Android with sub-16ms 60fps rendering. Integrated payment gateways, optimized rendering engines, implemented real-time Socket.IO/WebRTC pipelines, and built high-performance backends.',
+          JSON.stringify(['Flutter', 'Dart', 'Clean Architecture', 'BLoC', 'WebSockets', 'Payment Gateways', 'iOS/Android']),
           2
+        ],
+        [
+          'Spirehub Software Pvt Ltd',
+          'Java / Spring Boot Developer',
+          'Lucknow, India',
+          'Full-time',
+          '2019-07-01',
+          '2022-10-01',
+          false,
+          'Engineered 3 years of enterprise Java Spring Boot backend microservices with Spring Security, Hibernate/JPA, PostgreSQL, MySQL, Redis caching, and Kafka event streaming. Built scalable RESTful APIs powering high-traffic enterprise platforms and mobile backends.',
+          JSON.stringify(['Java 21', 'Spring Boot', 'Spring Security', 'Hibernate/JPA', 'PostgreSQL', 'MySQL', 'Kafka', 'Redis', 'Microservices', 'REST APIs']),
+          3
         ]
       ];
 
@@ -363,7 +375,7 @@ async function initDB() {
       await conn.query(`
         INSERT INTO education (institution, degree, field_of_study, start_year, end_year, grade, description, display_order)
         VALUES
-        ('University of Technology', 'Bachelor of Technology (B.Tech)', 'Computer Science & Engineering', '2017', '2021', 'First Class with Distinction', 'Core coursework in Algorithms, Data Structures, Operating Systems, Database Management Systems, Computer Networks, and Cloud Computing.', 1)
+        ('Galgotias University', 'B.Tech in Computer Science & Engineering', 'Cloud Computing & Distributed Systems', '2015', '2019', 'First Class with Distinction', 'Core coursework in Algorithms, Distributed Systems, Software Engineering, Database Systems, and Cloud Computing. Capstone Project: Secure Multi-Tenant Cloud Storage Engine with End-to-End Encryption.', 1)
       `);
       console.log('Created default education.');
     }

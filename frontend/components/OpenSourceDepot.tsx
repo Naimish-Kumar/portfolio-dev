@@ -14,9 +14,6 @@ import {
   Activity,
   FolderTree,
   Waves,
-  Star,
-  Download,
-  CheckCircle2,
 } from 'lucide-react';
 
 interface PackageItem {
@@ -199,11 +196,11 @@ export default function OpenSourceDepot() {
               key={pkg.id}
               className="manila-card-jacket relative paper-texture rounded-2xl shadow-xl p-6 md:p-8 border border-[#d5c39e] text-slate-800 overflow-hidden transition-all duration-300 hover:shadow-2xl"
             >
-              {/* Physical Washi Tape Accents */}
+              {/* Retro decorative washi tapes */}
               <div className="absolute -top-3 left-10 w-28 h-5 washi-tape-yellow rotate-[-2deg] pointer-events-none z-10" />
               <div className="absolute -top-3 right-10 w-24 h-5 washi-tape-green rotate-[2deg] pointer-events-none z-10" />
 
-              {/* Card Header Strip */}
+              {/* Card Header */}
               <div className="flex flex-wrap items-center justify-between border-b-2 border-slate-300 pb-3 mb-5 gap-3">
                 <div className="flex items-center gap-2.5">
                   <span className="ink-stamp stamp-green text-[10px] font-bold">
@@ -217,7 +214,7 @@ export default function OpenSourceDepot() {
                   </span>
                 </div>
 
-                {/* External Action Links (Styled as Tactile Buttons) */}
+                {/* External Action Badges */}
                 <div className="flex items-center gap-2 font-mono text-xs">
                   <a
                     href={pkg.githubUrl}
@@ -228,6 +225,7 @@ export default function OpenSourceDepot() {
                     <Github className="w-3.5 h-3.5" />
                     <span>SOURCE</span>
                   </a>
+
                   <a
                     href={pkg.pubUrl}
                     target="_blank"
@@ -240,7 +238,7 @@ export default function OpenSourceDepot() {
                 </div>
               </div>
 
-              {/* Tagline & Description */}
+              {/* Title Tagline & Description */}
               <div className="mb-6">
                 <h4 className="font-sans text-base font-bold text-slate-900 mb-1">
                   {pkg.tagline}
@@ -250,9 +248,9 @@ export default function OpenSourceDepot() {
                 </p>
               </div>
 
-              {/* 2-Column Grid: Live Simulator + Code Snippet */}
+              {/* BENTO GRID: Interactive Demo Box + Code Box */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                {/* Left: Vintage CRT Screen Simulator Widget (6 cols) */}
+                {/* Left: Interactive Live Simulator Demo (6 cols) */}
                 <div className="lg:col-span-6 bg-[#10181b] p-4 rounded-xl border border-[#2c3d42] text-slate-200 flex flex-col justify-between shadow-inner">
                   <div className="flex items-center justify-between border-b border-[#25363b] pb-2 mb-3">
                     <span className="font-mono text-[11px] font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
@@ -265,17 +263,17 @@ export default function OpenSourceDepot() {
                     </span>
                   </div>
 
-                  {/* 1. Waveform Simulator */}
+                  {/* 1. Real-Time Audio Waveform Recorder Simulator */}
                   {pkg.demoType === 'waveform' && (
                     <div className="space-y-3 py-2">
-                      <div className="h-20 bg-[#090e10] rounded-lg p-3 flex items-center justify-center gap-1 overflow-hidden border border-[#1e2e33]">
-                        {[16, 32, 50, 75, 90, 60, 80, 100, 45, 70, 95, 85, 60, 40, 90, 70, 35, 65, 80, 45, 70, 35, 20, 50, 75, 95, 55, 30].map(
+                      <div className="flex items-end justify-between h-16 bg-[#090e10] p-2 rounded border border-[#2c3d42] gap-1 overflow-hidden">
+                        {[40, 65, 30, 85, 95, 45, 75, 100, 60, 40, 90, 70, 50, 80, 60, 95, 35, 70, 85, 45].map(
                           (h, i) => (
                             <div
                               key={i}
-                              className={`w-1 rounded-full transition-all duration-150 ${
+                              className={`flex-1 rounded-full transition-all duration-75 ${
                                 isRecordingWave
-                                  ? 'bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.7)]'
+                                  ? 'bg-gradient-to-t from-emerald-600 to-emerald-400'
                                   : 'bg-slate-700'
                               }`}
                               style={{
@@ -314,7 +312,7 @@ export default function OpenSourceDepot() {
                         value={cipherInput}
                         onChange={(e) => setCipherInput(e.target.value)}
                         placeholder="Type confidential brief..."
-                        className="w-full bg-[#090e10] border border-[#2c3d42] rounded p-2 text-emerald-300 focus:outline-none text-[11px]"
+                        className="w-full bg-[#090e10] border border-[#2c3d42] rounded p-2 text-emerald-300 focus:outline-hidden text-[11px]"
                       />
                       <label className="text-[10px] text-slate-400 uppercase tracking-wider block pt-1">
                         Double Ratchet Encrypted Envelope:
@@ -357,7 +355,7 @@ export default function OpenSourceDepot() {
                   <div className="flex items-center justify-between border-t border-[#25363b] pt-2.5 mt-3 font-mono text-[11px]">
                     <span className="text-slate-400">Usage: <strong className="text-slate-200">{pkg.downloads}</strong></span>
                     <span className="text-slate-400">Pub Points: <strong className="text-emerald-400">{pkg.pubPoints}</strong></span>
-                    <span className="text-slate-400">Likes: <strong className="text-amber-400">{pkg.likes} ★</strong></span>
+                    <span className="text-slate-400">Rating: <strong className="text-amber-400">{pkg.likes}</strong></span>
                   </div>
                 </div>
 

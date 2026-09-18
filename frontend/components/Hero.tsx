@@ -48,7 +48,7 @@ export default function Hero({ heroData, profileData }: HeroProps) {
   const greeting = heroData?.greeting || 'Hello World, I am';
   const name = profileData?.full_name || 'Naimish (AcroCoder)';
   const subheadline = heroData?.subheadline || profileData?.bio || 'Building modern, resilient, high-speed 3D web applications with Three.js, Next.js, and Node.js.';
-  const badgeText = heroData?.badge_text || 'Available for exciting roles & contracts 🚀';
+  const badgeText = heroData?.badge_text || 'Available for exciting roles & contracts';
 
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
@@ -235,9 +235,8 @@ export default function Hero({ heroData, profileData }: HeroProps) {
                         <span className="text-indigo-300">&apos;Interactive WebGL & 3D Shaders&apos;</span>
                       </div>
                     </div>
-                    <div>&#125;;</div>
                     <div className="pt-2 border-t border-slate-800 text-cyan-300 font-semibold">
-                      ✔ 3D WebGL Scene Initialized: 60 FPS
+                      [OK] 3D WebGL Scene Initialized: 60 FPS
                     </div>
                   </div>
                 </div>

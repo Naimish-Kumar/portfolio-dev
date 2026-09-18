@@ -10,11 +10,11 @@ export default function DossierMetrics() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const metrics = [
-    { label: 'YEARS DEV EXPERIENCE', value: '5+', code: 'EXP.01', stamp: 'VERIFIED' },
-    { label: 'PRODUCTION PLATFORMS', value: '25+', code: 'PRJ.02', stamp: 'SHIPPED' },
-    { label: 'CLOUD & API UPTIME', value: '99.9%', code: 'UPT.03', stamp: 'SLA OK' },
-    { label: 'LINES OF TESTED CODE', value: '100K+', code: 'LOC.04', stamp: 'LOGGED' },
-    { label: 'HAPPY CLIENTS & TEAMS', value: '15+', code: 'CLI.05', stamp: 'ACTIVE' },
+    { label: 'YEARS DEV EXPERIENCE', value: '7+', code: 'EXP.01', stamp: 'VERIFIED' },
+    { label: 'PRODUCTION PLATFORMS', value: '30+', code: 'PRJ.02', stamp: 'SHIPPED' },
+    { label: 'JAVA SPRING BOOT & AI', value: '3+ YRS', code: 'STK.03', stamp: 'ENTERPRISE' },
+    { label: 'CLOUD & API UPTIME', value: '99.9%', code: 'UPT.04', stamp: 'SLA OK' },
+    { label: 'HAPPY CLIENTS & TEAMS', value: '20+', code: 'CLI.05', stamp: 'ACTIVE' },
   ];
 
   useEffect(() => {

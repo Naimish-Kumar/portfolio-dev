@@ -172,7 +172,7 @@ export default function ThreeSkillsGalaxy({ skills = [] }: ThreeSkillsGalaxyProp
         className="w-full h-[340px] flex items-center justify-center cursor-grab active:cursor-grabbing"
       />
       <span className="text-[11px] font-mono text-cyan-400/80 -mt-4 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-800">
-        ✦ Interactive 3D Skill Orbital Constellation (Move cursor to spin) ✦
+        [ Interactive 3D Skill Orbital Constellation // Move cursor to spin ]
       </span>
     </div>
   );

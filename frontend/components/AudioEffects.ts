@@ -135,6 +135,16 @@ class SoundManager {
     }
   }
 
+  // Mechanical Switch / Toggle Click
+  public playToggle() {
+    this.playKeyClick(680);
+  }
+
+  // Rotary Switch Click
+  public playRotaryClick() {
+    this.playKeyClick(520);
+  }
+
   // Paper Rustle
   public playPaperRustle() {
     this.playFolderSwitch();
