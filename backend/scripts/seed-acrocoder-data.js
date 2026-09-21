@@ -12,7 +12,7 @@ async function seedAcroCoderData() {
         headline = 'Software Engineer | Java & Mobile Systems Developer',
         bio = 'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.',
         about_text = 'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.',
-        avatar_url = '/naimish_portrait.png',
+        avatar_url = '/akash_portrait_bw.jpg',
         resume_url = 'https://acrocoder.com/resume.pdf',
         email = 'akash@spirehubs.com',
         phone = '+91 9718598938',

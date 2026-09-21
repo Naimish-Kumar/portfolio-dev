@@ -104,7 +104,7 @@ export default function DossierAbout({
   const avatarUrl =
     profile?.avatar_url?.startsWith('http') && !profile?.avatar_url?.includes('unsplash')
       ? profile.avatar_url
-      : '/naimish_portrait.png';
+      : '/akash_portrait_bw.jpg';
 
   return (
     <div ref={containerRef} className="w-full max-w-6xl mx-auto px-4 py-8">
@@ -147,11 +147,11 @@ export default function DossierAbout({
                     src={avatarUrl}
                     alt={name}
                     fill
-                    className="object-cover grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500"
+                    className="object-cover contrast-105 transition-all duration-300"
                     unoptimized
                   />
                   {/* Subtle retro vignette overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-amber-900/20 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-amber-900/15 via-transparent to-transparent pointer-events-none" />
                 </div>
                 <div className="mt-3 text-center">
                   <p className="font-hand text-xl text-slate-800 leading-none">
