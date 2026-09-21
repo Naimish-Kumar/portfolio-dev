@@ -139,13 +139,14 @@ export default function DossierAbout({
               className="relative group rotate-[-3deg] hover:rotate-0 transition-transform duration-300"
             >
               <div className="polaroid-card w-72 sm:w-80">
-                <div className="relative w-full h-72 bg-slate-200 overflow-hidden rounded-sm">
+                <div className="relative w-full aspect-[3/4] bg-slate-200 overflow-hidden rounded-sm">
                   <Image
                     src={avatarUrl}
                     alt={name}
                     fill
-                    className="object-cover contrast-105 transition-all duration-300"
+                    className="object-cover object-top contrast-105 transition-all duration-300"
                     unoptimized
+                    priority
                   />
                   {/* Subtle retro vignette overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-amber-900/15 via-transparent to-transparent pointer-events-none" />
