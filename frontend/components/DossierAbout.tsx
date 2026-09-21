@@ -138,9 +138,6 @@ export default function DossierAbout({
               ref={polaroidRef}
               className="relative group rotate-[-3deg] hover:rotate-0 transition-transform duration-300"
             >
-              {/* Scotch tape on top */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-28 h-6 scotch-tape z-20" />
-
               <div className="polaroid-card w-72 sm:w-80">
                 <div className="relative w-full h-72 bg-slate-200 overflow-hidden rounded-sm">
                   <Image
