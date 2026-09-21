@@ -24,10 +24,10 @@ export default function MetricsTicker() {
       color: 'text-emerald-400',
     },
     {
-      value: '4+ Packages',
-      label: 'Published Pub.dev Packages',
-      icon: Box,
-      color: 'text-purple-400',
+      value: '60 FPS',
+      label: 'Ultra-Smooth UI Performance',
+      icon: Zap,
+      color: 'text-amber-400',
     },
   ];
 

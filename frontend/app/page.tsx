@@ -6,7 +6,6 @@ import DossierProjects from '@/components/DossierProjects';
 import DossierMetrics from '@/components/DossierMetrics';
 import DossierServices from '@/components/DossierServices';
 import DossierAbout from '@/components/DossierAbout';
-import OpenSourceDepot from '@/components/OpenSourceDepot';
 import AirmailContact from '@/components/AirmailContact';
 import SmoothScroll from '@/components/SmoothScroll';
 import { soundFx } from '@/components/AudioEffects';
@@ -67,28 +66,22 @@ export default function Home() {
                 [01. WORK]
               </button>
               <button
-                onClick={() => scrollToSection('open-source')}
-                className="px-2 lg:px-2.5 py-1 text-emerald-400 hover:text-emerald-300 hover:bg-emerald-950/50 rounded transition-colors whitespace-nowrap"
-              >
-                [02. OPEN SOURCE]
-              </button>
-              <button
                 onClick={() => scrollToSection('services')}
                 className="px-2 lg:px-2.5 py-1 text-amber-300 hover:text-amber-200 hover:bg-amber-950/50 rounded transition-colors whitespace-nowrap"
               >
-                [03. SERVICES]
+                [02. SERVICES]
               </button>
               <button
                 onClick={() => scrollToSection('about')}
                 className="px-2 lg:px-2.5 py-1 text-[#d8c39e] hover:text-white hover:bg-slate-850 rounded transition-colors whitespace-nowrap"
               >
-                [04. DOSSIER]
+                [03. DOSSIER]
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="px-2 lg:px-2.5 py-1 text-red-400 hover:text-red-300 hover:bg-red-950/50 rounded transition-colors whitespace-nowrap"
               >
-                [05. BRIEF]
+                [04. BRIEF]
               </button>
             </nav>
 
@@ -133,29 +126,13 @@ export default function Home() {
           <DossierProjects projects={projects} categoryFilter="all" />
         </section>
 
-        {/* 4. SECTION 02: OPEN SOURCE DEPOT (Vertical Themed Cards & Live Simulators) */}
-        <section id="open-source" className="relative z-20 pt-8 pb-16 border-t border-[#223035]">
-          <div className="max-w-6xl mx-auto px-4 mb-2 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
-              <h2 className="font-mono text-sm uppercase tracking-widest font-bold text-cyan-400">
-                02 \ OPEN SOURCE DEPOT & PUB.DEV PACKAGES
-              </h2>
-            </div>
-            <span className="font-mono text-xs text-slate-500">
-              [ 7.5K+ MONTHLY DOWNLOADS ]
-            </span>
-          </div>
-          <OpenSourceDepot />
-        </section>
-
-        {/* 5. SECTION 03: SERVICES & ARCHITECTURE BLUEPRINT */}
+        {/* 4. SECTION 02: SERVICES & ARCHITECTURE BLUEPRINT */}
         <section id="services" className="relative z-20 pt-8 pb-16 border-t border-[#223035]">
           <div className="max-w-6xl mx-auto px-4 mb-2 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
               <h2 className="font-mono text-sm uppercase tracking-widest font-bold text-amber-400">
-                03 \ ARCHITECTURAL CAPABILITY MATRIX & SERVICES
+                02 \ ARCHITECTURAL CAPABILITY MATRIX & SERVICES
               </h2>
             </div>
             <span className="font-mono text-xs text-slate-500">
@@ -165,13 +142,13 @@ export default function Home() {
           <DossierServices />
         </section>
 
-        {/* 6. SECTION 04: DOSSIER ARCHIVE / ABOUT ME */}
+        {/* 5. SECTION 03: DOSSIER ARCHIVE / ABOUT ME */}
         <section id="about" className="relative z-20 pt-8 pb-16 border-t border-[#223035]">
           <div className="max-w-6xl mx-auto px-4 mb-2 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
               <h2 className="font-mono text-sm uppercase tracking-widest font-bold text-[#d8c39e]">
-                04 \ CLASSIFIED PERSONNEL DOSSIER & RECORD
+                03 \ CLASSIFIED PERSONNEL DOSSIER & RECORD
               </h2>
             </div>
             <span className="font-mono text-xs text-slate-500">
@@ -186,13 +163,13 @@ export default function Home() {
           />
         </section>
 
-        {/* 7. SECTION 05: AIRMAIL TELEGRAM CONTACT & PROJECT BRIEF */}
+        {/* 6. SECTION 04: AIRMAIL TELEGRAM CONTACT & PROJECT BRIEF */}
         <section id="contact" className="relative z-20 pt-8 pb-20 border-t border-[#223035]">
           <div className="max-w-6xl mx-auto px-4 mb-2 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
               <h2 className="font-mono text-sm uppercase tracking-widest font-bold text-red-400">
-                05 \ DISPATCH INQUIRY & INITIATE PROJECT BRIEF
+                04 \ DISPATCH INQUIRY & INITIATE PROJECT BRIEF
               </h2>
             </div>
             <span className="font-mono text-xs text-slate-500">

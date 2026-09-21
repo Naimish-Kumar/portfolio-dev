@@ -32,14 +32,7 @@ export default function FolderNavigation({
       badge: 'FLUTTER & APPS',
       clipType: 'paperclip',
     },
-    {
-      id: 'open-source' as FolderTabId,
-      label: 'open source & pub.dev',
-      colorClass: 'bg-[#1b4d3e] text-[#e1f5ec] border-[#143b2f]',
-      activeClass: 'bg-[#246954] text-white shadow-lg border-b-0 -translate-y-2',
-      badge: 'PUB.DEV DEPOT',
-      clipType: 'tape',
-    },
+
     {
       id: 'services' as FolderTabId,
       label: 'services & matrix',

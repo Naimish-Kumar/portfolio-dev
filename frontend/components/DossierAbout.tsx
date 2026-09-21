@@ -27,50 +27,6 @@ interface DossierAboutProps {
   educationList: Education[];
   onContactClick?: () => void;
 }
-
-const openSourcePackages = [
-  {
-    name: 'mcp_agent_toolkit',
-    description:
-      'Model Context Protocol (MCP) server & client SDK enabling LLMs to securely execute enterprise tools and workspace operations.',
-    tags: ['MCP Protocol', 'AI Agents', 'Tool Calling', 'TypeScript'],
-    githubUrl: 'https://github.com/akash-verma/mcp_agent_toolkit',
-    pubUrl: 'https://github.com/akash-verma/mcp_agent_toolkit',
-    downloads: '4.8k+ / mo',
-    installCmd: 'npm install @acrocoder/mcp-agent-toolkit',
-  },
-  {
-    name: 'spring_boot_enterprise_core',
-    description:
-      'High-throughput Java 21 & Spring Boot 3 enterprise microservices starter with Spring Security, Kafka, and PostgreSQL.',
-    tags: ['Java 21', 'Spring Boot 3', 'Kafka', 'Microservices'],
-    githubUrl: 'https://github.com/akash-verma/spring_boot_enterprise_core',
-    pubUrl: 'https://github.com/akash-verma/spring_boot_enterprise_core',
-    downloads: '3.6k+ / mo',
-    installCmd: 'mvn archetype:generate -DarchetypeArtifactId=spring-boot-core',
-  },
-  {
-    name: 'gemini_agentic_rag_pipeline',
-    description:
-      'Autonomous multimodal AI agent & vector search RAG orchestration framework with Gemini 2.0 streaming inference.',
-    tags: ['Gemini 2.0', 'Vector RAG', 'AI Tooling', 'LangChain'],
-    githubUrl: 'https://github.com/akash-verma/gemini_agentic_rag_pipeline',
-    pubUrl: 'https://github.com/akash-verma/gemini_agentic_rag_pipeline',
-    downloads: '2.9k+ / mo',
-    installCmd: 'npm install @acrocoder/gemini-rag-pipeline',
-  },
-  {
-    name: 'flutter_clean_architecture_core',
-    description:
-      'Battle-tested 60FPS Flutter production engine providing Clean Architecture layers, BLoC state observers, and sub-16ms telemetry.',
-    tags: ['Flutter 3', 'BLoC State', 'Clean Arch', '60FPS'],
-    githubUrl: 'https://github.com/akash-verma/flutter_clean_architecture_core',
-    pubUrl: 'https://github.com/akash-verma/flutter_clean_architecture_core',
-    downloads: '5.2k+ / mo',
-    installCmd: 'flutter pub add flutter_clean_architecture_core',
-  },
-];
-
 export default function DossierAbout({
   profile,
   experienceList,
@@ -363,7 +319,7 @@ export default function DossierAbout({
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Manifesto, Experience Notepad & Open Source Ecosystem (7 cols) */}
+          {/* RIGHT COLUMN: Manifesto & Experience Notepad (7 cols) */}
           <div ref={rightColRef} className="lg:col-span-7 flex flex-col gap-6">
             {/* 1. LINED PAPER MANIFESTO */}
             <div className="lined-paper-texture p-6 md:p-8 rounded-lg shadow-md border border-[#d9cbb2] rotate-[0.5deg]">
@@ -477,85 +433,6 @@ export default function DossierAbout({
                     </div>
                   </>
                 )}
-              </div>
-            </div>
-
-            {/* 3. OPEN SOURCE ECOSYSTEM & PUB.DEV PACKAGES */}
-            <div className="relative bg-[#f4f7f6] p-6 md:p-8 rounded-lg shadow-lg border border-[#c4d7d1] rotate-[0.3deg]">
-              {/* Starburst badge decor */}
-              <div className="absolute -top-3 right-6 bg-[#047857] text-white font-mono font-bold text-[10px] px-3 py-1 rounded-full shadow-md uppercase tracking-wider flex items-center gap-1">
-                <Package className="w-3 h-3" />
-                OPEN SOURCE ECOSYSTEM
-              </div>
-
-              <div className="flex items-center gap-2 mb-4 border-b-2 border-emerald-300 pb-1.5">
-                <Package className="w-5 h-5 text-emerald-800" />
-                <h4 className="font-hand font-bold text-2xl text-slate-900">
-                  Pub.dev Packages & Tools .
-                </h4>
-              </div>
-
-              <p className="font-sans text-xs text-slate-600 mb-4 leading-relaxed">
-                Open-source packages, security plugins, and architecture generators authored for Flutter developers worldwide:
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {openSourcePackages.map((pkg, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-white p-4 rounded-lg border border-slate-300 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="font-mono font-bold text-xs text-emerald-800 group-hover:text-emerald-900 transition-colors">
-                          {pkg.name}
-                        </span>
-                        <div className="flex items-center gap-2 text-slate-500">
-                          <a
-                            href={pkg.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-slate-900 transition-colors"
-                            title="GitHub Repository"
-                          >
-                            <Github className="w-3.5 h-3.5" />
-                          </a>
-                          <a
-                            href={pkg.pubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-cyan-700 transition-colors"
-                            title="View on Pub.dev"
-                          >
-                            <ExternalLink className="w-3.5 h-3.5" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <p className="font-sans text-[11px] text-slate-700 leading-relaxed mb-3">
-                        {pkg.description}
-                      </p>
-                    </div>
-
-                    <div>
-                      <div className="flex flex-wrap gap-1 mb-2">
-                        {pkg.tags.map((t, i) => (
-                          <span
-                            key={i}
-                            className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-
-                      <div className="font-mono text-[9px] text-emerald-800 bg-emerald-50 px-2 py-1 rounded border border-emerald-200 flex items-center justify-between">
-                        <span className="truncate">{pkg.installCmd}</span>
-                        <span className="shrink-0 font-bold">{pkg.downloads}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
 
