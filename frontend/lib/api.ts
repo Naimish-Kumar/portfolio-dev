@@ -99,9 +99,9 @@ export const defaultPortfolioData = {
     email: 'akash@spirehubs.com',
     phone: '+91 9536824061',
     location: 'Noida, India',
-    github_url: 'https://github.com/akash-verma',
-    linkedin_url: 'https://linkedin.com/in/akash-verma',
-    twitter_url: 'https://twitter.com/akash_verma',
+    github_url: '',
+    linkedin_url: '',
+    twitter_url: '',
     resume_url: 'https://acrocoder.com/resume.pdf',
   },
   projects: [

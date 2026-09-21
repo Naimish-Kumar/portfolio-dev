@@ -20,9 +20,9 @@ async function seedAcroCoderData() {
         available_for_hire = TRUE,
         years_experience = 7,
         projects_completed = 30,
-        github_url = 'https://github.com/akash-verma',
-        linkedin_url = 'https://linkedin.com/in/akash-verma',
-        twitter_url = 'https://twitter.com/akash_dev'
+        github_url = NULL,
+        linkedin_url = NULL,
+        twitter_url = NULL
       WHERE id = 1
     `);
 

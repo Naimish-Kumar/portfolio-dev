@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { submitContact, Profile } from '@/lib/api';
 import { soundFx } from './AudioEffects';
-import { Mail, MessageSquare, Linkedin, Github, Send, CheckCircle2, ShieldCheck, Sparkles, FileText, CheckSquare, Square } from 'lucide-react';
+import { Mail, MessageSquare, Send, CheckCircle2, ShieldCheck, Sparkles, FileText, CheckSquare, Square } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -340,22 +340,6 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
                 <span className="font-semibold text-slate-600 text-[11px]">WhatsApp / Phone:</span>
                 <a href="https://wa.me/919536824061" target="_blank" rel="noopener noreferrer" className="font-bold underline text-emerald-800 hover:text-emerald-900">
                   +91 9536824061
-                </a>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-slate-800">
-                <Linkedin className="w-4 h-4 text-blue-700 shrink-0" />
-                <span className="font-semibold text-slate-600 text-[11px]">LinkedIn:</span>
-                <a href={profile?.linkedin_url || 'https://linkedin.com/in/akash-verma'} target="_blank" rel="noopener noreferrer" className="font-bold underline text-blue-700 hover:text-blue-800">
-                  linkedin.com/in/akash-verma
-                </a>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-slate-800">
-                <Github className="w-4 h-4 text-slate-900 shrink-0" />
-                <span className="font-semibold text-slate-600 text-[11px]">GitHub:</span>
-                <a href={profile?.github_url || 'https://github.com/akash-verma'} target="_blank" rel="noopener noreferrer" className="font-bold underline text-slate-900 hover:text-slate-800">
-                  github.com/akash-verma
                 </a>
               </div>
             </div>
