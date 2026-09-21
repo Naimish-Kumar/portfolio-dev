@@ -24,8 +24,8 @@ type ScreenMode = 'terminal' | 'mcp' | 'matrix' | 'benchmark' | 'radio';
 type LightingMood = 'emerald' | 'amber' | 'blueprint' | 'neon';
 
 export default function RetroDeskScene({
-  name = 'Naimish Kumar Verma',
-  title = 'Flutter Team Lead & Senior Full-Stack Architect',
+  name = 'Akash Verma',
+  title = 'Software Engineer | Java & Mobile Systems Developer',
   onExploreWork,
   onOpenContact,
 }: RetroDeskSceneProps) {
@@ -38,8 +38,8 @@ export default function RetroDeskScene({
   const [commandInput, setCommandInput] = useState('');
   const [terminalLogs, setTerminalLogs] = useState<string[]>([
     'KERNEL: ACROCODER-OS v4.19.26 // 7+ YRS ACTIVE',
-    'STACK: Java 21 Spring Boot + Flutter 60FPS + MCP AI',
-    'STATUS: Production Lead Architect @ Spirehub',
+    'STACK: Java 17/21 Spring Boot + Flutter + IoT Telemetry',
+    'STATUS: Senior Software Engineer @ SpireHub Softwares',
     'READY: Click 3D objects or execute command below:',
   ]);
 
@@ -139,65 +139,65 @@ export default function RetroDeskScene({
   // Quick preset actions
   const quickActions = [
     {
-      label: 'MCP Agent AI',
-      cmd: 'mcp',
+      label: 'IoT & Telemetry',
+      cmd: 'iot',
       action: () => {
         animateKeyboardPress(8);
         setScreenMode('mcp');
         setTerminalLogs((prev) => [
           ...prev.slice(-4),
-          '> mcp-agent --inspect',
-          '[OK] MCP Server: JSON-RPC 2.0 Bridge Active',
-          '[OK] Tool: queryDatabase() -> [200 OK] 12ms',
-          '[OK] Vectors: 4.8k embedded @ pgvector',
+          '> iot-gateway --protocol=mqtt,ble',
+          '[OK] MQTT Broker: Connected // 50K Active Devices',
+          '[OK] Kafka Ingestion Pipeline Active (Sub-10ms)',
+          '[OK] Sensor Telemetry -> Real-Time Inference Hub',
         ]);
-        showToast('MCP Agent JSON-RPC Tool Stream Active');
+        showToast('IoT Gateway & Telemetry Stream Active');
       },
     },
     {
-      label: 'Java 21 & Spring',
+      label: 'Java 17/21 & Spring',
       cmd: 'spring',
       action: () => {
         animateKeyboardPress(8);
         setScreenMode('benchmark');
         setTerminalLogs((prev) => [
           ...prev.slice(-4),
-          '> java -jar spring-boot-microservice.jar',
-          '[OK] JVM Throughput: 18.4K RPS @ 14.2ms',
-          '[OK] Kafka Event Stream & PostgreSQL synced',
+          '> java -jar spring-cloud-microservices.jar',
+          '[OK] JVM Throughput: 18.4K RPS @ 14.2ms // 99.99% Uptime',
+          '[OK] Kafka Event Stream & PostgreSQL / Redis synced',
         ]);
         showToast('Spring Boot Microservices Telemetry Loaded');
       },
     },
     {
-      label: 'Flutter 60FPS',
+      label: 'Flutter & Mobile',
       cmd: 'flutter',
       action: () => {
         animateKeyboardPress(8);
         setScreenMode('matrix');
         setTerminalLogs((prev) => [
           ...prev.slice(-4),
-          '> flutter run --profile --vulkan',
-          '[OK] Render Target: Sub-16.6ms (Actual: 10.4ms)',
-          '[OK] 0 Frame Drops // Clean Architecture & BLoC',
+          '> flutter run --profile',
+          '[OK] Render Target: Sub-16ms (<16ms frame render target)',
+          '[OK] Clean Architecture & BLoC / Provider State Active',
         ]);
-        showToast('Flutter 60FPS Matrix Profiler Active');
+        showToast('Flutter 60FPS Mobile Profiler Active');
       },
     },
     {
-      label: '7-Yr Spirehub Stack',
+      label: '7-Yr Career Stack',
       cmd: 'exp',
       action: () => {
         animateKeyboardPress(8);
         setScreenMode('terminal');
         setTerminalLogs((prev) => [
           ...prev.slice(-4),
-          '> spirehub-career --timeline',
-          '2024–Pres: Flutter Team Lead & Full-Stack Architect',
-          '2022–2024: Senior Flutter Developer (6+ Apps)',
-          '2019–2022: Java / Spring Boot Developer (3 Full Yrs)',
+          '> akash-career --timeline',
+          '2023–Pres: Senior Software Engineer @ SpireHub Softwares',
+          '2020–2023: Java Enterprise Developer @ Enterprise Software Solutions',
+          '2017–2020: Associate Software Engineer @ TechSmart Mobile Systems',
         ]);
-        showToast('7+ Years Spirehub Career Timeline Logged');
+        showToast('7+ Years Career Timeline Logged');
       },
     },
   ];
@@ -211,7 +211,7 @@ export default function RetroDeskScene({
 
     if (query === 'clear') {
       setTerminalLogs(['Terminal buffer reset.', 'Type "help" for commands.']);
-    } else if (query.includes('mcp') || query.includes('ai')) {
+    } else if (query.includes('iot') || query.includes('mqtt') || query.includes('ble')) {
       quickActions[0].action();
     } else if (query.includes('spring') || query.includes('java')) {
       quickActions[1].action();
@@ -224,14 +224,14 @@ export default function RetroDeskScene({
       setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Inspecting Case Files & Live Projects...']);
     } else if (query.includes('hire') || query.includes('contact') || query.includes('email')) {
       onOpenContact?.();
-      setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Opening Direct Contact Brief: acrocoader@gmail.com']);
+      setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Opening Direct Contact Brief: akash@spirehubs.com']);
     } else if (query.includes('lamp') || query.includes('light')) {
       toggleLamp();
     } else {
       setTerminalLogs((prev) => [
         ...prev.slice(-4),
         `> ${query}`,
-        `Command '${query}' logged. Available: mcp, java, flutter, exp, work, hire, lamp, clear`,
+        `Command '${query}' logged. Available: iot, java, flutter, exp, work, hire, lamp, clear`,
       ]);
     }
     setCommandInput('');
@@ -1164,11 +1164,11 @@ export default function RetroDeskScene({
           <div className="font-bold text-sm tracking-wide text-amber-950 mb-1.5 font-sans flex items-center justify-between">
             <span>{name.split(' ')[0]}</span>
             <span className="text-[9px] bg-emerald-700 text-white px-2 py-0.5 rounded-full font-mono font-bold">
-              7+ YRS LEAD
+              7+ YRS DEV
             </span>
           </div>
           <p className="text-slate-800 text-[11px] leading-tight mb-2.5">
-            Senior Mobile & Backend Architect @ Spirehub. Enterprise Flutter, 3 yrs Java Spring Boot & Model Context Protocol (MCP) AI systems.
+            Senior Software Engineer @ SpireHub. Cross-platform mobile (Flutter/Android), 3 yrs Java enterprise backends, IoT protocols & microservices.
           </p>
           <button
             onClick={() => {
@@ -1195,7 +1195,7 @@ export default function RetroDeskScene({
           <p className="text-slate-800 text-[11px] leading-tight mb-2">
             Priority engineer inbox:
             <br />
-            <span className="font-bold text-amber-950">acrocoader@gmail.com</span>
+            <span className="font-bold text-amber-950">akash@spirehubs.com</span>
           </p>
           <button
             onClick={() => {

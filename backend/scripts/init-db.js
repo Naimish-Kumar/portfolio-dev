@@ -178,23 +178,23 @@ async function initDB() {
           github_url, linkedin_url, twitter_url, youtube_url, instagram_url, custom_links_json
         ) VALUES (
           1,
-          'Naimish Kumar Verma',
-          'Flutter Team Lead & Mobile / 3D Creative',
-          'Passionate Flutter Team Lead and Creative Technologist building production cross-platform apps, 3D WebGL interfaces, and scalable distributed backends.',
-          'I am a Flutter Team Lead & full-stack engineer with hands-on expertise building cross-platform mobile architectures, production-ready cloud systems, and modern interactive applications using Flutter, Dart, Next.js, Node.js, and MySQL.',
+          'Akash Verma',
+          'Software Engineer | Java & Mobile Systems Developer',
+          'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services.',
+          'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.',
           'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
-          '#resume',
-          'acrocoader@gmail.com',
-          '+91 7784068641',
-          'Lucknow, India',
+          'https://acrocoder.com/resume.pdf',
+          'akash@spirehubs.com',
+          '+91 9536824061',
+          'Noida, India',
           TRUE,
-          4,
-          32,
-          'https://github.com/acrocoder',
-          'https://linkedin.com/in/acrocoder',
-          'https://twitter.com/acrocoder',
-          'https://youtube.com/@acrocoder',
-          'https://instagram.com/acrocoder',
+          7,
+          30,
+          'https://github.com/akash-verma',
+          'https://linkedin.com/in/akash-verma',
+          'https://twitter.com/akash_dev',
+          'https://youtube.com/@akash_dev',
+          'https://instagram.com/akash_dev',
           JSON_ARRAY()
         )
       `);
@@ -210,15 +210,15 @@ async function initDB() {
           primary_button_text, primary_button_link, secondary_button_text, secondary_button_link, badge_text
         ) VALUES (
           1,
-          'Hello, World! I am Naimish',
-          'Full Stack Developer & Cloud Architect',
-          'Specializing in high-performance Next.js web applications, resilient Node.js microservices, and modern UI engineering.',
-          JSON_ARRAY('Full Stack Developer', 'Next.js & React Specialist', 'Node.js & Cloud Architect', 'UI/UX Enthusiast', 'Open Source Contributor'),
+          'Hello, World! I am Akash Verma',
+          'Software Engineer | Java & Mobile Systems',
+          'Bridging hardware and enterprise software systems with scalable Java 17/21 microservices, cross-platform mobile apps with Flutter, and real-time IoT firmware-to-cloud pipelines.',
+          JSON_ARRAY('Java 17/21 & Spring Boot', 'Flutter & Mobile Architectures', 'IoT Telemetry, MQTT & BLE', 'Kafka & Redis Streaming', 'High-Performance Cloud Systems'),
           'Explore My Projects',
           '#projects',
           'Let\\'s Talk',
           '#contact',
-          'Available for exciting new roles & contracts'
+          'Senior Software Engineer @ SpireHub Softwares'
         )
       `);
       console.log('Created default hero settings.');
@@ -228,16 +228,16 @@ async function initDB() {
     const [existingSkills] = await conn.query('SELECT id FROM skills LIMIT 1');
     if (existingSkills.length === 0) {
       const defaultSkills = [
-        ['Next.js / React', 'Frontend', 95, 'Layers', 1, true],
-        ['TypeScript & JavaScript', 'Frontend', 92, 'Code2', 2, true],
-        ['Tailwind CSS & Modern UI', 'Frontend', 94, 'Palette', 3, true],
-        ['Node.js & Express', 'Backend', 90, 'Server', 4, true],
-        ['RESTful APIs & GraphQL', 'Backend', 88, 'Network', 5, true],
-        ['MySQL & PostgreSQL', 'Database', 88, 'Database', 6, true],
-        ['Redis & Caching', 'Database', 82, 'Cpu', 7, true],
-        ['Docker & Cloud Hosting', 'DevOps & Cloud', 84, 'Cloud', 8, true],
-        ['Git & CI/CD Pipelines', 'DevOps & Cloud', 89, 'GitBranch', 9, true],
-        ['System Architecture & Security', 'Architecture', 86, 'ShieldCheck', 10, true],
+        ['Java 17/21 & Spring Boot', 'Enterprise Backend', 96, 'Server', 1, true],
+        ['Spring Cloud, Security & JWT', 'Microservices & Security', 94, 'ShieldCheck', 2, true],
+        ['Flutter & Dart (BLoC / Provider)', 'Core Mobile', 98, 'Smartphone', 3, true],
+        ['Android Native & Systems Dev', 'Core Mobile', 92, 'Smartphone', 4, true],
+        ['MQTT & BLE Hardware Protocols', 'IoT & Hardware Systems', 95, 'Cpu', 5, true],
+        ['IoT Telemetry & Ingestion', 'IoT & Hardware Systems', 93, 'Activity', 6, true],
+        ['Apache Kafka & Redis Streaming', 'Event Streaming', 92, 'Activity', 7, true],
+        ['PostgreSQL & MySQL / Hibernate', 'Databases', 94, 'Database', 8, true],
+        ['Docker & Microservices Architecture', 'DevOps & Cloud', 91, 'Cloud', 9, true],
+        ['Node.js, Express & WebSockets', 'Backend & Real-Time', 90, 'Globe', 10, true],
       ];
 
       for (const skill of defaultSkills) {
@@ -254,54 +254,54 @@ async function initDB() {
     if (existingProjects.length === 0) {
       const defaultProjects = [
         [
-          'SpaceBliz AI - Next-Gen Creative Suite',
-          'spacebliz-ai',
-          'Generative AI platform for multi-modal asset creation and automated workflow orchestration.',
-          'SpaceBliz is an enterprise-grade AI creative suite powered by Next.js, Node.js, and LLM orchestration. Features real-time collaborative canvas, automated asset rendering, and high-throughput asset pipeline.',
-          'Fullstack & AI',
-          'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
-          'https://spacebliz.com',
-          'https://github.com/acrocoder/spacebliz',
-          JSON.stringify(['Next.js', 'React', 'Node.js', 'MySQL', 'TailwindCSS', 'AI/ML', 'Docker']),
+          'Congo Bon Marché - E-Commerce & Marketplace Ecosystem',
+          'congobonmarche-ecommerce',
+          'Premier multi-vendor e-commerce marketplace and logistics platform in Central Africa with mobile apps for iOS & Android.',
+          'End-to-end multi-vendor e-commerce ecosystem designed for DRC and Central Africa. Features high-performance web storefront, native iOS & Android applications built with Flutter, multi-currency wallet support, Mobile Money (Airtel/Orange Money) payment gateways, real-time push order dispatch, and seller analytics dashboard.',
+          'Mobile & Web E-Commerce',
+          'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80',
+          'https://congobonmarche.com',
+          'https://apps.apple.com/in/app/congobonmarch%C3%A9-app/id6443672495',
+          JSON.stringify(['Flutter', 'iOS App', 'Android App', 'Java Spring Boot', 'E-Commerce', 'Mobile Money']),
           true,
           1
         ],
         [
-          'Homiq Real Estate Platform',
-          'homiq-real-estate',
-          'Modern real estate marketplace with immersive property tours, interactive search, and instant booking.',
-          'A comprehensive real estate ecosystem connecting buyers, tenants, and verified property brokers. Complete with dynamic filtering, live chat, interactive maps, and automated mortgage estimation.',
-          'Fullstack Web',
-          'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-          'https://homiq.space',
-          'https://github.com/acrocoder/homiq',
-          JSON.stringify(['React', 'Next.js', 'Express', 'MySQL', 'REST API', 'Maps API']),
+          'DarziDesk - Boutique & Custom Tailoring Management SaaS',
+          'darzidesk-boutique-saas',
+          'Cloud-based bespoke tailoring ERP & boutique management platform with automated measurement profiles, work orders, and WhatsApp notifications.',
+          'Comprehensive SaaS platform built for fashion designers, bespoke tailors, and boutique studios. Streamlines client body measurement profiles, custom stitching work orders, fabric inventory tracking, automated invoice generation, and real-time WhatsApp delivery notifications with sub-100ms response times.',
+          'Production SaaS',
+          'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80',
+          'https://darzidesk.shop',
+          'https://darzidesk.shop',
+          JSON.stringify(['Next.js 14', 'Java Spring Boot', 'MySQL', 'Tailwind CSS', 'SaaS', 'ERP']),
           true,
           2
         ],
         [
-          'WhatsFlow Messaging & CRM Hub',
-          'whatsflow-crm',
-          'Omnichannel conversational marketing and customer management system with automated drip campaigns.',
-          'Automated WhatsApp and omnichannel CRM for e-commerce and retail brands. Handles automated triggers, bulk communications, analytics dashboards, and webhooks.',
-          'Backend & SaaS',
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-          'https://whatsflow.site',
-          'https://github.com/acrocoder/whatsflow',
-          JSON.stringify(['Node.js', 'WebSockets', 'MySQL', 'Redis', 'React', 'Tailwind']),
+          'Spacebliz - Creative Digital Agency & Software Platform',
+          'spacebliz-digital-agency',
+          'High-performance digital agency platform featuring 3D interactive interfaces, modern full-stack architectures, and AI cloud engineering.',
+          'Dynamic high-performance agency portal and software engineering platform showcasing bespoke digital product development, interactive 3D WebGL interfaces, cloud native infrastructure, and enterprise AI integrations with 99+ Lighthouse performance scores.',
+          'Creative Tech & Agency',
+          'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+          'https://spacebliz.com',
+          'https://spacebliz.com',
+          JSON.stringify(['React', 'Next.js', 'Three.js 3D', 'Java Spring Boot', 'Cloud Architecture', 'AI MCP']),
           true,
           3
         ],
         [
-          'DarziDesk Tailoring ERP & Inventory',
-          'darzidesk-erp',
-          'Cloud-native ERP and custom order tracking system built specifically for bespoke tailoring ateliers.',
-          'Complete workflow management software tracking customer measurements, garment production status, inventory logistics, billing, and automated SMS alerts.',
-          'SaaS & ERP',
-          'https://images.unsplash.com/photo-1556742049-0a67e55722c0?auto=format&fit=crop&w=1200&q=80',
-          'https://darzidesk.shop',
-          'https://github.com/acrocoder/darzidesk',
-          JSON.stringify(['Next.js', 'Node.js', 'MySQL', 'REST API', 'TailwindCSS']),
+          'HomiQ Real-Estate Marketplace',
+          'homiq-real-estate',
+          'Direct real estate & rental marketplace connecting owners, buyers, and renters with zero brokerage fees, verified listings, and smart search.',
+          'Production real-estate marketplace serving thousands of active buyers and renters. Features interactive maps, instant chat, mortgage estimation, and verified identity workflows.',
+          'Shipped App',
+          'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+          'https://apps.apple.com/in/app/homiq-real-estate-marketplace/id6779412636',
+          'https://play.google.com/store/apps/details?id=com.homiq.acrocoder&hl=en_IN',
+          JSON.stringify(['Flutter', 'iOS', 'Android', 'Java Spring Boot', 'Real Estate', 'Google Maps']),
           true,
           4
         ]
@@ -322,39 +322,39 @@ async function initDB() {
     if (existingExp.length === 0) {
       const defaultExp = [
         [
-          'Spirehub Software Pvt Ltd',
-          'Flutter Team Lead & Senior Full-Stack Architect',
-          'Lucknow, India / Remote',
+          'SpireHub Softwares Pvt Ltd',
+          'Senior Software Engineer',
+          'Noida, India',
           'Full-time',
-          '2024-06-01',
+          '2023-06-01',
           null,
           true,
-          'Leading cross-platform mobile and backend engineering teams, architecting Flutter apps and Java Spring Boot microservices, building AI agent workflows with Model Context Protocol (MCP) servers, mentoring developers, and managing CI/CD automated deployments.',
-          JSON.stringify(['Flutter', 'Java Spring Boot', 'Model Context Protocol (MCP)', 'AI Agents', 'BLoC', 'Docker', 'CI/CD']),
+          'Spearheaded development of cross-platform mobile applications (Flutter/Android) communicating with custom IoT hardware via BLE and MQTT protocols.\\nArchitected microservices using Java 17/21 and Spring Boot, optimizing data processing pipelines that reduced latency by 35% for real-time sensor streams.\\nDesigned and maintained firmware-to-cloud communication interfaces, handling device authentication, telemetry ingestion, and OTA update dispatching.',
+          JSON.stringify(['Java 17/21', 'Spring Boot', 'Flutter', 'Android', 'BLE', 'MQTT', 'Microservices', 'WebSockets', 'Docker']),
           1
         ],
         [
-          'Spirehub Software Pvt Ltd',
-          'Senior Flutter & Full-Stack Developer',
-          'Lucknow, India',
+          'Enterprise Software Solutions',
+          'Java Enterprise Developer',
+          'Noida, India',
           'Full-time',
-          '2022-10-01',
-          '2024-06-01',
+          '2020-05-01',
+          '2023-05-01',
           false,
-          'Architected and deployed 6+ production mobile applications for iOS and Android with sub-16ms 60fps rendering. Integrated payment gateways, optimized rendering engines, implemented real-time Socket.IO/WebRTC pipelines, and built high-performance backends.',
-          JSON.stringify(['Flutter', 'Dart', 'Clean Architecture', 'BLoC', 'WebSockets', 'Payment Gateways', 'iOS/Android']),
+          'Engineered core enterprise backend services utilizing Java, Spring Boot, Hibernate/JPA, and PostgreSQL/MySQL databases.\\nBuilt and maintained RESTful APIs powering high-traffic web applications, processing 2M+ daily requests with 99.9% uptime.\\nIntegrated message-driven architectures using Apache Kafka and Redis for asynchronous task queuing and distributed caching.',
+          JSON.stringify(['Java', 'Spring Boot', 'Hibernate/JPA', 'PostgreSQL', 'MySQL', 'Apache Kafka', 'Redis', 'OAuth2', 'JWT', 'Docker']),
           2
         ],
         [
-          'Spirehub Software Pvt Ltd',
-          'Java / Spring Boot Developer',
-          'Lucknow, India',
+          'TechSmart Mobile Systems',
+          'Associate Software Engineer — Mobile & Systems',
+          'Noida, India',
           'Full-time',
-          '2019-07-01',
-          '2022-10-01',
+          '2017-06-01',
+          '2020-04-01',
           false,
-          'Engineered 3 years of enterprise Java Spring Boot backend microservices with Spring Security, Hibernate/JPA, PostgreSQL, MySQL, Redis caching, and Kafka event streaming. Built scalable RESTful APIs powering high-traffic enterprise platforms and mobile backends.',
-          JSON.stringify(['Java 21', 'Spring Boot', 'Spring Security', 'Hibernate/JPA', 'PostgreSQL', 'MySQL', 'Kafka', 'Redis', 'Microservices', 'REST APIs']),
+          'Developed hybrid and native mobile application modules for Android and cross-platform frameworks.\\nIntegrated backend APIs and local persistence layers (SQLite, Room, Shared Preferences) ensuring offline-first user experiences.\\nImplemented Bluetooth / serial communication protocols for companion device connectivity and data synchronization.',
+          JSON.stringify(['Android', 'Flutter', 'Java', 'SQLite', 'Bluetooth', 'REST APIs', 'Offline-First', 'Git']),
           3
         ]
       ];
@@ -375,22 +375,22 @@ async function initDB() {
       await conn.query(`
         INSERT INTO education (institution, degree, field_of_study, start_year, end_year, grade, description, display_order)
         VALUES
-        ('Galgotias University', 'B.Tech in Computer Science & Engineering', 'Cloud Computing & Distributed Systems', '2015', '2019', 'First Class with Distinction', 'Core coursework in Algorithms, Distributed Systems, Software Engineering, Database Systems, and Cloud Computing. Capstone Project: Secure Multi-Tenant Cloud Storage Engine with End-to-End Encryption.', 1)
+        ('Galgotias University', 'B.Tech in Computer Science & Engineering', 'Computer Science & Software Systems', '2013', '2017', 'First Class with Distinction', 'Core coursework in Data Structures & Algorithms, Object-Oriented Programming (Java), Operating Systems, Computer Networks, Database Management Systems, and Software Engineering.', 1)
       `);
       console.log('Created default education.');
     }
 
     // Seed Site Settings
     const defaultSettings = [
-      ['site_title', 'AcroCoder | Full Stack Developer & Cloud Engineer'],
-      ['site_description', 'Official dynamic portfolio of AcroCoder - Senior Full Stack Developer, Next.js Architect, and Cloud Engineer.'],
+      ['site_title', 'Akash Verma | Software Engineer & Systems Developer'],
+      ['site_description', 'Official portfolio of Akash Verma - Software Engineer with 7+ years experience bridging hardware & software systems, Java Spring Boot microservices, and Flutter mobile applications.'],
       ['accent_color', '#6366f1'],
       ['enable_contact_form', 'true'],
       ['enable_projects_section', 'true'],
       ['enable_skills_section', 'true'],
       ['enable_experience_section', 'true'],
       ['enable_education_section', 'true'],
-      ['footer_text', '© 2026 AcroCoder. Built with Next.js, Node.js & Hostinger. All rights reserved.']
+      ['footer_text', '© 2026 Akash Verma. Built with Next.js, Java Spring Boot & Cloud Architecture. All rights reserved.']
     ];
 
     for (const [key, val] of defaultSettings) {

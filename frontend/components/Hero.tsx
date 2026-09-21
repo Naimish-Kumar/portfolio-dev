@@ -17,7 +17,12 @@ export default function Hero({ heroData, profileData }: HeroProps) {
 
   const typingStrings = heroData?.typing_strings && heroData.typing_strings.length > 0
     ? heroData.typing_strings
-    : ['Full Stack Developer', 'Three.js & 3D Web Specialist', 'Next.js & React Architect', 'Node.js & Cloud Engineer'];
+    : [
+        'Java 17/21 & Spring Boot Microservices',
+        'Flutter & Cross-Platform Mobile',
+        'IoT Hardware & Telemetry Ingestion',
+        'Scalable Real-Time Architectures',
+      ];
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -46,9 +51,9 @@ export default function Hero({ heroData, profileData }: HeroProps) {
   }, [displayedText, isDeleting, currentTextIndex, typingStrings]);
 
   const greeting = heroData?.greeting || 'Hello World, I am';
-  const name = profileData?.full_name || 'Naimish (AcroCoder)';
-  const subheadline = heroData?.subheadline || profileData?.bio || 'Building modern, resilient, high-speed 3D web applications with Three.js, Next.js, and Node.js.';
-  const badgeText = heroData?.badge_text || 'Available for exciting roles & contracts';
+  const name = profileData?.full_name || 'Akash Verma';
+  const subheadline = heroData?.subheadline || profileData?.bio || 'Software Engineer bridging hardware and software systems with scalable Java enterprise microservices, cross-platform mobile apps, and real-time IoT architectures.';
+  const badgeText = heroData?.badge_text || 'Senior Software Engineer @ SpireHub Softwares';
 
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
@@ -205,7 +210,7 @@ export default function Hero({ heroData, profileData }: HeroProps) {
                     </div>
                     <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400">
                       <Terminal className="w-3.5 h-3.5 text-cyan-400" />
-                      <span>acrocoder@cloud ~ dev</span>
+                      <span>akash@systems ~ dev</span>
                     </div>
                     <div className="w-4" />
                   </div>
@@ -221,22 +226,22 @@ export default function Hero({ heroData, profileData }: HeroProps) {
                       </div>
                       <div>
                         <span className="text-slate-400">stack:</span> [
-                        <span className="text-emerald-300">&apos;Three.js&apos;</span>,{' '}
-                        <span className="text-emerald-300">&apos;Next.js&apos;</span>,{' '}
-                        <span className="text-emerald-300">&apos;Node.js&apos;</span>],
+                        <span className="text-emerald-300">&apos;Java 21 / Spring Boot&apos;</span>,{' '}
+                        <span className="text-emerald-300">&apos;Flutter & Android&apos;</span>,{' '}
+                        <span className="text-emerald-300">&apos;Kafka / MQTT / Redis&apos;</span>],
                       </div>
                       <div>
                         <span className="text-slate-400">experience:</span>{' '}
-                        <span className="text-cyan-300">{profileData?.years_experience || 4}</span>{' '}
+                        <span className="text-cyan-300">{profileData?.years_experience || 7}</span>{' '}
                         <span className="text-slate-400">+ years</span>,
                       </div>
                       <div>
-                        <span className="text-slate-400">graphics:</span>{' '}
-                        <span className="text-indigo-300">&apos;Interactive WebGL & 3D Shaders&apos;</span>
+                        <span className="text-slate-400">systems:</span>{' '}
+                        <span className="text-indigo-300">&apos;Distributed Microservices & Hardware-to-Cloud&apos;</span>
                       </div>
                     </div>
                     <div className="pt-2 border-t border-slate-800 text-cyan-300 font-semibold">
-                      [OK] 3D WebGL Scene Initialized: 60 FPS
+                      [OK] Microservices & Real-Time Telemetry Pipeline: 100% HEALTHY
                     </div>
                   </div>
                 </div>
@@ -261,7 +266,7 @@ export default function Hero({ heroData, profileData }: HeroProps) {
                 </div>
                 <div>
                   <div className="text-base font-bold font-heading text-white">
-                    {profileData?.years_experience || 4}+ Years
+                    {profileData?.years_experience || 7}+ Years
                   </div>
                   <div className="text-[10px] text-slate-400">Engineering Exp</div>
                 </div>

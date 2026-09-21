@@ -19,23 +19,23 @@ export default function DossierSkills({ skillsList = [] }: DossierSkillsProps) {
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
   const defaultSkills: SkillItem[] = [
-    { name: 'Java 21 & Spring Boot 3', category: 'Backend', proficiency: 96 },
-    { name: 'Model Context Protocol (MCP) & AI', category: 'AI & MCP', proficiency: 95 },
-    { name: 'Flutter & Dart (60FPS BLoC)', category: 'Mobile', proficiency: 98 },
-    { name: 'Spring Security & OAuth2 / JWT', category: 'Backend', proficiency: 94 },
-    { name: 'Autonomous AI Agents & RAG', category: 'AI & MCP', proficiency: 92 },
-    { name: 'Next.js 14 / React 19 & TS', category: 'Frontend', proficiency: 96 },
-    { name: 'PostgreSQL & MySQL / JPA', category: 'Backend', proficiency: 94 },
-    { name: 'Apache Kafka & Redis Streaming', category: 'Backend', proficiency: 90 },
-    { name: 'Three.js / WebGL / GLSL', category: '3D & WebGL', proficiency: 92 },
-    { name: 'Docker, K8s & CI/CD Pipelines', category: 'Cloud & DevOps', proficiency: 91 },
-    { name: 'REST & GraphQL Microservices', category: 'Backend', proficiency: 95 },
-    { name: 'WebRTC & Socket.IO Realtime', category: 'Mobile', proficiency: 93 },
+    { name: 'Java 17/21 & Spring Boot', category: 'Backend', proficiency: 96 },
+    { name: 'Spring Cloud, Security & JWT', category: 'Backend', proficiency: 94 },
+    { name: 'Flutter & Dart (BLoC / Provider)', category: 'Mobile', proficiency: 98 },
+    { name: 'Android Native & Systems Dev', category: 'Mobile', proficiency: 92 },
+    { name: 'MQTT & BLE Hardware Protocols', category: 'IoT & Systems', proficiency: 95 },
+    { name: 'IoT Telemetry & Ingestion', category: 'IoT & Systems', proficiency: 93 },
+    { name: 'Apache Kafka & Redis Caching', category: 'Backend', proficiency: 92 },
+    { name: 'PostgreSQL & MySQL / Hibernate', category: 'Database', proficiency: 94 },
+    { name: 'Node.js, Express & WebSockets', category: 'Backend', proficiency: 90 },
+    { name: 'Docker & Microservices Architecture', category: 'Cloud & DevOps', proficiency: 91 },
+    { name: 'REST APIs & Firmware Sync', category: 'IoT & Systems', proficiency: 94 },
+    { name: 'React & Modern Web Interfaces', category: 'Frontend', proficiency: 88 },
   ];
 
   const effectiveSkills = skillsList && skillsList.length > 0 ? skillsList : defaultSkills;
 
-  const categories = ['All', 'Backend', 'AI & MCP', 'Mobile', 'Frontend', '3D & WebGL', 'Cloud & DevOps'];
+  const categories = ['All', 'Backend', 'Mobile', 'IoT & Systems', 'Database', 'Cloud & DevOps', 'Frontend'];
 
   const filteredSkills =
     activeCategory === 'All'

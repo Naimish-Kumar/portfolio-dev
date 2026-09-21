@@ -8,44 +8,44 @@ async function seedAcroCoderData() {
     // 1. Update Profile
     await conn.query(`
       UPDATE profile SET
-        full_name = 'Naimish Kumar Verma',
-        headline = 'Senior Software Architect & Flutter Team Lead | 7+ Years Exp | Java Spring Boot & AI MCP Integrations',
-        bio = 'Software Architect & Flutter Team Lead with 7+ years of engineering experience architecting scalable cross-platform mobile systems and enterprise backend services. Expert in Flutter/Dart, 3+ years of enterprise Java Spring Boot microservices, Clean Architecture, BLoC, real-time WebRTC/Socket.IO pipelines, and cutting-edge AI integrations including Model Context Protocol (MCP) agents.',
-        about_text = 'Senior Software Architect & Flutter Team Lead at Spirehub Software Pvt Ltd with 7+ years of engineering experience architecting scalable cross-platform mobile systems for iOS and Android as well as enterprise Java Spring Boot backends. Expert in Clean Architecture, BLoC state management, team leadership, 3+ years of enterprise Java Spring Boot microservices, real-time WebRTC/Socket.IO features, and Model Context Protocol (MCP) AI agent integrations. Proven track record of leading development teams to ship production apps serving over 100K+ active users with 99.9% reliability.',
+        full_name = 'Akash Verma',
+        headline = 'Software Engineer | Java & Mobile Systems Developer',
+        bio = 'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.',
+        about_text = 'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.',
         avatar_url = '/naimish_portrait.png',
         resume_url = 'https://acrocoder.com/resume.pdf',
-        email = 'acrocoader@gmail.com',
-        phone = '+91 9876543210',
-        location = 'India / Remote',
+        email = 'akash@spirehubs.com',
+        phone = '+91 9536824061',
+        location = 'Noida, India',
         available_for_hire = TRUE,
         years_experience = 7,
         projects_completed = 30,
-        github_url = 'https://github.com/Naimish-Kumar',
-        linkedin_url = 'https://linkedin.com/in/naimish-kumar-verma',
-        twitter_url = 'https://twitter.com/acrocoder'
+        github_url = 'https://github.com/akash-verma',
+        linkedin_url = 'https://linkedin.com/in/akash-verma',
+        twitter_url = 'https://twitter.com/akash_dev'
       WHERE id = 1
     `);
 
     // 2. Update Hero Settings
     await conn.query(`
       UPDATE hero_settings SET
-        greeting = 'Senior Software Architect & Mobile Lead',
-        headline = 'Architecting High-Performance Mobile, Spring Boot & AI Agent Systems',
-        subheadline = 'Engineering 60fps cross-platform mobile apps, Java Spring Boot microservices, and autonomous Model Context Protocol (MCP) AI integrations with enterprise reliability.',
+        greeting = 'Software Engineer | Java & Mobile Systems',
+        headline = 'Bridging Hardware & Enterprise Software Systems',
+        subheadline = 'Engineering scalable Java 17/21 microservices, cross-platform mobile apps with Flutter, and real-time IoT firmware-to-cloud pipelines.',
         typing_strings_json = ?,
         primary_button_text = 'Explore Applications',
         primary_button_link = '#work',
         secondary_button_text = 'Initiate Contact',
         secondary_button_link = '#contact',
-        badge_text = 'Senior Architect & Flutter Team Lead @ Spirehub'
+        badge_text = 'Senior Software Engineer @ SpireHub Softwares'
       WHERE id = 1
     `, [
       JSON.stringify([
-        '7+ Years Senior Full-Stack Lead',
-        'Java 21 Spring Boot Microservices',
-        'AI Agents & Model Context Protocol (MCP)',
-        'Flutter Lead • Sub-16ms 60fps',
-        'Clean Architecture & Cloud Systems'
+        '7+ Years Systems & Software Engineer',
+        'Java 17/21 & Spring Boot Microservices',
+        'Flutter & Android Mobile Architectures',
+        'IoT Telemetry, MQTT & BLE Protocols',
+        'High-Throughput Kafka & Redis Streaming'
       ])
     ]);
 
@@ -155,16 +155,16 @@ async function seedAcroCoderData() {
     // 4. Update Skills
     await conn.query('DELETE FROM skills');
     const skills = [
-      ['Java 21 & Spring Boot 3', 'Enterprise Backend', 96, 'Server', 1, true],
-      ['Model Context Protocol (MCP) & AI', 'AI & Agentic Systems', 95, 'Sparkles', 2, true],
-      ['Flutter & Dart (60FPS BLoC)', 'Core Mobile', 98, 'Smartphone', 3, true],
-      ['Spring Security & OAuth2 / JWT', 'Security & Microservices', 94, 'ShieldCheck', 4, true],
-      ['Next.js 14 / React 19 & TypeScript', 'Fullstack Web', 96, 'Globe', 5, true],
-      ['PostgreSQL & MySQL / JPA Hibernate', 'Databases', 94, 'Database', 6, true],
-      ['Apache Kafka & Redis Streaming', 'Event Streaming', 90, 'Activity', 7, true],
-      ['Three.js & 3D WebGL Shaders', '3D Graphics', 92, 'Cpu', 8, true],
-      ['Docker, K8s & CI/CD Pipelines', 'DevOps & Cloud', 91, 'Cloud', 9, true],
-      ['WebRTC & Socket.IO Realtime', 'Realtime Media', 93, 'Video', 10, true],
+      ['Java 17/21 & Spring Boot', 'Enterprise Backend', 96, 'Server', 1, true],
+      ['Spring Cloud, Security & JWT', 'Microservices & Security', 94, 'ShieldCheck', 2, true],
+      ['Flutter & Dart (BLoC / Provider)', 'Core Mobile', 98, 'Smartphone', 3, true],
+      ['Android Native & Systems Dev', 'Core Mobile', 92, 'Smartphone', 4, true],
+      ['MQTT & BLE Hardware Protocols', 'IoT & Hardware Systems', 95, 'Cpu', 5, true],
+      ['IoT Telemetry & Ingestion', 'IoT & Hardware Systems', 93, 'Activity', 6, true],
+      ['Apache Kafka & Redis Streaming', 'Event Streaming', 92, 'Activity', 7, true],
+      ['PostgreSQL & MySQL / Hibernate', 'Databases', 94, 'Database', 8, true],
+      ['Docker & Microservices Architecture', 'DevOps & Cloud', 91, 'Cloud', 9, true],
+      ['Node.js, Express & WebSockets', 'Backend & Real-Time', 90, 'Globe', 10, true],
     ];
 
     for (const s of skills) {
@@ -174,43 +174,43 @@ async function seedAcroCoderData() {
       );
     }
 
-    // 5. Update Experience (7 Years Total: 3 Years Java @ Spirehub, 2+ Years Flutter @ Spirehub, Flutter Lead @ Spirehub)
+    // 5. Update Experience (SpireHub, Enterprise Software Solutions, TechSmart Mobile Systems)
     await conn.query('DELETE FROM experience');
     const experiences = [
       [
-        'Spirehub Software Pvt Ltd',
-        'Flutter Team Lead & Senior Full-Stack Architect',
-        'Lucknow, India / Remote',
+        'SpireHub Softwares Pvt Ltd',
+        'Senior Software Engineer',
+        'Noida, India',
         'Full-time',
-        '2024-06-01',
+        '2023-06-01',
         null,
         true,
-        'Leading cross-platform mobile and backend engineering teams, architecting Flutter apps and Java Spring Boot microservices, building AI agent workflows with Model Context Protocol (MCP) servers, mentoring developers, and managing CI/CD automated deployments.',
-        JSON.stringify(['Flutter', 'Java Spring Boot', 'Model Context Protocol (MCP)', 'AI Agents', 'BLoC', 'Docker', 'CI/CD']),
+        'Spearheaded development of cross-platform mobile applications (Flutter/Android) communicating with custom IoT hardware via BLE and MQTT protocols.\\nArchitected microservices using Java 17/21 and Spring Boot, optimizing data processing pipelines that reduced latency by 35% for real-time sensor streams.\\nDesigned and maintained firmware-to-cloud communication interfaces, handling device authentication, telemetry ingestion, and OTA update dispatching.\\nImplemented real-time bidirectional communication channels using WebSockets and Socket.IO for live device control dashboards.\\nMentored junior engineers and led code reviews to maintain code quality, test coverage, and documentation standards.',
+        JSON.stringify(['Java 17/21', 'Spring Boot', 'Flutter', 'Android', 'BLE', 'MQTT', 'Microservices', 'WebSockets', 'Docker']),
         1
       ],
       [
-        'Spirehub Software Pvt Ltd',
-        'Senior Flutter & Full-Stack Developer',
-        'Lucknow, India',
+        'Enterprise Software Solutions',
+        'Java Enterprise Developer',
+        'Noida, India',
         'Full-time',
-        '2022-10-01',
-        '2024-06-01',
+        '2020-05-01',
+        '2023-05-01',
         false,
-        'Architected and deployed 6+ production mobile applications for iOS and Android with sub-16ms 60fps rendering. Integrated payment gateways, optimized rendering engines, implemented real-time Socket.IO/WebRTC pipelines, and built high-performance backends.',
-        JSON.stringify(['Flutter', 'Dart', 'Clean Architecture', 'BLoC', 'WebSockets', 'Payment Gateways', 'iOS/Android']),
+        'Engineered core enterprise backend services utilizing Java, Spring Boot, Hibernate/JPA, and PostgreSQL/MySQL databases.\\nBuilt and maintained RESTful APIs powering high-traffic web applications, processing 2M+ daily requests with 99.9% uptime.\\nIntegrated message-driven architectures using Apache Kafka and Redis for asynchronous task queuing and distributed caching.\\nImplemented role-based access control (RBAC), OAuth2, and JWT authentication across distributed microservices.\\nContainerized backend applications with Docker and automated deployment workflows through CI/CD pipelines.',
+        JSON.stringify(['Java', 'Spring Boot', 'Hibernate/JPA', 'PostgreSQL', 'MySQL', 'Apache Kafka', 'Redis', 'OAuth2', 'JWT', 'Docker']),
         2
       ],
       [
-        'Spirehub Software Pvt Ltd',
-        'Java / Spring Boot Developer',
-        'Lucknow, India',
+        'TechSmart Mobile Systems',
+        'Associate Software Engineer — Mobile & Systems',
+        'Noida, India',
         'Full-time',
-        '2019-07-01',
-        '2022-10-01',
+        '2017-06-01',
+        '2020-04-01',
         false,
-        'Engineered 3 years of enterprise Java Spring Boot backend microservices with Spring Security, Hibernate/JPA, PostgreSQL, MySQL, Redis caching, and Kafka event streaming. Built scalable RESTful APIs powering high-traffic enterprise platforms and mobile backends.',
-        JSON.stringify(['Java 21', 'Spring Boot', 'Spring Security', 'Hibernate/JPA', 'PostgreSQL', 'MySQL', 'Kafka', 'Redis', 'Microservices', 'REST APIs']),
+        'Developed hybrid and native mobile application modules for Android and cross-platform frameworks.\\nIntegrated backend APIs and local persistence layers (SQLite, Room, Shared Preferences) ensuring offline-first user experiences.\\nImplemented Bluetooth / serial communication protocols for companion device connectivity and data synchronization.\\nCollaborated with UI/UX teams to build responsive, accessible layouts and smooth, jitter-free user interaction flows.\\nAssisted in debugging, bug fixes, automated unit testing, and release cycle preparation.',
+        JSON.stringify(['Android', 'Flutter', 'Java', 'SQLite', 'Bluetooth', 'REST APIs', 'Offline-First', 'Git']),
         3
       ]
     ];
@@ -222,26 +222,26 @@ async function seedAcroCoderData() {
       `, exp);
     }
 
-    // 6. Update Education (2015 – 2019)
+    // 6. Update Education (2013 – 2017)
     await conn.query('DELETE FROM education');
     await conn.query(`
       INSERT INTO education (institution, degree, field_of_study, start_year, end_year, grade, description, display_order)
       VALUES
-      ('Galgotias University', 'B.Tech in Computer Science & Engineering', 'Cloud Computing & Distributed Systems', '2015', '2019', 'First Class with Distinction', 'Core coursework in Algorithms, Distributed Systems, Software Engineering, Database Systems, and Cloud Computing. Capstone Project: Secure Multi-Tenant Cloud Storage Engine with End-to-End Encryption.', 1)
+      ('Galgotias University', 'B.Tech in Computer Science & Engineering', 'Computer Science & Software Systems', '2013', '2017', 'First Class with Distinction', 'Core coursework in Data Structures & Algorithms, Object-Oriented Programming (Java), Operating Systems, Computer Networks, Database Management Systems, and Software Engineering.', 1)
     `);
 
     // 7. Update Site Settings
     await conn.query(`
       INSERT INTO site_settings (setting_key, setting_value) VALUES
-      ('site_title', 'Naimish Kumar Verma — Senior Mobile Engineer & Flutter Specialist'),
-      ('site_description', 'Official portfolio of Naimish Kumar Verma - Flutter Team Lead at Spirehub Software, Senior Mobile Engineer, and Open Source Creator.'),
+      ('site_title', 'Akash Verma — Software Engineer | Java & Mobile Systems Developer'),
+      ('site_description', 'Official portfolio of Akash Verma - Software Engineer with 7+ years of experience bridging hardware & software systems, Java enterprise microservices, and Flutter mobile architectures.'),
       ('accent_color', '#06b6d4'),
       ('enable_contact_form', 'true'),
       ('enable_projects_section', 'true'),
       ('enable_skills_section', 'true'),
       ('enable_experience_section', 'true'),
       ('enable_education_section', 'true'),
-      ('footer_text', '© 2026 NAIMISH KUMAR VERMA — SENIOR FLUTTER ENGINEER & TEAM LEAD. ALL RIGHTS RESERVED.')
+      ('footer_text', '© 2026 AKASH VERMA — SOFTWARE ENGINEER | JAVA & MOBILE SYSTEMS DEVELOPER. ALL RIGHTS RESERVED.')
       ON DUPLICATE KEY UPDATE setting_value = VALUES(setting_value)
     `);
 

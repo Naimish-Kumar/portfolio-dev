@@ -54,7 +54,7 @@ export default function Home() {
             <div className="flex items-center gap-2.5 shrink-0">
               <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span className="font-mono text-xs sm:text-sm font-bold tracking-widest text-[#f5eedf] whitespace-nowrap">
-                PORTFOLIO \ 2026 :: NAIMISH VERMA
+                PORTFOLIO \ 2026 :: AKASH VERMA
               </span>
             </div>
 
@@ -108,8 +108,8 @@ export default function Home() {
 
         {/* 1. HERO: 3D Isometric Retro CRT Terminal & Mechanical Keyboard */}
         <RetroDeskScene
-          name={profile?.name || 'Naimish Kumar Verma'}
-          title={profile?.title || 'Flutter Team Lead & Mobile Creative'}
+          name={profile?.name || 'Akash Verma'}
+          title={profile?.title || 'Software Engineer | Java & Mobile Systems Developer'}
           onExploreWork={() => scrollToSection('work')}
           onOpenContact={() => scrollToSection('contact')}
         />
@@ -175,7 +175,7 @@ export default function Home() {
               </h2>
             </div>
             <span className="font-mono text-xs text-slate-500">
-              [ REF: ARCHIVE-2026-NKV ]
+              [ REF: ARCHIVE-2026-AV ]
             </span>
           </div>
           <DossierAbout
@@ -206,7 +206,7 @@ export default function Home() {
         <footer className="w-full border-t border-[#233035] py-8 text-center font-mono text-xs text-slate-500 relative z-20 bg-[#0e1315]">
           <div className="max-w-4xl mx-auto px-4">
             <p className="text-slate-400 font-bold">
-              © 2026 Naimish Kumar Verma // Flutter Team Lead & Full-Stack Architect
+              © 2026 Akash Verma // Software Engineer | Java & Mobile Systems Developer
             </p>
           </div>
         </footer>

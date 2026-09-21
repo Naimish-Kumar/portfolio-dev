@@ -117,14 +117,14 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
       await submitContact({ ...formData, message: compiledMessage });
       setStatus({
         type: 'success',
-        text: 'PROJECT BRIEF DISPATCHED: Your brief has been securely logged in Naimish’s priority queue.',
+        text: 'PROJECT BRIEF DISPATCHED: Your brief has been securely logged in Akash’s priority queue.',
       });
       setFormData({ name: '', email: '', message: '' });
       setSelectedScopes([]);
     } catch {
       setStatus({
         type: 'error',
-        text: 'Failed to dispatch brief. Please contact directly at acrocoader@gmail.com',
+        text: 'Failed to dispatch brief. Please contact directly at akash@spirehubs.com',
       });
     } finally {
       setLoading(false);
@@ -133,14 +133,14 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
 
   const techBadges = [
     { label: 'Flutter & Dart', color: 'border-cyan-800 text-cyan-900 bg-cyan-50' },
-    { label: 'Next.js 14', color: 'border-slate-800 text-slate-800 bg-slate-100' },
-    { label: 'Three.js WebGL', color: 'border-emerald-800 text-emerald-900 bg-emerald-50' },
-    { label: 'React 19', color: 'border-blue-800 text-blue-900 bg-blue-50' },
+    { label: 'Java 17/21 Spring Boot', color: 'border-amber-800 text-amber-900 bg-amber-50' },
+    { label: 'Apache Kafka', color: 'border-slate-800 text-slate-800 bg-slate-100' },
+    { label: 'MQTT & BLE IoT', color: 'border-emerald-800 text-emerald-900 bg-emerald-50' },
     { label: 'Node.js & Express', color: 'border-green-800 text-green-900 bg-green-50' },
-    { label: 'MySQL / Cloud SQL', color: 'border-amber-800 text-amber-900 bg-amber-50' },
-    { label: 'TypeScript', color: 'border-sky-800 text-sky-900 bg-sky-50' },
-    { label: 'Tailwind CSS', color: 'border-cyan-800 text-cyan-900 bg-cyan-50' },
-    { label: 'Blender 3D', color: 'border-orange-800 text-orange-900 bg-orange-50' },
+    { label: 'PostgreSQL & MySQL', color: 'border-blue-800 text-blue-900 bg-blue-50' },
+    { label: 'Clean Architecture & BLoC', color: 'border-sky-800 text-sky-900 bg-sky-50' },
+    { label: 'Docker & Microservices', color: 'border-purple-800 text-purple-900 bg-purple-50' },
+    { label: 'WebSockets / Socket.IO', color: 'border-orange-800 text-orange-900 bg-orange-50' },
   ];
 
   return (
@@ -183,7 +183,7 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
               Initiate Project Brief
             </h2>
             <p className="font-sans text-xs md:text-sm text-slate-600 mb-6 leading-relaxed">
-              Have a high-impact digital product, 3D interactive web project, or scalable architecture to build? Transmit your requirements directly.
+              Have a high-impact mobile app, Java enterprise backend, IoT integration, or scalable microservices architecture to build? Transmit your requirements directly.
             </p>
 
             {/* Interactive Scope Selectors */}
@@ -293,7 +293,7 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
               {/* Embossed Wax Seal */}
               <div className="w-20 h-20 rounded-full bg-red-900 border-2 border-red-950 shadow-xl flex flex-col items-center justify-center text-amber-200 rotate-[-8deg] relative select-none">
                 <div className="w-16 h-16 rounded-full border border-dashed border-red-700/80 flex flex-col items-center justify-center text-center">
-                  <span className="font-mono font-black text-[9px] tracking-widest text-amber-300">NKV</span>
+                  <span className="font-mono font-black text-[9px] tracking-widest text-amber-300">AV</span>
                   <span className="font-mono text-[7px] tracking-wider text-amber-200/90">// 2026 //</span>
                   <span className="font-mono text-[6px] uppercase tracking-tighter text-amber-300/80">SEALED</span>
                 </div>
@@ -309,7 +309,7 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
               {/* Circular Postal Postmark */}
               <div className="w-20 h-20 rounded-full border-2 border-slate-800 p-1 flex items-center justify-center text-center rotate-[-12deg] opacity-80 select-none">
                 <p className="font-mono text-[8px] font-bold leading-tight text-slate-800">
-                  LUCKNOW <br />
+                  NOIDA <br />
                   SEP 2026 <br />
                   DELIVERED
                 </p>
@@ -330,32 +330,32 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
               <div className="flex items-center gap-2.5 text-slate-800">
                 <Mail className="w-4 h-4 text-slate-700 shrink-0" />
                 <span className="font-semibold text-slate-600 text-[11px]">Email:</span>
-                <a href="mailto:acrocoader@gmail.com" className="font-bold underline text-blue-800 hover:text-blue-900">
-                  acrocoader@gmail.com
+                <a href="mailto:akash@spirehubs.com" className="font-bold underline text-blue-800 hover:text-blue-900">
+                  akash@spirehubs.com
                 </a>
               </div>
 
               <div className="flex items-center gap-2.5 text-slate-800">
                 <MessageSquare className="w-4 h-4 text-emerald-800 shrink-0" />
-                <span className="font-semibold text-slate-600 text-[11px]">WhatsApp:</span>
-                <a href="https://wa.me/917784068641" target="_blank" rel="noopener noreferrer" className="font-bold underline text-emerald-800 hover:text-emerald-900">
-                  +91 7784068641
+                <span className="font-semibold text-slate-600 text-[11px]">WhatsApp / Phone:</span>
+                <a href="https://wa.me/919536824061" target="_blank" rel="noopener noreferrer" className="font-bold underline text-emerald-800 hover:text-emerald-900">
+                  +91 9536824061
                 </a>
               </div>
 
               <div className="flex items-center gap-2.5 text-slate-800">
                 <Linkedin className="w-4 h-4 text-blue-700 shrink-0" />
                 <span className="font-semibold text-slate-600 text-[11px]">LinkedIn:</span>
-                <a href={profile?.linkedin_url || 'https://linkedin.com'} target="_blank" rel="noopener noreferrer" className="font-bold underline text-blue-700 hover:text-blue-800">
-                  linkedin.com/in/naimish
+                <a href={profile?.linkedin_url || 'https://linkedin.com/in/akash-verma'} target="_blank" rel="noopener noreferrer" className="font-bold underline text-blue-700 hover:text-blue-800">
+                  linkedin.com/in/akash-verma
                 </a>
               </div>
 
               <div className="flex items-center gap-2.5 text-slate-800">
                 <Github className="w-4 h-4 text-slate-900 shrink-0" />
                 <span className="font-semibold text-slate-600 text-[11px]">GitHub:</span>
-                <a href={profile?.github_url || 'https://github.com/acrocoder'} target="_blank" rel="noopener noreferrer" className="font-bold underline text-slate-900 hover:text-slate-800">
-                  github.com/acrocoder
+                <a href={profile?.github_url || 'https://github.com/akash-verma'} target="_blank" rel="noopener noreferrer" className="font-bold underline text-slate-900 hover:text-slate-800">
+                  github.com/akash-verma
                 </a>
               </div>
             </div>

@@ -9,7 +9,7 @@ interface NavbarProps {
   isAvailable?: boolean;
 }
 
-export default function Navbar({ profileName = 'NAIMISH.DEV', isAvailable = true }: NavbarProps) {
+export default function Navbar({ profileName = 'AKASH.DEV', isAvailable = true }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -48,13 +48,13 @@ export default function Navbar({ profileName = 'NAIMISH.DEV', isAvailable = true
           </div>
           <div className="flex flex-col">
             <span className="font-heading font-extrabold text-lg text-white tracking-tight flex items-center gap-1.5 font-mono">
-              NAIMISH.<span className="text-cyan-400">DEV</span>
+              AKASH.<span className="text-cyan-400">DEV</span>
               <span className="px-1.5 py-0.2 rounded text-[10px] font-mono bg-slate-800 text-slate-400 border border-slate-700">
                 v3.5.0
               </span>
             </span>
             <span className="text-[10px] font-mono text-cyan-400 font-semibold tracking-wider uppercase">
-              Flutter Team Lead & Mobile Architect
+              Software Engineer | Java & Mobile Systems Developer
             </span>
           </div>
         </Link>

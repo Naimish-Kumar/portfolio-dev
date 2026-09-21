@@ -10,24 +10,24 @@ interface AboutProps {
 
 export default function About({ profileData }: AboutProps) {
   const avatarUrl = profileData?.avatar_url || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';
-  const aboutText = profileData?.about_text || 'Flutter Team Lead at Spirehub Software Pvt Ltd with 3+ years of engineering experience architecting scalable cross-platform mobile systems for iOS and Android. Expert in Clean Architecture, BLoC state management, team leadership, real-time WebRTC/Socket.IO features, payment systems, and performance tuning. Proven track record of leading development teams to ship production apps serving thousands of active users with 99.9% crash-free sessions.';
+  const aboutText = profileData?.about_text || 'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.';
 
   const leadershipPoints = [
     {
-      title: 'Clean Architecture & BLoC',
-      description: 'Scalable enterprise state management & modular repositories with pure separation of concerns.',
+      title: 'Java & Spring Microservices',
+      description: 'High-throughput distributed systems, Kafka streaming, Redis caching, and resilient RESTful APIs.',
       icon: Code2,
       color: 'text-indigo-400',
     },
     {
-      title: 'Sub-16ms Frame Rendering',
-      description: '60fps fluid UI animations with zero jank, widget render caching, and memory leak elimination.',
+      title: 'Cross-Platform Mobile & IoT',
+      description: 'Production Flutter & Android architectures integrated with BLE hardware and MQTT telemetry.',
       icon: Sparkles,
       color: 'text-cyan-400',
     },
     {
-      title: 'CI/CD & App Store Delivery',
-      description: 'Automated release workflows, TestFlight distribution, and Google Play compliance releases.',
+      title: 'Hardware-to-Cloud Integration',
+      description: 'End-to-end device telemetry pipelines, sensor data ingestion, and cloud microservices.',
       icon: Briefcase,
       color: 'text-purple-400',
     },
@@ -44,10 +44,10 @@ export default function About({ profileData }: AboutProps) {
             <span>Professional Journey</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-white tracking-tight">
-            Engineering Leadership & <span className="text-gradient">Mobile Mastery</span>
+            Systems Architecture & <span className="text-gradient">Engineering Mastery</span>
           </h2>
           <p className="mt-4 text-slate-400 text-base sm:text-lg">
-            Leading teams, crafting production apps, and architecting sub-16ms mobile systems.
+            Bridging hardware and software systems with scalable microservices and cross-platform mobile apps.
           </p>
         </div>
 
@@ -60,19 +60,19 @@ export default function About({ profileData }: AboutProps) {
               <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
                 <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
                   <Terminal className="w-3.5 h-3.5 inline mr-1 text-cyan-400" />
-                  Core Leadership
+                  Systems Engineer
                 </span>
                 <span className="text-xs font-mono text-emerald-400 flex items-center gap-1.5 font-bold">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block" />
-                  Active Team Lead
+                  Senior Software Engineer
                 </span>
               </div>
 
               <h3 className="text-2xl font-heading font-bold text-white pt-2">
-                Naimish Kumar Verma
+                Akash Verma
               </h3>
               <div className="text-xs font-mono text-cyan-400 font-semibold">
-                Flutter Team Lead @ Spirehub Software Pvt Ltd
+                Software Engineer | Java & Mobile Systems Developer @ SpireHub Softwares Pvt Ltd
               </div>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed whitespace-pre-line pt-2">
@@ -107,8 +107,8 @@ export default function About({ profileData }: AboutProps) {
                 </div>
                 <div>
                   <div className="text-[10px] font-mono uppercase text-slate-500">Email</div>
-                  <a href="mailto:acrocoader@gmail.com" className="text-xs font-bold text-white hover:text-cyan-400 transition-colors">
-                    acrocoader@gmail.com
+                  <a href="mailto:akash@spirehubs.com" className="text-xs font-bold text-white hover:text-cyan-400 transition-colors">
+                    akash@spirehubs.com
                   </a>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export default function About({ profileData }: AboutProps) {
                 </div>
                 <div>
                   <div className="text-[10px] font-mono uppercase text-slate-500">Location</div>
-                  <div className="text-xs font-bold text-white">India (Available Worldwide)</div>
+                  <div className="text-xs font-bold text-white">Noida, India (Available Worldwide)</div>
                 </div>
               </div>
             </div>
@@ -148,9 +148,9 @@ export default function About({ profileData }: AboutProps) {
 
             {/* Quick Metrics Badge */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-950/40 via-slate-900/60 to-cyan-950/40 border border-indigo-500/30">
-              <div className="text-xs font-mono text-cyan-400 font-bold uppercase mb-2">Production Quality Guarantee</div>
+              <div className="text-xs font-mono text-cyan-400 font-bold uppercase mb-2">Enterprise & IoT System Resilience</div>
               <p className="text-xs text-slate-300 leading-relaxed">
-                99.9% crash-free session rate across multiple high-traffic apps published on the App Store & Google Play Store.
+                Production-proven systems handling high-frequency sensor streams, low-latency mobile rendering, and enterprise cloud microservices.
               </p>
             </div>
           </div>
