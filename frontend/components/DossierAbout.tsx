@@ -34,8 +34,8 @@ const openSourcePackages = [
     description:
       'Model Context Protocol (MCP) server & client SDK enabling LLMs to securely execute enterprise tools and workspace operations.',
     tags: ['MCP Protocol', 'AI Agents', 'Tool Calling', 'TypeScript'],
-    githubUrl: 'https://github.com/Naimish-Kumar/mcp_agent_toolkit',
-    pubUrl: 'https://github.com/Naimish-Kumar/mcp_agent_toolkit',
+    githubUrl: 'https://github.com/akash-verma/mcp_agent_toolkit',
+    pubUrl: 'https://github.com/akash-verma/mcp_agent_toolkit',
     downloads: '4.8k+ / mo',
     installCmd: 'npm install @acrocoder/mcp-agent-toolkit',
   },
@@ -44,8 +44,8 @@ const openSourcePackages = [
     description:
       'High-throughput Java 21 & Spring Boot 3 enterprise microservices starter with Spring Security, Kafka, and PostgreSQL.',
     tags: ['Java 21', 'Spring Boot 3', 'Kafka', 'Microservices'],
-    githubUrl: 'https://github.com/Naimish-Kumar/spring_boot_enterprise_core',
-    pubUrl: 'https://github.com/Naimish-Kumar/spring_boot_enterprise_core',
+    githubUrl: 'https://github.com/akash-verma/spring_boot_enterprise_core',
+    pubUrl: 'https://github.com/akash-verma/spring_boot_enterprise_core',
     downloads: '3.6k+ / mo',
     installCmd: 'mvn archetype:generate -DarchetypeArtifactId=spring-boot-core',
   },
@@ -54,8 +54,8 @@ const openSourcePackages = [
     description:
       'Autonomous multimodal AI agent & vector search RAG orchestration framework with Gemini 2.0 streaming inference.',
     tags: ['Gemini 2.0', 'Vector RAG', 'AI Tooling', 'LangChain'],
-    githubUrl: 'https://github.com/Naimish-Kumar/gemini_agentic_rag_pipeline',
-    pubUrl: 'https://github.com/Naimish-Kumar/gemini_agentic_rag_pipeline',
+    githubUrl: 'https://github.com/akash-verma/gemini_agentic_rag_pipeline',
+    pubUrl: 'https://github.com/akash-verma/gemini_agentic_rag_pipeline',
     downloads: '2.9k+ / mo',
     installCmd: 'npm install @acrocoder/gemini-rag-pipeline',
   },
@@ -64,8 +64,8 @@ const openSourcePackages = [
     description:
       'Battle-tested 60FPS Flutter production engine providing Clean Architecture layers, BLoC state observers, and sub-16ms telemetry.',
     tags: ['Flutter 3', 'BLoC State', 'Clean Arch', '60FPS'],
-    githubUrl: 'https://github.com/Naimish-Kumar/flutter_clean_architecture_core',
-    pubUrl: 'https://github.com/Naimish-Kumar/flutter_clean_architecture_core',
+    githubUrl: 'https://github.com/akash-verma/flutter_clean_architecture_core',
+    pubUrl: 'https://github.com/akash-verma/flutter_clean_architecture_core',
     downloads: '5.2k+ / mo',
     installCmd: 'flutter pub add flutter_clean_architecture_core',
   },

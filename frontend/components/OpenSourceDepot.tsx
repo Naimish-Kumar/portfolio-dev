@@ -47,7 +47,7 @@ const packages: PackageItem[] = [
     likes: '148',
     pubPoints: '140/140',
     pubUrl: 'https://pub.dev/packages/audio_waveform_recorder',
-    githubUrl: 'https://github.com/Naimish-Kumar/audio_waveform_recorder',
+    githubUrl: 'https://github.com/akash-verma/audio_waveform_recorder',
     installCmd: 'flutter pub add audio_waveform_recorder',
     sampleCode: `import 'package:audio_waveform_recorder/audio_waveform_recorder.dart';
 
@@ -76,7 +76,7 @@ await controller.startRecording();
     likes: '112',
     pubPoints: '140/140',
     pubUrl: 'https://pub.dev/packages/chat_secure_guard',
-    githubUrl: 'https://github.com/Naimish-Kumar/chat_secure_guard',
+    githubUrl: 'https://github.com/akash-verma/chat_secure_guard',
     installCmd: 'flutter pub add chat_secure_guard',
     sampleCode: `import 'package:chat_secure_guard/chat_secure_guard.dart';
 
@@ -102,7 +102,7 @@ final encryptedEnvelope = await ratchet.encryptMessage(
     likes: '235',
     pubPoints: '140/140',
     pubUrl: 'https://pub.dev/packages/flutter_performance_optimizer',
-    githubUrl: 'https://github.com/Naimish-Kumar/flutter_performance_optimizer',
+    githubUrl: 'https://github.com/akash-verma/flutter_performance_optimizer',
     installCmd: 'flutter pub add flutter_performance_optimizer',
     sampleCode: `import 'package:flutter_performance_optimizer/optimizer.dart';
 
@@ -131,7 +131,7 @@ void main() {
     likes: '380',
     pubPoints: '140/140',
     pubUrl: 'https://pub.dev/packages/flutter_architecture_generator',
-    githubUrl: 'https://github.com/Naimish-Kumar/flutter_architecture_generator',
+    githubUrl: 'https://github.com/akash-verma/flutter_architecture_generator',
     installCmd: 'flutter pub add flutter_architecture_generator',
     sampleCode: `// Terminal CLI Execution:
 $ flutter_arch_gen feature --name auth --state bloc --repo
