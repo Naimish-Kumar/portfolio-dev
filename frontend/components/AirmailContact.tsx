@@ -338,8 +338,8 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
               <div className="flex items-center gap-2.5 text-slate-800">
                 <MessageSquare className="w-4 h-4 text-emerald-800 shrink-0" />
                 <span className="font-semibold text-slate-600 text-[11px]">WhatsApp / Phone:</span>
-                <a href="https://wa.me/919536824061" target="_blank" rel="noopener noreferrer" className="font-bold underline text-emerald-800 hover:text-emerald-900">
-                  +91 9536824061
+                <a href={profile?.phone ? `https://wa.me/${profile.phone.replace(/[^0-9]/g, '')}` : 'https://wa.me/919718598938'} target="_blank" rel="noopener noreferrer" className="font-bold underline text-emerald-800 hover:text-emerald-900">
+                  {profile?.phone || '+91 9718598938'}
                 </a>
               </div>
             </div>

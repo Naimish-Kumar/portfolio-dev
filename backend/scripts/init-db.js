@@ -185,7 +185,7 @@ async function initDB() {
           'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
           'https://acrocoder.com/resume.pdf',
           'akash@spirehubs.com',
-          '+91 9536824061',
+          '+91 9718598938',
           'Noida, India',
           TRUE,
           7,

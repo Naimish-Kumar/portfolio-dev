@@ -97,7 +97,7 @@ export const defaultPortfolioData = {
     avatar_url: '/naimish_portrait.png',
     available_for_hire: true,
     email: 'akash@spirehubs.com',
-    phone: '+91 9536824061',
+    phone: '+91 9718598938',
     location: 'Noida, India',
     github_url: '',
     linkedin_url: '',

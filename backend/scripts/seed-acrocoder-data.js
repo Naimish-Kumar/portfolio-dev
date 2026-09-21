@@ -15,7 +15,7 @@ async function seedAcroCoderData() {
         avatar_url = '/naimish_portrait.png',
         resume_url = 'https://acrocoder.com/resume.pdf',
         email = 'akash@spirehubs.com',
-        phone = '+91 9536824061',
+        phone = '+91 9718598938',
         location = 'Noida, India',
         available_for_hire = TRUE,
         years_experience = 7,
