@@ -2,21 +2,21 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Akash Verma | Software Engineer & Java / Mobile Systems Developer',
-  description: 'Portfolio of Akash Verma — Software Engineer with 7+ years experience in Java enterprise backends, Flutter mobile apps, IoT systems, and microservices.',
-  keywords: ['Software Engineer', 'Java Developer', 'Spring Boot', 'Flutter', 'Mobile Developer', 'IoT', 'Microservices', 'Akash Verma', 'Portfolio'],
-  authors: [{ name: 'Akash Verma' }],
+  title: 'Naimish Kumar Verma | Flutter Developer & Mobile / Full-Stack Engineer',
+  description: 'Official portfolio of Naimish Kumar Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps for Android & iOS and publishing open-source pub.dev packages.',
+  keywords: ['Flutter Developer', 'Dart', 'Mobile Engineer', 'iOS App', 'Android App', 'pub.dev', 'Open Source', 'Naimish Kumar Verma', 'Portfolio'],
+  authors: [{ name: 'Naimish Kumar Verma' }],
   openGraph: {
-    title: 'Akash Verma | Software Engineer & Java / Mobile Systems Developer',
-    description: 'Portfolio of Akash Verma — Software Engineer with 7+ years experience bridging hardware, mobile, and enterprise Java backend systems.',
+    title: 'Naimish Kumar Verma | Flutter Developer & Mobile / Full-Stack Engineer',
+    description: 'Official portfolio of Naimish Kumar Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps for Android & iOS and publishing open-source pub.dev packages.',
     url: 'https://acrocoder.com',
-    siteName: 'Akash Verma Portfolio',
+    siteName: 'Naimish Kumar Verma Portfolio',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80',
         width: 1200,
         height: 630,
-        alt: 'Akash Verma Portfolio',
+        alt: 'Naimish Kumar Verma Portfolio',
       },
     ],
     locale: 'en_US',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Akash Verma | Software Engineer',
-    description: 'Portfolio of Akash Verma — Software Engineer with 7+ years experience bridging hardware, mobile, and enterprise Java backend systems.',
+    title: 'Naimish Kumar Verma | Flutter Developer',
+    description: 'Official portfolio of Naimish Kumar Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps and publishing open-source pub.dev packages.',
   },
 };
 

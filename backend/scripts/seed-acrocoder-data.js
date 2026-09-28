@@ -1,27 +1,27 @@
 const pool = require('../config/db');
 
 async function seedAcroCoderData() {
-  console.log('Seeding exact AcroCoder profile, projects, packages, and experience into MySQL...');
+  console.log('Seeding exact Naimish Kumar Verma profile, projects, packages, and experience into MySQL...');
   const conn = await pool.getConnection();
 
   try {
     // 1. Update Profile
     await conn.query(`
       UPDATE profile SET
-        full_name = 'Akash Verma',
-        headline = 'Software Engineer | Java & Mobile Systems Developer',
-        bio = 'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.',
-        about_text = 'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.',
+        full_name = 'Naimish Kumar Verma',
+        headline = 'Flutter Developer | Mobile & Full-Stack Engineer',
+        bio = 'Results-driven Flutter Developer with 2+ years of professional experience designing and shipping scalable cross-platform mobile applications for Android and iOS. Proficient in Flutter, Dart, Firebase, REST APIs, real-time systems (Socket.IO), and payment gateway integration (PayPal, Authorize.net). Published 5+ production applications on Google Play Store and Apple App Store. Hands-on open-source contributor with 4 published pub.dev packages.',
+        about_text = 'Results-driven Flutter Developer with 2+ years of professional experience designing and shipping scalable cross-platform mobile applications for Android and iOS. Proficient in Flutter, Dart, Firebase, REST APIs, real-time systems (Socket.IO), and payment gateway integration (PayPal, Authorize.net). Published 5+ production applications on Google Play Store and Apple App Store. Hands-on open-source contributor with 4 published pub.dev packages.',
         avatar_url = '/akash_portrait_bw.jpg',
         resume_url = 'https://acrocoder.com/resume.pdf',
-        email = 'akash@spirehubs.com',
-        phone = '+91 9718598938',
+        email = 'vnaimishkumar@gmail.com',
+        phone = '+91-9536824061',
         location = 'Noida, India',
         available_for_hire = TRUE,
-        years_experience = 7,
-        projects_completed = 30,
-        github_url = NULL,
-        linkedin_url = NULL,
+        years_experience = 2,
+        projects_completed = 12,
+        github_url = 'https://github.com/vnaimishkumar',
+        linkedin_url = 'https://linkedin.com/in/vnaimishkumar',
         twitter_url = NULL
       WHERE id = 1
     `);
@@ -29,119 +29,184 @@ async function seedAcroCoderData() {
     // 2. Update Hero Settings
     await conn.query(`
       UPDATE hero_settings SET
-        greeting = 'Software Engineer | Java & Mobile Systems',
-        headline = 'Bridging Hardware & Enterprise Software Systems',
-        subheadline = 'Engineering scalable Java 17/21 microservices, cross-platform mobile apps with Flutter, and real-time IoT firmware-to-cloud pipelines.',
+        greeting = 'Flutter Developer | Mobile & Full-Stack Engineer',
+        headline = 'Building Scalable Cross-Platform Mobile Apps & Open-Source Tools',
+        subheadline = 'Specializing in Flutter, BLoC, Clean Architecture, Socket.IO real-time systems, and payment gateway integrations.',
         typing_strings_json = ?,
         primary_button_text = 'Explore Applications',
         primary_button_link = '#work',
         secondary_button_text = 'Initiate Contact',
         secondary_button_link = '#contact',
-        badge_text = 'Senior Software Engineer @ SpireHub Softwares'
+        badge_text = 'Flutter Developer @ Spirehub Software'
       WHERE id = 1
     `, [
       JSON.stringify([
-        '7+ Years Systems & Software Engineer',
-        'Java 17/21 & Spring Boot Microservices',
-        'Flutter & Android Mobile Architectures',
-        'IoT Telemetry, MQTT & BLE Protocols',
-        'High-Throughput Kafka & Redis Streaming'
+        'Flutter & Dart Cross-Platform Mobile Apps',
+        'Open Source Pub.dev Package Contributor',
+        'Clean Architecture & BLoC State Management',
+        'Socket.IO & Real-Time Communications',
+        'PayPal & Authorize.net Payment Gateways'
       ])
     ]);
 
-    // 3. Update Projects & Shipped Apps
+    // 3. Update Projects & Shipped Apps + Pub.dev Packages
     await conn.query('DELETE FROM projects');
     const projects = [
       [
-        'Congo Bon Marché - E-Commerce & Marketplace Ecosystem',
-        'congobonmarche-ecommerce',
-        'Premier multi-vendor e-commerce marketplace and logistics platform in Central Africa with mobile apps for iOS & Android.',
-        'End-to-end multi-vendor e-commerce ecosystem designed for DRC and Central Africa. Features high-performance web storefront, native iOS & Android applications built with Flutter, multi-currency wallet support, Mobile Money (Airtel/Orange Money) payment gateways, real-time push order dispatch, and seller analytics dashboard.',
-        'Mobile & Web E-Commerce',
-        'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80',
-        'https://congobonmarche.com',
-        'https://apps.apple.com/in/app/congobonmarch%C3%A9-app/id6443672495',
-        JSON.stringify(['Flutter', 'iOS App', 'Android App', 'Java Spring Boot', 'E-Commerce', 'Mobile Money']),
+        'Healthosyst — Healthcare Appointment Booking Platform',
+        'healthosyst-telemedicine',
+        'Full-featured healthcare appointment booking platform with doctor discovery, real-time slot availability, and appointment management for patients and providers.',
+        'Architected and deployed healthcare appointment booking platform with doctor discovery, real-time slot availability, and appointment management for patients and providers. Integrated Google Maps SDK for hospital/clinic location search, distance calculation, and turn-by-turn directions via deep linking. Implemented Firebase FCM push notifications for appointment reminders, cancellations, and real-time status updates. Developed multi-role authentication (patient, doctor, admin) with JWT-secured API calls and token refresh handling.',
+        'Shipped Mobile App',
+        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+        'https://play.google.com/store/apps/details?id=com.healthosyst.app',
+        'https://apps.apple.com/in/app/healthosyst/id6702022061',
+        JSON.stringify(['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Node.js', 'BLoC', 'Healthcare']),
         true,
         1
       ],
       [
-        'DarziDesk - Boutique & Custom Tailoring Management SaaS',
-        'darzidesk-boutique-saas',
-        'Cloud-based bespoke tailoring ERP & boutique management platform with automated measurement profiles, work orders, and WhatsApp notifications.',
-        'Comprehensive SaaS platform built for fashion designers, bespoke tailors, and boutique studios. Streamlines client body measurement profiles, custom stitching work orders, fabric inventory tracking, automated invoice generation, and real-time WhatsApp delivery notifications with sub-100ms response times.',
-        'Production SaaS',
-        'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80',
-        'https://darzidesk.shop',
-        'https://darzidesk.shop',
-        JSON.stringify(['Next.js 14', 'Java Spring Boot', 'MySQL', 'Tailwind CSS', 'SaaS', 'ERP']),
+        'Coach-By-App — Real-Time Fitness Coaching Platform',
+        'coach-by-app-fitness',
+        'Live fitness coaching app enabling real-time coach-client communication via Socket.IO chat, video tutorials, and Authorize.net subscription billing.',
+        'Developed a live fitness coaching app enabling real-time coach-client communication via Socket.IO-powered chat and session tracking. Built a workout library with video tutorials (Chewie/VideoPlayer), animated exercise demonstrations, and progress logging with chart visualizations (fl_chart). Implemented personalized workout plan generation with schedule management, rest-day tracking, and push notification reminders. Integrated Authorize.net for subscription billing with plan upgrade/downgrade flows and payment history screens.',
+        'Shipped Mobile App',
+        'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
+        'https://play.google.com/store/apps/details?id=com.coachbyapp.app',
+        'https://apps.apple.com/in/app/coach-by-app/id6467117400',
+        JSON.stringify(['Flutter', 'Dart', 'Socket.IO', 'Firebase', 'Authorize.net', 'Node.js', 'VideoPlayer', 'fl_chart']),
         true,
         2
       ],
       [
-        'Spacebliz - Creative Digital Agency & Software Platform',
-        'spacebliz-digital-agency',
-        'High-performance digital agency platform featuring 3D interactive interfaces, modern full-stack architectures, and AI cloud engineering.',
-        'Dynamic high-performance agency portal and software engineering platform showcasing bespoke digital product development, interactive 3D WebGL interfaces, cloud native infrastructure, and enterprise AI integrations with 99+ Lighthouse performance scores.',
-        'Creative Tech & Agency',
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
-        'https://spacebliz.com',
-        'https://spacebliz.com',
-        JSON.stringify(['React', 'Next.js', 'Three.js 3D', 'Java Spring Boot', 'Cloud Architecture', 'AI MCP']),
+        'Smyline — Business Management Platform',
+        'smyline-business-platform',
+        'Dental aligner treatment companion app enabling patients to track orthodontic progress, manage treatment stages, and monitor smile transformation digitally.',
+        'Developed a dental aligner treatment companion app enabling patients to track orthodontic progress, manage treatment stages, and monitor smile transformation digitally. Built appointment scheduling and clinic management features allowing users to book consultations, receive reminders, and stay connected with dental professionals. Implemented treatment timeline tracking with aligner change notifications, progress monitoring, and patient engagement workflows.',
+        'Shipped Mobile App',
+        'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80',
+        'https://play.google.com/store/apps/details?id=com.smyline.app',
+        'https://apps.apple.com/in/app/smyline/id6470000000',
+        JSON.stringify(['Flutter', 'Firebase', 'REST APIs', 'Hive', 'Clean Architecture', 'Dental App']),
         true,
         3
       ],
       [
-        'HomiQ Real-Estate Marketplace',
-        'homiq-real-estate',
-        'Direct real estate & rental marketplace connecting owners, buyers, and renters with zero brokerage fees, verified listings, and smart search.',
-        'Production real-estate marketplace serving thousands of active buyers and renters. Features interactive maps, instant chat, mortgage estimation, and verified identity workflows.',
-        'Shipped App',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-        'https://apps.apple.com/in/app/homiq-real-estate-marketplace/id6779412636',
-        'https://play.google.com/store/apps/details?id=com.homiq.acrocoder&hl=en_IN',
-        JSON.stringify(['Flutter', 'iOS', 'Android', 'Java Spring Boot', 'Real Estate', 'Google Maps']),
+        'Ancient Mystic Music — Music Streaming Application',
+        'ancient-mystic-music',
+        'Full-featured music streaming app with playlist management, background audio playback (just_audio, audio_service), and equalizer controls.',
+        'Developed a full-featured music streaming app with playlist management, background audio playback (just_audio, audio_service), and equalizer controls. Implemented subscription-based access with PayPal payment integration, entitlement management, and graceful paywall flows. Built offline listening with local caching of purchased tracks and download progress tracking UI.',
+        'Shipped Mobile App',
+        'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80',
+        'https://play.google.com/store/apps/details?id=com.ancientmysticmusic.app',
+        'https://apps.apple.com/in/app/ancient-mystic-music/id6480000000',
+        JSON.stringify(['Flutter', 'just_audio', 'audio_service', 'PayPal SDK', 'Firebase', 'Provider']),
         true,
         4
       ],
       [
-        'Healthosyst Healthcare Platform',
-        'healthosyst-telemedicine',
-        'Comprehensive telemedicine app allowing patients to discover doctors, book appointments, and consult via encrypted video.',
-        'Enterprise healthcare suite featuring encrypted WebRTC video consultations, electronic health records (EHR), prescription management, and appointment queuing.',
-        'Shipped App',
-        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
-        'https://apps.apple.com/in/app/healthosyst/id6702022061',
-        'https://play.google.com/store/apps/details?id=com.healthosyst.app',
-        JSON.stringify(['Flutter', 'WebRTC', 'Telemedicine', 'Java Spring Boot', 'iOS', 'Android']),
+        'CongoBonMarché — E-Commerce Shopping Platform',
+        'congobonmarche-ecommerce',
+        'Built a full-featured e-commerce shopping app for the Congolese market, enabling product discovery, cart management, and order tracking.',
+        'Built a full-featured e-commerce shopping app for the Congolese market, enabling product discovery, cart management, and order tracking for both Android and iOS users. Implemented multi-language support, secure user authentication, and real-time inventory updates with Firebase Firestore synchronization. Published and maintained on both Google Play Store and Apple App Store.',
+        'Shipped Mobile App',
+        'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80',
+        'https://play.google.com/store/apps/details?id=org.congobonmarche',
+        'https://apps.apple.com/in/app/congobonmarch%C3%A9-app/id6443672495',
+        JSON.stringify(['Flutter', 'Dart', 'Firebase', 'REST APIs', 'BLoC', 'Clean Architecture', 'E-Commerce']),
         true,
         5
       ],
       [
-        'Coach-By-App Fitness Suite',
-        'coach-by-app-fitness',
-        'Live fitness coaching platform featuring automated workout plans, live trainer chat via Socket.IO, and recurring subscriptions.',
-        'Real-time fitness tracking and coaching app with live trainer messaging via Socket.IO, automated workout routine scheduling, and in-app subscription billing.',
-        'Shipped App',
-        'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
-        'https://apps.apple.com/in/app/coach-by-app/id6467117400',
-        'https://play.google.com/store/apps/details?id=com.coachbyapp.app',
-        JSON.stringify(['Flutter', 'Socket.IO', 'Stripe', 'Java Microservices', 'iOS', 'Android']),
+        'audio_waveform_recorder',
+        'audio-waveform-recorder',
+        'Real-time audio recording with animated waveform visualization package for Flutter apps.',
+        'Published pub.dev open-source Flutter package for real-time audio recording with animated waveform visualization. Supports MP3/WAV/AAC output, customizable wave colors/amplitude, and platform channels for native audio access.',
+        'Pub.dev Open Source Package',
+        'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80',
+        'https://pub.dev/packages/audio_waveform_recorder',
+        'https://github.com/vnaimishkumar/audio_waveform_recorder',
+        JSON.stringify(['Open Source', 'Pub.dev', 'Flutter Package', 'Audio', 'Dart']),
         true,
         6
       ],
       [
-        'DoodleJoy - Creative Canvas Web & Mobile App',
-        'doodlejoy-canvas',
-        'Interactive web & mobile drawing application for kids featuring magic brushes, smooth canvas rendering, and secure sharing.',
-        'Interactive drawing application for web and mobile featuring sub-16ms custom canvas rendering, glow shaders, multi-touch brush engines, and cloud galleries.',
-        'Shipped App',
-        'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80',
-        'https://doodlejoy.fun/',
-        'https://play.google.com/store/apps/details?id=com.acrocoder.doodlejoy&hl=en_IN',
-        JSON.stringify(['Flutter', 'Canvas 60fps', 'Web', 'Android', 'Clean Architecture', 'BLoC']),
+        'chat_secure_guard',
+        'chat-secure-guard',
+        'End-to-end chat encryption utilities for Flutter apps implementing AES-256-GCM and RSA key exchange.',
+        'Published pub.dev open-source Flutter package providing end-to-end chat encryption utilities. Implements AES-256-GCM and RSA key exchange with secure storage integration via flutter_secure_storage.',
+        'Pub.dev Open Source Package',
+        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
+        'https://pub.dev/packages/chat_secure_guard',
+        'https://github.com/vnaimishkumar/chat_secure_guard',
+        JSON.stringify(['Open Source', 'Pub.dev', 'Flutter Package', 'Encryption', 'Security']),
         true,
         7
+      ],
+      [
+        'flutter_performance_optimizer',
+        'flutter-performance-optimizer',
+        'Developer toolkit for analyzing widget rebuilds, frame render times, and memory usage in Flutter.',
+        'Published pub.dev open-source Flutter developer toolkit for analyzing widget rebuilds, frame render times, and memory usage. Includes overlay dashboard with real-time FPS monitoring and performance optimization suggestions.',
+        'Pub.dev Open Source Package',
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+        'https://pub.dev/packages/flutter_performance_optimizer',
+        'https://github.com/vnaimishkumar/flutter_performance_optimizer',
+        JSON.stringify(['Open Source', 'Pub.dev', 'Flutter Package', 'Performance', 'DevTools']),
+        true,
+        8
+      ],
+      [
+        'flutter_architecture_generator',
+        'flutter-architecture-generator',
+        'CLI + IDE plugin that auto-scaffolds BLoC/Clean Architecture folder structure and dependency injection.',
+        'Published pub.dev open-source CLI + IDE plugin tool that auto-scaffolds BLoC/Clean Architecture folder structure, generates boilerplate files, and wires dependency injection for new Flutter features.',
+        'Pub.dev Open Source Package',
+        'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=1200&q=80',
+        'https://pub.dev/packages/flutter_architecture_generator',
+        'https://github.com/vnaimishkumar/flutter_architecture_generator',
+        JSON.stringify(['Open Source', 'Pub.dev', 'Flutter Package', 'Clean Architecture', 'CLI']),
+        true,
+        9
+      ],
+      [
+        'DoodleJoy — Interactive Drawing Web Platform',
+        'doodlejoy-canvas',
+        'Interactive drawing & doodling web platform for kids. Built with Next.js and Canvas API. Live at doodlejoy.fun.',
+        'Interactive drawing & doodling web platform for kids built with Next.js and Canvas API. Features sub-16ms custom canvas rendering, glow shaders, and multi-touch drawing tools. Live at doodlejoy.fun with Android app on Google Play Store.',
+        'Web Project',
+        'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80',
+        'https://doodlejoy.fun',
+        'https://github.com/vnaimishkumar/doodlejoy',
+        JSON.stringify(['Next.js', 'Canvas API', 'Web App', 'Kids App', 'Drawing']),
+        true,
+        10
+      ],
+      [
+        'GreenStreak — Gamified Sustainability Habit Tracker',
+        'greenstreak-sustainability',
+        'Sustainability habit tracker that gamifies eco-friendly actions with streaks, badges, and social sharing. Live at greenstreak.in.',
+        'Sustainability habit tracker web platform that gamifies eco-friendly actions with streaks, badges, and social sharing. Built with Next.js and React, empowering users to track daily green activities and compete on leaderboards. Live at greenstreak.in.',
+        'Web Project',
+        'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
+        'https://greenstreak.in',
+        'https://github.com/vnaimishkumar/greenstreak',
+        JSON.stringify(['Next.js', 'React', 'Sustainability', 'Gamification', 'Web App']),
+        true,
+        11
+      ],
+      [
+        'StudyGate — AI-Powered Parental Control EdTech App',
+        'studygate-ai-edtech',
+        'AI-powered parental control EdTech app using Flutter, Laravel, MySQL, and Claude API for AI quiz generation.',
+        'Currently building StudyGate, an AI-powered parental control EdTech app. Integrates Flutter for cross-platform Android & iOS apps, Laravel and MySQL for backend REST services, and Claude API for automated AI quiz generation and educational content curation.',
+        'In-Development AI App',
+        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+        'https://github.com/vnaimishkumar/studygate',
+        'https://github.com/vnaimishkumar/studygate',
+        JSON.stringify(['Flutter', 'Laravel', 'MySQL', 'Claude API', 'EdTech', 'AI']),
+        true,
+        12
       ]
     ];
 
@@ -155,16 +220,16 @@ async function seedAcroCoderData() {
     // 4. Update Skills
     await conn.query('DELETE FROM skills');
     const skills = [
-      ['Java 17/21 & Spring Boot', 'Enterprise Backend', 96, 'Server', 1, true],
-      ['Spring Cloud, Security & JWT', 'Microservices & Security', 94, 'ShieldCheck', 2, true],
-      ['Flutter & Dart (BLoC / Provider)', 'Core Mobile', 98, 'Smartphone', 3, true],
-      ['Android Native & Systems Dev', 'Core Mobile', 92, 'Smartphone', 4, true],
-      ['MQTT & BLE Hardware Protocols', 'IoT & Hardware Systems', 95, 'Cpu', 5, true],
-      ['IoT Telemetry & Ingestion', 'IoT & Hardware Systems', 93, 'Activity', 6, true],
-      ['Apache Kafka & Redis Streaming', 'Event Streaming', 92, 'Activity', 7, true],
-      ['PostgreSQL & MySQL / Hibernate', 'Databases', 94, 'Database', 8, true],
-      ['Docker & Microservices Architecture', 'DevOps & Cloud', 91, 'Cloud', 9, true],
-      ['Node.js, Express & WebSockets', 'Backend & Real-Time', 90, 'Globe', 10, true],
+      ['Flutter & Dart (BLoC / Provider)', 'Core Mobile', 98, 'Smartphone', 1, true],
+      ['Clean Architecture & MVVM', 'Architecture', 95, 'Layers', 2, true],
+      ['Firebase (Auth, Firestore, FCM)', 'Backend & Cloud', 94, 'Database', 3, true],
+      ['Socket.IO & Real-Time Chat', 'Backend & Real-Time', 92, 'Activity', 4, true],
+      ['PayPal & Authorize.net Integration', 'Payment Systems', 90, 'ShieldCheck', 5, true],
+      ['Laravel & Node.js REST APIs', 'Backend Development', 88, 'Server', 6, true],
+      ['SQLite (sqflite) & Hive', 'Local Databases', 92, 'Database', 7, true],
+      ['Performance Optimization (<16ms)', 'Mobile Systems', 95, 'Cpu', 8, true],
+      ['Git, GitHub & CI/CD Pipelines', 'DevOps & Tools', 90, 'Cloud', 9, true],
+      ['Next.js & Web Technologies', 'Web Development', 86, 'Globe', 10, true],
     ];
 
     for (const s of skills) {
@@ -174,44 +239,20 @@ async function seedAcroCoderData() {
       );
     }
 
-    // 5. Update Experience (SpireHub, Enterprise Software Solutions, TechSmart Mobile Systems)
+    // 5. Update Experience
     await conn.query('DELETE FROM experience');
     const experiences = [
       [
-        'SpireHub Softwares Pvt Ltd',
-        'Senior Software Engineer',
+        'Spirehub Software Pvt Ltd',
+        'Flutter Developer',
         'Noida, India',
         'Full-time',
-        '2023-06-01',
+        '2023-10-01',
         null,
         true,
-        'Spearheaded development of cross-platform mobile applications (Flutter/Android) communicating with custom IoT hardware via BLE and MQTT protocols.\\nArchitected microservices using Java 17/21 and Spring Boot, optimizing data processing pipelines that reduced latency by 35% for real-time sensor streams.\\nDesigned and maintained firmware-to-cloud communication interfaces, handling device authentication, telemetry ingestion, and OTA update dispatching.\\nImplemented real-time bidirectional communication channels using WebSockets and Socket.IO for live device control dashboards.\\nMentored junior engineers and led code reviews to maintain code quality, test coverage, and documentation standards.',
-        JSON.stringify(['Java 17/21', 'Spring Boot', 'Flutter', 'Android', 'BLE', 'MQTT', 'Microservices', 'WebSockets', 'Docker']),
+        'Architected and deployed 4+ cross-platform mobile applications (Android & iOS) serving thousands of users, following Clean Architecture and BLoC state management patterns for maintainability and scalability.\\nIntegrated Firebase services including Authentication, Firestore, Cloud Storage, Remote Config, and Analytics, reducing backend development time by 30%.\\nImplemented bidirectional real-time communication using Socket.IO for live chat, notifications, and data sync across healthcare and fitness platforms.\\nIntegrated PayPal and Authorize.net payment gateways with secure tokenized transactions, PCI-compliant flows, and subscription billing support.\\nOptimized app performance by reducing widget rebuild cycles and implementing lazy loading — achieving <16ms frame render times.\\nCollaborated with backend Node.js developers to design RESTful API contracts.\\nSet up CI/CD pipelines via GitHub Actions for automated builds and app distribution.',
+        JSON.stringify(['Flutter', 'Dart', 'Firebase', 'Socket.IO', 'PayPal', 'Authorize.net', 'REST APIs', 'BLoC', 'Clean Architecture', 'CI/CD']),
         1
-      ],
-      [
-        'Enterprise Software Solutions',
-        'Java Enterprise Developer',
-        'Noida, India',
-        'Full-time',
-        '2020-05-01',
-        '2023-05-01',
-        false,
-        'Engineered core enterprise backend services utilizing Java, Spring Boot, Hibernate/JPA, and PostgreSQL/MySQL databases.\\nBuilt and maintained RESTful APIs powering high-traffic web applications, processing 2M+ daily requests with 99.9% uptime.\\nIntegrated message-driven architectures using Apache Kafka and Redis for asynchronous task queuing and distributed caching.\\nImplemented role-based access control (RBAC), OAuth2, and JWT authentication across distributed microservices.\\nContainerized backend applications with Docker and automated deployment workflows through CI/CD pipelines.',
-        JSON.stringify(['Java', 'Spring Boot', 'Hibernate/JPA', 'PostgreSQL', 'MySQL', 'Apache Kafka', 'Redis', 'OAuth2', 'JWT', 'Docker']),
-        2
-      ],
-      [
-        'TechSmart Mobile Systems',
-        'Associate Software Engineer — Mobile & Systems',
-        'Noida, India',
-        'Full-time',
-        '2017-06-01',
-        '2020-04-01',
-        false,
-        'Developed hybrid and native mobile application modules for Android and cross-platform frameworks.\\nIntegrated backend APIs and local persistence layers (SQLite, Room, Shared Preferences) ensuring offline-first user experiences.\\nImplemented Bluetooth / serial communication protocols for companion device connectivity and data synchronization.\\nCollaborated with UI/UX teams to build responsive, accessible layouts and smooth, jitter-free user interaction flows.\\nAssisted in debugging, bug fixes, automated unit testing, and release cycle preparation.',
-        JSON.stringify(['Android', 'Flutter', 'Java', 'SQLite', 'Bluetooth', 'REST APIs', 'Offline-First', 'Git']),
-        3
       ]
     ];
 
@@ -222,30 +263,30 @@ async function seedAcroCoderData() {
       `, exp);
     }
 
-    // 6. Update Education (2013 – 2017)
+    // 6. Update Education
     await conn.query('DELETE FROM education');
     await conn.query(`
       INSERT INTO education (institution, degree, field_of_study, start_year, end_year, grade, description, display_order)
       VALUES
-      ('Galgotias University', 'B.Tech in Computer Science & Engineering', 'Computer Science & Software Systems', '2013', '2017', 'First Class with Distinction', 'Core coursework in Data Structures & Algorithms, Object-Oriented Programming (Java), Operating Systems, Computer Networks, Database Management Systems, and Software Engineering.', 1)
+      ('Galgotias University, Greater Noida', 'Bachelor of Technology (B.Tech)', 'Computer Science & Engineering', '2019', '2025', 'First Class', 'Key coursework: Android Development, Distributed Systems, Network Security, Database Management, Software Engineering, Operating Systems.', 1)
     `);
 
     // 7. Update Site Settings
     await conn.query(`
       INSERT INTO site_settings (setting_key, setting_value) VALUES
-      ('site_title', 'Akash Verma — Software Engineer | Java & Mobile Systems Developer'),
-      ('site_description', 'Official portfolio of Akash Verma - Software Engineer with 7+ years of experience bridging hardware & software systems, Java enterprise microservices, and Flutter mobile architectures.'),
-      ('accent_color', '#06b6d4'),
+      ('site_title', 'Naimish Kumar Verma — Flutter Developer | Mobile & Full-Stack Engineer'),
+      ('site_description', 'Official portfolio of Naimish Kumar Verma - Flutter Developer with 2+ years of professional experience shipping cross-platform mobile apps and publishing open-source pub.dev packages.'),
+      ('accent_color', '#10b981'),
       ('enable_contact_form', 'true'),
       ('enable_projects_section', 'true'),
       ('enable_skills_section', 'true'),
       ('enable_experience_section', 'true'),
       ('enable_education_section', 'true'),
-      ('footer_text', '© 2026 AKASH VERMA — SOFTWARE ENGINEER | JAVA & MOBILE SYSTEMS DEVELOPER. ALL RIGHTS RESERVED.')
+      ('footer_text', '© 2026 NAIMISH KUMAR VERMA — FLUTTER DEVELOPER | MOBILE & FULL-STACK ENGINEER. ALL RIGHTS RESERVED.')
       ON DUPLICATE KEY UPDATE setting_value = VALUES(setting_value)
     `);
 
-    console.log('Successfully seeded authentic AcroCoder data into MySQL!');
+    console.log('Successfully seeded authentic Naimish Kumar Verma data into MySQL!');
   } catch (err) {
     console.error('Error seeding data:', err);
     throw err;

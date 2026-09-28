@@ -18,10 +18,11 @@ export default function Hero({ heroData, profileData }: HeroProps) {
   const typingStrings = heroData?.typing_strings && heroData.typing_strings.length > 0
     ? heroData.typing_strings
     : [
-        'Java 17/21 & Spring Boot Microservices',
-        'Flutter & Cross-Platform Mobile',
-        'IoT Hardware & Telemetry Ingestion',
-        'Scalable Real-Time Architectures',
+        'Flutter & Dart Cross-Platform Mobile Apps',
+        'Open Source Pub.dev Package Contributor',
+        'Clean Architecture & BLoC State Management',
+        'Socket.IO & Real-Time Communications',
+        'PayPal & Authorize.net Payment Integration',
       ];
 
   useEffect(() => {
@@ -51,9 +52,9 @@ export default function Hero({ heroData, profileData }: HeroProps) {
   }, [displayedText, isDeleting, currentTextIndex, typingStrings]);
 
   const greeting = heroData?.greeting || 'Hello World, I am';
-  const name = profileData?.full_name || 'Akash Verma';
-  const subheadline = heroData?.subheadline || profileData?.bio || 'Software Engineer bridging hardware and software systems with scalable Java enterprise microservices, cross-platform mobile apps, and real-time IoT architectures.';
-  const badgeText = heroData?.badge_text || 'Senior Software Engineer @ SpireHub Softwares';
+  const name = profileData?.full_name || 'Naimish Kumar Verma';
+  const subheadline = heroData?.subheadline || profileData?.bio || 'Results-driven Flutter Developer with 2+ years of professional experience designing and shipping scalable cross-platform mobile applications for Android and iOS.';
+  const badgeText = heroData?.badge_text || 'Flutter Developer @ Spirehub Software';
 
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">

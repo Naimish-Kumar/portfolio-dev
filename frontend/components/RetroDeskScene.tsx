@@ -24,8 +24,8 @@ type ScreenMode = 'terminal' | 'mcp' | 'matrix' | 'benchmark' | 'radio';
 type LightingMood = 'emerald' | 'amber' | 'blueprint' | 'neon';
 
 export default function RetroDeskScene({
-  name = 'Akash Verma',
-  title = 'Software Engineer | Java & Mobile Systems Developer',
+  name = 'Naimish Kumar Verma',
+  title = 'Flutter Developer | Mobile & Full-Stack Engineer',
   onExploreWork,
   onOpenContact,
 }: RetroDeskSceneProps) {
@@ -37,9 +37,9 @@ export default function RetroDeskScene({
   const [interactiveToast, setInteractiveToast] = useState<string | null>(null);
   const [commandInput, setCommandInput] = useState('');
   const [terminalLogs, setTerminalLogs] = useState<string[]>([
-    'KERNEL: ACROCODER-OS v4.19.26 // 7+ YRS ACTIVE',
-    'STACK: Java 17/21 Spring Boot + Flutter + IoT Telemetry',
-    'STATUS: Senior Software Engineer @ SpireHub Softwares',
+    'KERNEL: ACROCODER-OS v4.19.26 // 2+ YRS ACTIVE',
+    'STACK: Flutter + Dart + BLoC + Socket.IO + Pub.dev Packages',
+    'STATUS: Flutter Developer @ Spirehub Software Pvt Ltd',
     'READY: Click 3D objects or execute command below:',
   ]);
 
@@ -192,12 +192,12 @@ export default function RetroDeskScene({
         setScreenMode('terminal');
         setTerminalLogs((prev) => [
           ...prev.slice(-4),
-          '> akash-career --timeline',
-          '2023–Pres: Senior Software Engineer @ SpireHub Softwares',
-          '2020–2023: Java Enterprise Developer @ Enterprise Software Solutions',
-          '2017–2020: Associate Software Engineer @ TechSmart Mobile Systems',
+          '> naimish-career --timeline',
+          '2023–Pres: Flutter Developer @ Spirehub Software Pvt Ltd',
+          'Published 5+ Production Apps on App Store & Play Store',
+          'Published 4+ Open Source Packages on pub.dev',
         ]);
-        showToast('7+ Years Career Timeline Logged');
+        showToast('2+ Years Career Timeline Logged');
       },
     },
   ];
@@ -224,7 +224,7 @@ export default function RetroDeskScene({
       setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Inspecting Case Files & Live Projects...']);
     } else if (query.includes('hire') || query.includes('contact') || query.includes('email')) {
       onOpenContact?.();
-      setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Opening Direct Contact Brief: akash@spirehubs.com']);
+      setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Opening Direct Contact Brief: vnaimishkumar@gmail.com']);
     } else if (query.includes('lamp') || query.includes('light')) {
       toggleLamp();
     } else {
@@ -1195,7 +1195,7 @@ export default function RetroDeskScene({
           <p className="text-slate-800 text-[11px] leading-tight mb-2">
             Priority engineer inbox:
             <br />
-            <span className="font-bold text-amber-950">akash@spirehubs.com</span>
+            <span className="font-bold text-amber-950">vnaimishkumar@gmail.com</span>
           </p>
           <button
             onClick={() => {

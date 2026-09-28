@@ -96,10 +96,10 @@ export default function DossierAbout({
     return () => ctx.revert();
   }, []);
 
-  const name = profile?.name || 'Akash Verma';
+  const name = profile?.name || 'Naimish Kumar Verma';
   const bio =
     profile?.bio ||
-    'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services. Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), and system-level performance optimization.';
+    'Results-driven Flutter Developer with 2+ years of professional experience designing and shipping scalable cross-platform mobile applications for Android and iOS. Proficient in Flutter, Dart, Firebase, REST APIs, real-time systems (Socket.IO), and payment gateway integration (PayPal, Authorize.net). Published 5+ production applications on Google Play Store and Apple App Store. Hands-on open-source contributor with 4 published pub.dev packages.';
 
   const avatarUrl =
     profile?.avatar_url?.startsWith('http') && !profile?.avatar_url?.includes('unsplash')
@@ -117,14 +117,14 @@ export default function DossierAbout({
               DOSSIER FILE \\ VERIFIED
             </span>
             <span className="font-mono text-xs text-slate-500 font-semibold tracking-wider">
-              REF: ARCHIVE-2026-AV
+              REF: ARCHIVE-2026-NKV
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping" />
             <span className="font-mono text-xs font-bold text-emerald-900 bg-emerald-100 px-3 py-1 rounded border border-emerald-300">
-              [STATUS: SENIOR SOFTWARE ENGINEER]
+              [STATUS: FLUTTER DEVELOPER]
             </span>
           </div>
         </div>
@@ -156,12 +156,12 @@ export default function DossierAbout({
                     ~ {name} (2026)
                   </p>
                   <p className="font-mono text-[10px] text-slate-500 mt-1 uppercase tracking-widest font-bold">
-                    Software Engineer | Java & Mobile Systems Developer
+                    Flutter Developer | Mobile & Full-Stack Engineer
                   </p>
                 </div>
               </div>
 
-              {/* "this file belongs to \ akash" stitched label badge */}
+              {/* "this file belongs to \ naimish" stitched label badge */}
               <div className="absolute -bottom-4 -left-4 bg-[#fbf8f1] border-2 border-dashed border-[#ab955d] px-3 py-1.5 rounded shadow-md rotate-[-6deg] z-20">
                 <p className="font-mono text-[10px] text-amber-900">
                   this file belongs to:
@@ -184,54 +184,54 @@ export default function DossierAbout({
                     RECEIPTIFY
                   </h3>
                   <p className="font-mono text-[10px] text-slate-500 uppercase">
-                    7+ YRS ARCHITECT & DEV LOG
+                    2+ YRS FLUTTER & DEV LOG
                   </p>
                   <p className="font-mono text-[9px] text-slate-400">
-                    ORDER #2026-AKASH-DEV
+                    ORDER #2026-NAIMISH-DEV
                   </p>
                 </div>
 
                 {/* Receipt Line Items */}
                 <div className="space-y-1.5 font-mono text-xs text-slate-700">
                   <div className="flex justify-between">
-                    <span>01. FLUTTER / ANDROID / MOBILE</span>
-                    <span className="font-bold text-slate-900">5,800 HRS</span>
+                    <span>01. FLUTTER / DART MOBILE</span>
+                    <span className="font-bold text-slate-900">3,400 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>02. JAVA 17/21 SPRING BOOT</span>
-                    <span className="font-bold text-slate-900">4,200 HRS</span>
+                    <span>02. FIREBASE & REST APIS</span>
+                    <span className="font-bold text-slate-900">2,100 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>03. IOT / MQTT / BLE PROTOCOLS</span>
-                    <span className="font-bold text-slate-900">3,100 HRS</span>
+                    <span>03. SOCKET.IO REAL-TIME CHAT</span>
+                    <span className="font-bold text-slate-900">1,800 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>04. KAFKA & REDIS TELEMETRY</span>
-                    <span className="font-bold text-slate-900">2,800 HRS</span>
+                    <span>04. PUB.DEV PACKAGES</span>
+                    <span className="font-bold text-slate-900">4 PACKAGES</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>05. NODE.JS / EXPRESS / LARAVEL</span>
-                    <span className="font-bold text-slate-900">2,400 HRS</span>
+                    <span>05. PAYPAL & AUTHORIZE.NET</span>
+                    <span className="font-bold text-slate-900">1,200 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>06. CI/CD & CLOUD DEPLOY</span>
-                    <span className="font-bold text-slate-900">2,200 HRS</span>
+                    <span>06. CI/CD & APP DISTRO</span>
+                    <span className="font-bold text-slate-900">1,000 HRS</span>
                   </div>
                 </div>
 
                 {/* Totals Section */}
                 <div className="border-t-2 border-dashed border-slate-400 my-3 pt-2 font-mono text-xs space-y-1">
                   <div className="flex justify-between font-bold text-slate-900">
-                    <span>SYSTEM AVAILABILITY</span>
-                    <span className="text-emerald-700">99.99%</span>
+                    <span>PUBLISHED PRODUCTION APPS</span>
+                    <span className="text-emerald-700">5+ STORES</span>
                   </div>
                   <div className="flex justify-between font-bold text-slate-900">
-                    <span>FRAME RATE TARGET</span>
+                    <span>FRAME RENDER TARGET</span>
                     <span className="text-emerald-700">&lt;16ms (&gt;60 FPS)</span>
                   </div>
                   <div className="flex justify-between font-bold text-slate-900">
                     <span>OVERALL EXPERIENCE</span>
-                    <span className="text-red-700">7+ YEARS</span>
+                    <span className="text-red-700">2+ YEARS</span>
                   </div>
                 </div>
 
@@ -249,7 +249,7 @@ export default function DossierAbout({
                     )}
                   </div>
                   <p className="font-mono text-[9px] tracking-widest text-slate-500">
-                    * 2026-AKASH-PORTFOLIO *
+                    * 2026-NAIMISH-PORTFOLIO *
                   </p>
                 </div>
               </div>
@@ -332,18 +332,14 @@ export default function DossierAbout({
 
               <div className="font-serif text-xs md:text-sm text-slate-800 leading-relaxed space-y-3 italic">
                 <p>
-                  &ldquo;Software Engineer with{' '}
+                  &ldquo;Results-driven Flutter Developer with{' '}
                   <strong className="text-slate-950 not-italic font-bold bg-amber-200/80 px-1 py-0.5 rounded">
-                    7+ years of overall experience
+                    2+ years of professional experience
                   </strong>{' '}
-                  bridging hardware and software systems, including{' '}
-                  <strong className="text-slate-950 not-italic font-bold bg-amber-200/80 px-1 py-0.5 rounded">
-                    3 years of dedicated Java enterprise development
-                  </strong>
-                  . Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services.&rdquo;
+                  designing and shipping scalable cross-platform mobile applications for Android and iOS. Proficient in Flutter, Dart, Firebase, REST APIs, real-time systems (Socket.IO), and payment gateway integration.&rdquo;
                 </p>
                 <p>
-                  &ldquo;Skilled in firmware-to-cloud communication, IoT protocols (MQTT, BLE), clean architecture, real-time WebSockets, and system-level performance optimization with &lt;16ms frame render targets and 99.99% uptime.&rdquo;
+                  &ldquo;Published 5+ production applications on Google Play Store and Apple App Store. Hands-on open-source contributor with 4 published pub.dev packages, focusing on developer tooling, encryption, audio waveforms, and performance.&rdquo;
                 </p>
               </div>
             </div>
@@ -382,51 +378,17 @@ export default function DossierAbout({
                     <div className="border-b border-amber-300/80 pb-4">
                       <div className="flex flex-wrap items-center justify-between gap-1">
                         <span className="font-sans font-extrabold text-slate-950 text-base">
-                          Senior Software Engineer
+                          Flutter Developer
                         </span>
                         <span className="font-mono text-xs font-bold text-amber-900 bg-amber-200/90 px-2 py-0.5 rounded">
-                          JUN 2023 – PRESENT
+                          OCT 2023 – PRESENT
                         </span>
                       </div>
                       <p className="font-mono text-xs font-bold text-amber-900 mt-0.5">
-                        @ SpireHub Softwares Pvt Ltd, Noida
+                        @ Spirehub Software Pvt Ltd, Noida
                       </p>
                       <p className="font-sans text-xs text-slate-800 mt-1.5 leading-relaxed">
-                        Lead mobile and backend engineering initiatives, overseeing Clean Architecture implementations, conducting code reviews, and mentoring cross-functional engineering teams. Architect scalable real-time integrations using WebSockets and Socket.IO while streamlining CI/CD automation pipelines for mobile and cloud deployments. Drive mobile performance optimization (&lt;16ms frame render target), cloud services integration, and payment gateway infrastructure across client products.
-                      </p>
-                    </div>
-
-                    <div className="border-b border-amber-300/80 pb-4">
-                      <div className="flex flex-wrap items-center justify-between gap-1">
-                        <span className="font-sans font-extrabold text-slate-950 text-base">
-                          Java Enterprise Developer
-                        </span>
-                        <span className="font-mono text-xs font-bold text-amber-900 bg-amber-200/90 px-2 py-0.5 rounded">
-                          MAY 2020 – MAY 2023
-                        </span>
-                      </div>
-                      <p className="font-mono text-xs font-bold text-amber-900 mt-0.5">
-                        @ Enterprise Software Solutions, Noida
-                      </p>
-                      <p className="font-sans text-xs text-slate-800 mt-1.5 leading-relaxed">
-                        Spent 3 years designing and deploying mission-critical Java enterprise backends using Java 17, Spring Boot, Spring Cloud microservices, and PostgreSQL. Engineered high-throughput event-streaming telemetry pipelines using Apache Kafka, managing real-time data ingestion for large-scale IoT system deployments. Implemented enterprise OAuth2/JWT security filters, Redis caching, and dynamic thread pool optimizations to sustain 99.99% system availability.
-                      </p>
-                    </div>
-
-                    <div className="border-b border-amber-300/80 pb-4">
-                      <div className="flex flex-wrap items-center justify-between gap-1">
-                        <span className="font-sans font-extrabold text-slate-950 text-base">
-                          Associate Software Engineer — Mobile & Systems
-                        </span>
-                        <span className="font-mono text-xs font-bold text-amber-900 bg-amber-200/90 px-2 py-0.5 rounded">
-                          JUN 2017 – APR 2020
-                        </span>
-                      </div>
-                      <p className="font-mono text-xs font-bold text-amber-900 mt-0.5">
-                        @ TechSmart Mobile Systems, Noida
-                      </p>
-                      <p className="font-sans text-xs text-slate-800 mt-1.5 leading-relaxed">
-                        Developed cross-platform mobile applications and Android native software utilizing Java, RESTful APIs, and local databases. Collaborated on hardware-software integration for IoT-enabled mobile accessories and Bluetooth Low Energy (BLE) device communication protocols.
+                        Architected and deployed 4+ cross-platform mobile applications (Android & iOS) serving thousands of users, following Clean Architecture and BLoC state management patterns. Integrated Firebase services (Auth, Firestore, Storage, Remote Config, Analytics), reducing backend development time by 30%. Implemented bidirectional real-time communication using Socket.IO for live chat and data sync. Integrated PayPal and Authorize.net payment gateways with secure tokenized transactions and subscription billing support. Optimized app performance achieving &lt;16ms frame render times. Set up CI/CD pipelines via GitHub Actions.
                       </p>
                     </div>
                   </>
