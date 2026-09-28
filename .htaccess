@@ -1,19 +1,9 @@
-DirectoryIndex frontend/out/index.html index.html index.php
+DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-
-  # Handle root directory request
-  RewriteRule ^$ frontend/out/index.html [L]
-
-  # Serve existing static assets from frontend/out
-  RewriteCond %{DOCUMENT_ROOT}/frontend/out/$1 -f [OR]
-  RewriteCond %{DOCUMENT_ROOT}/frontend/out/$1 -d
-  RewriteRule ^(.*)$ frontend/out/$1 [L]
-
-  # Fallback for Next.js routing
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ frontend/out/index.html [L]
+  RewriteRule ^(.*)$ index.html [L]
 </IfModule>
