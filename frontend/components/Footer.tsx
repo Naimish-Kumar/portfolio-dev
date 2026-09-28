@@ -14,7 +14,7 @@ export default function Footer({ profileData, settings }: FooterProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const footerText = settings?.footer_text || `© ${new Date().getFullYear()} ${profileData?.full_name || 'Naimish Kumar Verma'}. Built with Flutter, Next.js & Modern Cloud Architecture.`;
+  const footerText = settings?.footer_text || `© ${new Date().getFullYear()} ${profileData?.full_name || 'Akash Verma'}. Built with Java, Spring Boot, Flutter, Next.js & Modern Cloud Architecture.`;
 
   return (
     <footer className="bg-[#05070f] border-t border-slate-800/80 relative z-10 py-12">
@@ -31,10 +31,10 @@ export default function Footer({ profileData, settings }: FooterProps) {
             </div>
             <div>
               <div className="font-heading font-bold text-white text-base">
-                {profileData?.full_name || 'Naimish Kumar Verma'}
+                {profileData?.full_name || 'Akash Verma'}
               </div>
               <div className="text-[11px] font-mono text-cyan-400">
-                {profileData?.headline || 'Flutter Developer | Mobile & Full-Stack Engineer'}
+                {profileData?.headline || 'Software Engineer | Java & Mobile Systems Developer'}
               </div>
             </div>
           </div>

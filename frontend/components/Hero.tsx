@@ -52,9 +52,9 @@ export default function Hero({ heroData, profileData }: HeroProps) {
   }, [displayedText, isDeleting, currentTextIndex, typingStrings]);
 
   const greeting = heroData?.greeting || 'Hello World, I am';
-  const name = profileData?.full_name || 'Naimish Kumar Verma';
-  const subheadline = heroData?.subheadline || profileData?.bio || 'Results-driven Flutter Developer with 2+ years of professional experience designing and shipping scalable cross-platform mobile applications for Android and iOS.';
-  const badgeText = heroData?.badge_text || 'Flutter Developer @ Spirehub Software';
+  const name = profileData?.full_name || 'Akash Verma';
+  const subheadline = heroData?.subheadline || profileData?.bio || 'Senior Software Engineer with 7+ years of experience bridging hardware, cross-platform Flutter mobile applications, and enterprise Java Spring Boot backends.';
+  const badgeText = heroData?.badge_text || 'Software Engineer @ SpireHub Software';
 
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">

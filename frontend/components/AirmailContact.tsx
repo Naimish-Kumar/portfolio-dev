@@ -117,14 +117,14 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
       await submitContact({ ...formData, message: compiledMessage });
       setStatus({
         type: 'success',
-        text: 'PROJECT BRIEF DISPATCHED: Your brief has been securely logged in Naimish’s priority queue.',
+        text: 'PROJECT BRIEF DISPATCHED: Your brief has been securely logged in Akash’s priority queue.',
       });
       setFormData({ name: '', email: '', message: '' });
       setSelectedScopes([]);
     } catch {
       setStatus({
         type: 'error',
-        text: 'Failed to dispatch brief. Please contact directly at vnaimishkumar@gmail.com',
+        text: 'Failed to dispatch brief. Please contact directly at akash@spirehubs.com',
       });
     } finally {
       setLoading(false);
@@ -330,8 +330,8 @@ export default function AirmailContact({ profile }: AirmailContactProps) {
               <div className="flex items-center gap-2.5 text-slate-800">
                 <Mail className="w-4 h-4 text-slate-700 shrink-0" />
                 <span className="font-semibold text-slate-600 text-[11px]">Email:</span>
-                <a href={`mailto:${profile?.email || 'vnaimishkumar@gmail.com'}`} className="font-bold underline text-blue-800 hover:text-blue-900">
-                  {profile?.email || 'vnaimishkumar@gmail.com'}
+                <a href={`mailto:${profile?.email || 'akash@spirehubs.com'}`} className="font-bold underline text-blue-800 hover:text-blue-900">
+                  {profile?.email || 'akash@spirehubs.com'}
                 </a>
               </div>
 
