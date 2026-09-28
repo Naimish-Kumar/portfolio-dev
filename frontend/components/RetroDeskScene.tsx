@@ -24,8 +24,8 @@ type ScreenMode = 'terminal' | 'mcp' | 'matrix' | 'benchmark' | 'radio';
 type LightingMood = 'emerald' | 'amber' | 'blueprint' | 'neon';
 
 export default function RetroDeskScene({
-  name = 'Naimish Kumar Verma',
-  title = 'Flutter Developer | Mobile & Full-Stack Engineer',
+  name = 'Akash Verma',
+  title = 'Software Engineer | Java & Mobile Systems Developer',
   onExploreWork,
   onOpenContact,
 }: RetroDeskSceneProps) {
@@ -192,12 +192,12 @@ export default function RetroDeskScene({
         setScreenMode('terminal');
         setTerminalLogs((prev) => [
           ...prev.slice(-4),
-          '> naimish-career --timeline',
-          '2023–Pres: Flutter Developer @ Spirehub Software Pvt Ltd',
+          '> akash-career --timeline',
+          '2023–Pres: Senior Software Engineer @ SpireHub Softwares Pvt Ltd',
           'Published 5+ Production Apps on App Store & Play Store',
           'Published 4+ Open Source Packages on pub.dev',
         ]);
-        showToast('2+ Years Career Timeline Logged');
+        showToast('7+ Years Career Timeline Logged');
       },
     },
   ];
@@ -224,7 +224,7 @@ export default function RetroDeskScene({
       setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Inspecting Case Files & Live Projects...']);
     } else if (query.includes('hire') || query.includes('contact') || query.includes('email')) {
       onOpenContact?.();
-      setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Opening Direct Contact Brief: vnaimishkumar@gmail.com']);
+      setTerminalLogs((prev) => [...prev.slice(-4), `> ${query}`, 'Opening Direct Contact Brief: akash@spirehubs.com']);
     } else if (query.includes('lamp') || query.includes('light')) {
       toggleLamp();
     } else {
@@ -1195,7 +1195,7 @@ export default function RetroDeskScene({
           <p className="text-slate-800 text-[11px] leading-tight mb-2">
             Priority engineer inbox:
             <br />
-            <span className="font-bold text-amber-950">vnaimishkumar@gmail.com</span>
+            <span className="font-bold text-amber-950">akash@spirehubs.com</span>
           </p>
           <button
             onClick={() => {

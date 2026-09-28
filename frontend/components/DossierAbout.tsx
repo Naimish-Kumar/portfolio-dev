@@ -96,10 +96,10 @@ export default function DossierAbout({
     return () => ctx.revert();
   }, []);
 
-  const name = profile?.name || 'Naimish Kumar Verma';
+  const name = profile?.name || 'Akash Verma';
   const bio =
     profile?.bio ||
-    'Results-driven Flutter Developer with 2+ years of professional experience designing and shipping scalable cross-platform mobile applications for Android and iOS. Proficient in Flutter, Dart, Firebase, REST APIs, real-time systems (Socket.IO), and payment gateway integration (PayPal, Authorize.net). Published 5+ production applications on Google Play Store and Apple App Store. Hands-on open-source contributor with 4 published pub.dev packages.';
+    'Software Engineer with 7+ years of overall experience bridging hardware and software systems, including 3 years of dedicated Java enterprise development. Proven expertise in developing production-ready, cross-platform mobile applications integrated with IoT hardware, microservices, and real-time backend services.';
 
   const avatarUrl =
     profile?.avatar_url?.startsWith('http') && !profile?.avatar_url?.includes('unsplash')
@@ -184,54 +184,54 @@ export default function DossierAbout({
                     RECEIPTIFY
                   </h3>
                   <p className="font-mono text-[10px] text-slate-500 uppercase">
-                    2+ YRS FLUTTER & DEV LOG
+                    7+ YRS ARCHITECT & DEV LOG
                   </p>
                   <p className="font-mono text-[9px] text-slate-400">
-                    ORDER #2026-NAIMISH-DEV
+                    ORDER #2026-AKASH-DEV
                   </p>
                 </div>
 
                 {/* Receipt Line Items */}
                 <div className="space-y-1.5 font-mono text-xs text-slate-700">
                   <div className="flex justify-between">
-                    <span>01. FLUTTER / DART MOBILE</span>
-                    <span className="font-bold text-slate-900">3,400 HRS</span>
+                    <span>01. FLUTTER / ANDROID / MOBILE</span>
+                    <span className="font-bold text-slate-900">5,800 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>02. FIREBASE & REST APIS</span>
-                    <span className="font-bold text-slate-900">2,100 HRS</span>
+                    <span>02. JAVA 17/21 SPRING BOOT</span>
+                    <span className="font-bold text-slate-900">4,200 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>03. SOCKET.IO REAL-TIME CHAT</span>
-                    <span className="font-bold text-slate-900">1,800 HRS</span>
+                    <span>03. IOT / MQTT / BLE PROTOCOLS</span>
+                    <span className="font-bold text-slate-900">3,100 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>04. PUB.DEV PACKAGES</span>
-                    <span className="font-bold text-slate-900">4 PACKAGES</span>
+                    <span>04. KAFKA & REDIS TELEMETRY</span>
+                    <span className="font-bold text-slate-900">2,800 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>05. PAYPAL & AUTHORIZE.NET</span>
-                    <span className="font-bold text-slate-900">1,200 HRS</span>
+                    <span>05. NODE.JS / EXPRESS / LARAVEL</span>
+                    <span className="font-bold text-slate-900">2,400 HRS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>06. CI/CD & APP DISTRO</span>
-                    <span className="font-bold text-slate-900">1,000 HRS</span>
+                    <span>06. CI/CD & CLOUD DEPLOY</span>
+                    <span className="font-bold text-slate-900">2,200 HRS</span>
                   </div>
                 </div>
 
                 {/* Totals Section */}
                 <div className="border-t-2 border-dashed border-slate-400 my-3 pt-2 font-mono text-xs space-y-1">
                   <div className="flex justify-between font-bold text-slate-900">
-                    <span>PUBLISHED PRODUCTION APPS</span>
-                    <span className="text-emerald-700">5+ STORES</span>
+                    <span>SYSTEM AVAILABILITY</span>
+                    <span className="text-emerald-700">99.99%</span>
                   </div>
                   <div className="flex justify-between font-bold text-slate-900">
-                    <span>FRAME RENDER TARGET</span>
+                    <span>FRAME RATE TARGET</span>
                     <span className="text-emerald-700">&lt;16ms (&gt;60 FPS)</span>
                   </div>
                   <div className="flex justify-between font-bold text-slate-900">
                     <span>OVERALL EXPERIENCE</span>
-                    <span className="text-red-700">2+ YEARS</span>
+                    <span className="text-red-700">7+ YEARS</span>
                   </div>
                 </div>
 
@@ -249,7 +249,7 @@ export default function DossierAbout({
                     )}
                   </div>
                   <p className="font-mono text-[9px] tracking-widest text-slate-500">
-                    * 2026-NAIMISH-PORTFOLIO *
+                    * 2026-AKASH-PORTFOLIO *
                   </p>
                 </div>
               </div>

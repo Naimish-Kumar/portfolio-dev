@@ -331,8 +331,21 @@ export async function fetchPortfolio() {
     const res = await fetch(`${API_BASE}/portfolio`, { cache: 'no-store' });
     if (!res.ok) throw new Error('Failed to fetch portfolio data');
     const data = await res.json();
-    if (data.data && data.data.projects && data.data.projects.length > 0) {
+    if (data.data && data.data.projects && data.data.projects.length >= 12) {
       return data.data;
+    }
+    if (data.data) {
+      return {
+        ...data.data,
+        profile: {
+          ...defaultPortfolioData.profile,
+          ...(data.data.profile || {}),
+          name: 'Akash Verma',
+          full_name: 'Akash Verma',
+          email: 'akash@spirehubs.com',
+        },
+        projects: defaultPortfolioData.projects,
+      };
     }
     return defaultPortfolioData;
   } catch (error) {
