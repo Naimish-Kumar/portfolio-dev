@@ -8,14 +8,14 @@ async function seedAcroCoderData() {
     // 1. Update Profile
     await conn.query(`
       UPDATE profile SET
-        full_name = 'Naimish Kumar Verma',
+        full_name = 'Akash Verma',
         headline = 'Flutter Developer | Mobile & Full-Stack Engineer',
         bio = 'Results-driven Flutter Developer with 2+ years of professional experience designing and shipping scalable cross-platform mobile applications for Android and iOS. Proficient in Flutter, Dart, Firebase, REST APIs, real-time systems (Socket.IO), and payment gateway integration (PayPal, Authorize.net). Published 5+ production applications on Google Play Store and Apple App Store. Hands-on open-source contributor with 4 published pub.dev packages.',
         about_text = 'Results-driven Flutter Developer with 2+ years of professional experience designing and shipping scalable cross-platform mobile applications for Android and iOS. Proficient in Flutter, Dart, Firebase, REST APIs, real-time systems (Socket.IO), and payment gateway integration (PayPal, Authorize.net). Published 5+ production applications on Google Play Store and Apple App Store. Hands-on open-source contributor with 4 published pub.dev packages.',
         avatar_url = '/akash_portrait_bw.jpg',
         resume_url = 'https://acrocoder.com/resume.pdf',
-        email = 'vnaimishkumar@gmail.com',
-        phone = '+91-9536824061',
+        email = 'akash@spirehubs.com',
+        phone = '+91 9718598938',
         location = 'Noida, India',
         available_for_hire = TRUE,
         years_experience = 2,
@@ -274,19 +274,19 @@ async function seedAcroCoderData() {
     // 7. Update Site Settings
     await conn.query(`
       INSERT INTO site_settings (setting_key, setting_value) VALUES
-      ('site_title', 'Naimish Kumar Verma — Flutter Developer | Mobile & Full-Stack Engineer'),
-      ('site_description', 'Official portfolio of Naimish Kumar Verma - Flutter Developer with 2+ years of professional experience shipping cross-platform mobile apps and publishing open-source pub.dev packages.'),
+      ('site_title', 'Akash Verma — Flutter Developer | Mobile & Full-Stack Engineer'),
+      ('site_description', 'Official portfolio of Akash Verma - Flutter Developer with 2+ years of professional experience shipping cross-platform mobile apps and publishing open-source pub.dev packages.'),
       ('accent_color', '#10b981'),
       ('enable_contact_form', 'true'),
       ('enable_projects_section', 'true'),
       ('enable_skills_section', 'true'),
       ('enable_experience_section', 'true'),
       ('enable_education_section', 'true'),
-      ('footer_text', '© 2026 NAIMISH KUMAR VERMA — FLUTTER DEVELOPER | MOBILE & FULL-STACK ENGINEER. ALL RIGHTS RESERVED.')
+      ('footer_text', '© 2026 AKASH VERMA — FLUTTER DEVELOPER | MOBILE & FULL-STACK ENGINEER. ALL RIGHTS RESERVED.')
       ON DUPLICATE KEY UPDATE setting_value = VALUES(setting_value)
     `);
 
-    console.log('Successfully seeded authentic Naimish Kumar Verma data into MySQL!');
+    console.log('Successfully seeded authentic Akash Verma data into MySQL!');
   } catch (err) {
     console.error('Error seeding data:', err);
     throw err;
