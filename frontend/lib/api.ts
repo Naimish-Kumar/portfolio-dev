@@ -323,6 +323,8 @@ export const defaultPortfolioData = {
       order_num: 1,
     },
   ],
+  hero: {} as any,
+  settings: {} as any,
 };
 
 // Fetch full portfolio
@@ -331,23 +333,46 @@ export async function fetchPortfolio() {
     const res = await fetch(`${API_BASE}/portfolio`, { cache: 'no-store' });
     if (!res.ok) throw new Error('Failed to fetch portfolio data');
     const data = await res.json();
-    if (data.data && data.data.projects && data.data.projects.length >= 12) {
-      return data.data;
-    }
-    if (data.data) {
-      return {
-        ...data.data,
-        profile: {
-          ...defaultPortfolioData.profile,
-          ...(data.data.profile || {}),
-          name: 'Akash Verma',
-          full_name: 'Akash Verma',
-          email: 'akash@spirehubs.com',
-        },
-        projects: defaultPortfolioData.projects,
-      };
-    }
-    return defaultPortfolioData;
+
+    const mergedProfile = {
+      ...defaultPortfolioData.profile,
+      ...(data.data?.profile || {}),
+      name: 'Akash Verma',
+      full_name: 'Akash Verma',
+      email: 'akash@spirehubs.com',
+    };
+
+    // Combine default projects with remote projects to guarantee all 12 projects & pub.dev open source packages are included
+    const fetchedProjects = data.data?.projects || [];
+    const projectMap = new Map();
+
+    // 1. Add all default local projects first
+    defaultPortfolioData.projects.forEach((p) => {
+      const key = (p.title || '').toLowerCase().trim();
+      projectMap.set(key, p);
+    });
+
+    // 2. Merge or append remote projects
+    fetchedProjects.forEach((p: any) => {
+      const key = (p.title || '').toLowerCase().trim();
+      const existing = projectMap.get(key) || {};
+      const normalizedTags = p.tags || p.tags_json || existing.tags || [];
+      projectMap.set(key, {
+        ...existing,
+        ...p,
+        tags: Array.isArray(normalizedTags) ? normalizedTags : [],
+      });
+    });
+
+    const combinedProjects = Array.from(projectMap.values());
+    return {
+      profile: mergedProfile,
+      projects: combinedProjects.length > 0 ? combinedProjects : defaultPortfolioData.projects,
+      experience: data.data?.experience?.length ? data.data.experience : defaultPortfolioData.experience,
+      education: data.data?.education?.length ? data.data.education : defaultPortfolioData.education,
+      hero: data.data?.hero || {},
+      settings: data.data?.settings || {},
+    };
   } catch (error) {
     console.warn('Fetch portfolio error, loading default portfolio data:', error);
     return defaultPortfolioData;

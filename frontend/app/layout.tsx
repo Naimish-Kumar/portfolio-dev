@@ -2,21 +2,21 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Naimish Kumar Verma | Flutter Developer & Mobile / Full-Stack Engineer',
-  description: 'Official portfolio of Naimish Kumar Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps for Android & iOS and publishing open-source pub.dev packages.',
-  keywords: ['Flutter Developer', 'Dart', 'Mobile Engineer', 'iOS App', 'Android App', 'pub.dev', 'Open Source', 'Naimish Kumar Verma', 'Portfolio'],
-  authors: [{ name: 'Naimish Kumar Verma' }],
+  title: 'Akash Verma | Flutter Developer & Mobile / Full-Stack Engineer',
+  description: 'Official portfolio of Akash Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps for Android & iOS and publishing open-source pub.dev packages.',
+  keywords: ['Flutter Developer', 'Dart', 'Mobile Engineer', 'iOS App', 'Android App', 'pub.dev', 'Open Source', 'Akash Verma', 'Portfolio'],
+  authors: [{ name: 'Akash Verma' }],
   openGraph: {
-    title: 'Naimish Kumar Verma | Flutter Developer & Mobile / Full-Stack Engineer',
-    description: 'Official portfolio of Naimish Kumar Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps for Android & iOS and publishing open-source pub.dev packages.',
+    title: 'Akash Verma | Flutter Developer & Mobile / Full-Stack Engineer',
+    description: 'Official portfolio of Akash Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps for Android & iOS and publishing open-source pub.dev packages.',
     url: 'https://acrocoder.com',
-    siteName: 'Naimish Kumar Verma Portfolio',
+    siteName: 'Akash Verma Portfolio',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80',
         width: 1200,
         height: 630,
-        alt: 'Naimish Kumar Verma Portfolio',
+        alt: 'Akash Verma Portfolio',
       },
     ],
     locale: 'en_US',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Naimish Kumar Verma | Flutter Developer',
-    description: 'Official portfolio of Naimish Kumar Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps and publishing open-source pub.dev packages.',
+    title: 'Akash Verma | Flutter Developer',
+    description: 'Official portfolio of Akash Verma — Flutter Developer with 2+ years experience building cross-platform mobile apps and publishing open-source pub.dev packages.',
   },
 };
 
